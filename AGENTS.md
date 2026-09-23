@@ -27,6 +27,7 @@ A US cost-of-living-adjusted salary calculator for software engineering roles, c
 ## Commands
 - Install: `npm ci`
 - Build region data: `npm run build:regions`
+- Build official RPP data: `npm run build:rpp` (requires `BEA_API_KEY` in the environment or root `.env`)
 - Test (frontend): `npm run test:frontend`
 - Test (backend): `npm run test:backend`
 - Test (full): `npm test`

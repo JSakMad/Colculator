@@ -5,3 +5,6 @@ __pycache__/
 .cache/
 .venv/
 coverage/
+.env
+.env.*
+!.env.example

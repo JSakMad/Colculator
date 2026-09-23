@@ -1,0 +1,39 @@
+{
+  "publisher": "U.S. Bureau of Economic Analysis",
+  "dataset": "Regional",
+  "year": 2024,
+  "api_url": "https://apps.bea.gov/api/data/",
+  "product_url": "https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area",
+  "download_archives": {
+    "state": "https://apps.bea.gov/regional/zip/SARPP.zip",
+    "metro": "https://apps.bea.gov/regional/zip/MARPP.zip"
+  },
+  "tables": {
+    "state": "SARPP",
+    "metro": "MARPP"
+  },
+  "components": {
+    "1": {
+      "field": "rpp_all_items",
+      "bea_label": "RPPs: All items"
+    },
+    "2": {
+      "field": "rpp_goods",
+      "bea_label": "RPPs: Goods"
+    },
+    "3": {
+      "field": "rpp_housing",
+      "bea_label": "RPPs: Services: Housing"
+    },
+    "4": {
+      "field": "rpp_utilities",
+      "bea_label": "RPPs: Services: Utilities"
+    },
+    "5": {
+      "field": "rpp_other_services",
+      "bea_label": "RPPs: Services: Other"
+    }
+  },
+  "source_tag": "official_bea",
+  "notes": "All five official BEA RPP series are preserved. The requirements' rpp_services shorthand is represented without loss as utilities and other services."
+}
