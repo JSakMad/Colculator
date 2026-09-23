@@ -1,0 +1,50 @@
+name: Refresh BEA RPP
+
+on:
+  # BEA's next annual RPP release is December 10, 2026. A short delay avoids
+  # racing publication; workflow_dispatch covers release-date changes.
+  schedule:
+    - cron: "0 12 15 12 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build:rpp
+        env:
+          BEA_API_KEY: ${{ secrets.BEA_API_KEY }}
+      - run: npm test
+      - run: npm run lint
+      - name: Open refresh pull request when BEA data changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then
+            echo "BEA RPP artifacts are current."
+            exit 0
+          fi
+          branch="codex/bea-rpp-refresh-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add frontend/public/data/rpp.json frontend/public/data/rpp.sources.json supabase/seeds/rpp.sql
+          git commit -m "data: refresh official BEA RPP"
+          git push origin "$branch"
+          gh pr create \
+            --base main \
+            --head "$branch" \
+            --title "data: refresh official BEA RPP" \
+            --body "Annual FR2 refresh from the official BEA Regional API. The workflow regenerated the committed artifacts and passed the full test and lint suites."
+
