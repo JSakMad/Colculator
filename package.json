@@ -6,6 +6,7 @@
   "scripts": {
     "build:regions": "PYTHONPATH=backend/src python3 scripts/build_regions.py",
     "build:rpp": "PYTHONPATH=backend/src python3 scripts/build_rpp.py",
+    "build:wages": "PYTHONPATH=backend/src python3 scripts/build_wages.py",
     "test": "npm run test:frontend && npm run test:backend",
     "test:frontend": "node --test frontend/tests/*.test.mjs",
     "test:backend": "PYTHONPATH=backend/src python3 -m unittest discover -s backend/tests -v",

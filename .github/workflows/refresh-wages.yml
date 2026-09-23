@@ -1,0 +1,47 @@
+name: Refresh BLS OEWS wages
+
+on:
+  # OEWS is normally released in the spring. A late-May run avoids racing the
+  # publication, while workflow_dispatch covers release-date changes.
+  schedule:
+    - cron: "0 12 25 5 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build:wages
+      - run: npm test
+      - run: npm run lint
+      - name: Open refresh pull request when BLS data changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then
+            echo "BLS OEWS artifacts are current."
+            exit 0
+          fi
+          branch="codex/bls-oews-refresh-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add frontend/public/data/wages.json frontend/public/data/wages.sources.json supabase/seeds/wages.sql
+          git commit -m "data: refresh official BLS OEWS wages"
+          git push origin "$branch"
+          gh pr create \
+            --base main \
+            --head "$branch" \
+            --title "data: refresh official BLS OEWS wages" \
+            --body "Annual FR4 refresh from the official BLS OEWS state and metro files. The workflow regenerated the committed artifacts and passed the full test and lint suites."
