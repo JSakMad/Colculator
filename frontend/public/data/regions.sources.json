@@ -1,0 +1,32 @@
+{
+  "generated_from": [
+    {
+      "key": "tiger_states",
+      "publisher": "U.S. Census Bureau",
+      "vintage": "2025",
+      "url": "https://www2.census.gov/geo/tiger/TIGER2025/STATE/tl_2025_us_state.zip",
+      "sha256": "59a220888a8d9be8117c4fcd38f542bd02d81abf0d198c78113595ad540dd957"
+    },
+    {
+      "key": "tiger_counties",
+      "publisher": "U.S. Census Bureau",
+      "vintage": "2025",
+      "url": "https://www2.census.gov/geo/tiger/TIGER2025/COUNTY/tl_2025_us_county.zip",
+      "sha256": "9c6e9d9076abce2670d1de255de3710c35ecca00a7005d88e012dec52d95f763"
+    },
+    {
+      "key": "omb_delineation",
+      "publisher": "U.S. Office of Management and Budget via U.S. Census Bureau",
+      "vintage": "2023-07",
+      "url": "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2023/delineation-files/list1_2023.xlsx",
+      "sha256": "952c4b1e78acbb54e6ec9412434b7602fedacbf021736351a63c181bdb753629"
+    }
+  ],
+  "transformation": {
+    "tool": "shapefile + topojson-server + topojson-simplify",
+    "simplification": "2%",
+    "quantization": 100000,
+    "scope_filter": "numeric state FIPS below 60 (50 states and District of Columbia)",
+    "metro_membership": "Metropolitan Statistical Area rows only; micropolitan rows remain null"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "colculator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cost-of-living-adjusted salary calculator",
+  "scripts": {
+    "build:regions": "PYTHONPATH=backend/src python3 scripts/build_regions.py",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "node --test frontend/tests/*.test.mjs",
+    "test:backend": "PYTHONPATH=backend/src python3 -m unittest discover -s backend/tests -v",
+    "lint": "PYTHONPATH=backend/src python3 -m compileall -q backend/src backend/tests scripts && node --check frontend/tests/geometry.test.mjs"
+  },
+  "devDependencies": {
+    "shapefile": "0.6.6",
+    "supabase": "2.117.0",
+    "topojson-client": "3.1.0",
+    "topojson-server": "3.0.1",
+    "topojson-simplify": "3.0.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
