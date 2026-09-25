@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: colculator-api
+    runtime: python
+    plan: free
+    buildCommand: python -m pip install -e backend
+    startCommand: uvicorn colculator.api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeployTrigger: checksPass

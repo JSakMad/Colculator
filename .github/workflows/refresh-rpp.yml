@@ -21,7 +21,12 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - run: npm ci
+      - run: python -m venv .venv
+      - run: .venv/bin/python -m pip install -e 'backend[test]'
       - run: npm run build:rpp
         env:
           BEA_API_KEY: ${{ secrets.BEA_API_KEY }}
@@ -47,4 +52,3 @@ jobs:
             --head "$branch" \
             --title "data: refresh official BEA RPP" \
             --body "Annual FR2 refresh from the official BEA Regional API. The workflow regenerated the committed artifacts and passed the full test and lint suites."
-

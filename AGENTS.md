@@ -25,10 +25,11 @@ A US cost-of-living-adjusted salary calculator for software engineering roles, c
 - Run the full test suite before opening a PR, and include the test output in the PR description.
 
 ## Commands
-- Install: `npm ci`
+- Install: `npm ci && python3 -m venv .venv && .venv/bin/python -m pip install -e 'backend[test]'`
 - Build region data: `npm run build:regions`
 - Build wage data: `npm run build:wages`
 - Build official RPP data: `npm run build:rpp` (requires `BEA_API_KEY` in the environment or root `.env`)
+- Run backend API: `npm run start:backend`
 - Test (frontend): `npm run test:frontend`
 - Test (backend): `npm run test:backend`
 - Test (full): `npm test`
