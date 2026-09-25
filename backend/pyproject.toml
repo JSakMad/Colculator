@@ -7,7 +7,13 @@ name = "colculator-backend"
 version = "0.1.0"
 description = "Colculator API and official-data pipelines"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+  "fastapi==0.141.1",
+  "uvicorn==0.54.0",
+]
+
+[project.optional-dependencies]
+test = ["httpx2==2.13.1"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

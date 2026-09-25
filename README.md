@@ -6,14 +6,14 @@ phases defined by [`docs/colculator_requirements.md`](docs/colculator_requiremen
 
 ## Current phase
 
-Phase 3 implements FR4 on top of the region and RPP foundations:
+Phase 4 implements FR5 on top of the official region, RPP, and wage data:
 
-- official BLS OEWS state and metropolitan-area annual wage ingestion
-- all five detailed occupations in the 15-1250 software broad group
-- explicit statuses for suppressed values, which remain null rather than estimated
-- source-tagged static data plus a read-only, RLS-protected Supabase table
-- exact May 2025 published-value spot checks for California, Mississippi, and Texas
-- an annual GitHub Actions refresh after the expected spring OEWS release
+- FastAPI salary normalization using the exact FR5 RPP ratio
+- national-average origin default and official metro inheritance for covered counties
+- separate housing, goods, utilities, and other-services comparisons without invented weights
+- destination BLS median wage alongside the normalized result
+- source, confidence interval, and model version propagation for future modeled counties
+- an explicit unavailable tax result until sourced tax inputs and assumptions exist
 
 The committed source manifest at
 [`frontend/public/data/regions.sources.json`](frontend/public/data/regions.sources.json)
@@ -27,6 +27,8 @@ in [`frontend/public/data/wages.sources.json`](frontend/public/data/wages.source
 
 ```bash
 npm ci
+python3 -m venv .venv
+.venv/bin/python -m pip install -e 'backend[test]'
 npm run build:regions
 npm run build:rpp
 npm run build:wages
@@ -34,6 +36,8 @@ npm test
 npm run lint
 npm audit --audit-level=moderate
 ```
+
+In a separate terminal, run `npm run start:backend` to start the API.
 
 `npm run build:regions` downloads only the checksum-pinned official Census/OMB
 inputs and regenerates the region catalog, TopoJSON, and `supabase/seed.sql`.
@@ -48,14 +52,22 @@ preceding year's official state and metro archive URLs during the annual
 late-May refresh. The workbook vintage is validated before output. It requires
 no API key; `-- --year YYYY` can select a different published vintage.
 
+`npm run start:backend` serves the API at `http://localhost:8000`. POST
+`/v1/calculate` with a nominal salary and destination region; omit the origin
+to use BEA's national-average index of 100. The optional tax request is clearly
+reported as unavailable and never changes the RPP result until sourced tax data
+and calculation assumptions are added in a later phase.
+
 ## Repository layout
 
 - `backend/src/colculator/regions`: official-data ingestion and hierarchy logic
 - `backend/src/colculator/rpp`: official BEA RPP API ingestion
 - `backend/src/colculator/wages`: official BLS OEWS wage ingestion
+- `backend/src/colculator/calculator`: FR5 calculation and response contract
 - `frontend/public/data`: generated region catalog, provenance, and geometry
 - `supabase/migrations`: database schema with public read-only RLS policy
 - `supabase/seed.sql` and `supabase/seeds`: deterministic official-data rows
-- `backend/tests` and `frontend/tests`: FR1, FR2, and FR4 acceptance coverage
+- `backend/tests` and `frontend/tests`: FR1, FR2, FR4, and FR5 acceptance coverage
 
-No taxes or modeled values are introduced in Phase 3.
+No tax rate or modeled RPP is introduced in Phase 4. The response contract is
+tested with a modeled fixture so Phase 5 cannot lose its source/confidence tags.

@@ -7,10 +7,11 @@
     "build:regions": "PYTHONPATH=backend/src python3 scripts/build_regions.py",
     "build:rpp": "PYTHONPATH=backend/src python3 scripts/build_rpp.py",
     "build:wages": "PYTHONPATH=backend/src python3 scripts/build_wages.py",
+    "start:backend": "PYTHONPATH=backend/src .venv/bin/python -m uvicorn colculator.api:app --host 0.0.0.0 --port 8000",
     "test": "npm run test:frontend && npm run test:backend",
     "test:frontend": "node --test frontend/tests/*.test.mjs",
-    "test:backend": "PYTHONPATH=backend/src python3 -m unittest discover -s backend/tests -v",
-    "lint": "PYTHONPATH=backend/src python3 -m compileall -q backend/src backend/tests scripts && node --check frontend/tests/*.test.mjs"
+    "test:backend": "PYTHONPATH=backend/src .venv/bin/python -m unittest discover -s backend/tests -v",
+    "lint": "PYTHONPATH=backend/src .venv/bin/python -m compileall -q backend/src backend/tests scripts && node --check frontend/tests/*.test.mjs"
   },
   "devDependencies": {
     "shapefile": "0.6.6",
