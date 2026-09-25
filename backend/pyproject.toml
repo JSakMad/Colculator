@@ -9,6 +9,7 @@ description = "Colculator API and official-data pipelines"
 requires-python = ">=3.12"
 dependencies = [
   "fastapi==0.141.1",
+  "scikit-learn==1.9.1",
   "uvicorn==0.54.0",
 ]
 

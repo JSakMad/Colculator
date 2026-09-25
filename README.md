@@ -6,7 +6,18 @@ phases defined by [`docs/colculator_requirements.md`](docs/colculator_requiremen
 
 ## Current phase
 
-Phase 4 implements FR5 on top of the official region, RPP, and wage data:
+Phase 5 implements FR3 and Section 6 on top of the official-data calculator:
+
+- county Zillow ZHVI/ZORI ingestion with missing observations preserved as null
+- county HUD FMR and Census population-density ingestion
+- source-tagged, strict tax-rate input with no guessed or unsourced values
+- population-weighted state/metro training rows with local wages explicitly excluded
+- an ElasticNet baseline with five-fold cross-validation RMSE logged on every run
+- 95% residual-based confidence intervals on every modeled county estimate
+- hard pipeline and database guards that prevent prediction for metro-covered counties
+- a separately labeled comparison to Commerce's experimental research estimates
+
+Phase 4 already provides:
 
 - FastAPI salary normalization using the exact FR5 RPP ratio
 - national-average origin default and official metro inheritance for covered counties
@@ -32,6 +43,8 @@ python3 -m venv .venv
 npm run build:regions
 npm run build:rpp
 npm run build:wages
+npm run build:county-features
+npm run train:county-rpp -- --commerce-csv data/reference/commerce_experimental_county_rpp.csv
 npm test
 npm run lint
 npm audit --audit-level=moderate
@@ -52,6 +65,20 @@ preceding year's official state and metro archive URLs during the annual
 late-May refresh. The workbook vintage is validated before output. It requires
 no API key; `-- --year YYYY` can select a different published vintage.
 
+`npm run build:county-features` uses the December 2024 Zillow county ZHVI/ZORI
+observations, FY 2024 HUD FMRs, and Census 2024 population and land area. HUD's
+free dataset API token must be set as `HUD_API_TOKEN` in `.env` and as the same
+repository secret for scheduled GitHub Actions. The build also requires the
+approved official-source tax input described in
+[`data/manual/README.md`](data/manual/README.md). It rejects missing tax rows
+and conflicting town-level HUD values rather than selecting or averaging them.
+
+`npm run train:county-rpp` aggregates county inputs to official BEA state and
+metro labels, logs cross-validation metrics, trains the ElasticNet baseline,
+and predicts only counties whose FR1 `msa_id` is null. The optional Commerce
+file location and its required research-only interpretation are documented in
+[`data/reference/README.md`](data/reference/README.md).
+
 `npm run start:backend` serves the API at `http://localhost:8000`. POST
 `/v1/calculate` with a nominal salary and destination region; omit the origin
 to use BEA's national-average index of 100. The optional tax request is clearly
@@ -69,5 +96,7 @@ and calculation assumptions are added in a later phase.
 - `supabase/seed.sql` and `supabase/seeds`: deterministic official-data rows
 - `backend/tests` and `frontend/tests`: FR1, FR2, FR4, and FR5 acceptance coverage
 
-No tax rate or modeled RPP is introduced in Phase 4. The response contract is
-tested with a modeled fixture so Phase 5 cannot lose its source/confidence tags.
+The calculator repository automatically resolves a nonmetro county to a
+source-tagged modeled estimate when the generated Phase 5 artifact is present.
+Official metro inheritance always takes priority and modeled values can never
+replace an `official_bea` result.

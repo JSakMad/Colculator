@@ -41,6 +41,18 @@ class CatalogRepository:
             for record in rpp_payload["records"]
             if isinstance(record, dict)
         }
+        county_estimates_path = data_dir / "county_rpp_estimates.json"
+        if county_estimates_path.exists():
+            county_estimates_payload = json.loads(
+                county_estimates_path.read_text(encoding="utf-8")
+            )
+            self._county_estimates = {
+                str(record["county_fips"]): record
+                for record in county_estimates_payload["records"]
+                if isinstance(record, dict)
+            }
+        else:
+            self._county_estimates = {}
         self._wages = {
             (str(record["region_id"]), str(record["soc_code"])): record
             for record in wages_payload["records"]
@@ -71,6 +83,25 @@ class CatalogRepository:
         if record is None and region.get("type") == "county" and region.get("msa_id"):
             effective_region_id = str(region["msa_id"])
             record = self._rpp.get(effective_region_id)
+        if record is None and region.get("type") == "county" and not region.get("msa_id"):
+            estimate = self._county_estimates.get(str(region["fips"]))
+            if estimate is not None:
+                interval = estimate["confidence_interval"]["all_items"]
+                return RPPResolution(
+                    requested_region_id=region_id,
+                    requested_region_name=str(region["name"]),
+                    effective_region_id=region_id,
+                    effective_region_name=str(region["name"]),
+                    year=int(estimate["year"]),
+                    source="modeled",
+                    rpp_all_items=Decimal(str(estimate["predicted_rpp_all_items"])),
+                    rpp_housing=Decimal(str(estimate["predicted_rpp_housing"])),
+                    confidence_interval=(
+                        Decimal(str(interval["lower"])),
+                        Decimal(str(interval["upper"])),
+                    ),
+                    model_version=str(estimate["model_version"]),
+                )
         if record is None:
             raise RPPUnavailableError(region_id)
         effective_region = self._regions.get(effective_region_id)

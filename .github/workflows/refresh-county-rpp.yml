@@ -1,0 +1,62 @@
+name: Refresh county RPP model
+
+on:
+  # Monthly runs capture source revisions while keeping the feature vintage
+  # aligned to the latest official BEA label year.
+  schedule:
+    - cron: "0 13 10 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: npm ci
+      - run: python -m venv .venv
+      - run: .venv/bin/python -m pip install -e 'backend[test]'
+      - run: npm run build:county-features
+        env:
+          HUD_API_TOKEN: ${{ secrets.HUD_API_TOKEN }}
+      - run: >-
+          npm run train:county-rpp --
+          --commerce-csv data/reference/commerce_experimental_county_rpp.csv
+      - run: npm test
+      - run: npm run lint
+      - name: Open refresh pull request when county artifacts changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then
+            echo "County feature and model artifacts are current."
+            exit 0
+          fi
+          branch="codex/county-rpp-refresh-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add frontend/public/data/county_features.json \
+            frontend/public/data/county_features.sources.json \
+            frontend/public/data/county_rpp_estimates.json \
+            frontend/public/data/county_rpp_model.metrics.json \
+            supabase/seeds/county_features.sql \
+            supabase/seeds/county_rpp_estimates.sql
+          git commit -m "data: refresh county RPP model"
+          git push origin "$branch"
+          gh pr create \
+            --base main \
+            --head "$branch" \
+            --title "data: refresh county RPP model" \
+            --body "Scheduled FR3 refresh. Regenerated source-tagged county features and nonmetro-only modeled RPP estimates, logged cross-validation RMSE and confidence intervals, and passed the full test and lint suites."
