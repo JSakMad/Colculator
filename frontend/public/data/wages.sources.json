@@ -1,0 +1,35 @@
+{
+  "publisher": "U.S. Bureau of Labor Statistics",
+  "program": "Occupational Employment and Wage Statistics",
+  "release": "May 2025",
+  "tables_url": "https://www.bls.gov/oes/tables.htm",
+  "archives": {
+    "state": {
+      "url": "https://www.bls.gov/oes/special-requests/oesm25st.zip",
+      "sha256": "74d5be0e1df865517d22dc3bd1fc3a8af5f6f9e3052a2163143021505d8e04c6",
+      "downloaded_filename": "oesm25st.zip"
+    },
+    "metro": {
+      "url": "https://www.bls.gov/oes/special-requests/oesm25ma.zip",
+      "sha256": "cc3e6fa80edf64ab8fd0e8a6472ef1b513a6bcaef2f5018e9649c485793b0b99",
+      "downloaded_filename": "oesm25ma.zip"
+    }
+  },
+  "occupations": {
+    "15-1251": "Computer Programmers",
+    "15-1252": "Software Developers",
+    "15-1253": "Software Quality Assurance Analysts and Testers",
+    "15-1254": "Web Developers",
+    "15-1255": "Web and Digital Interface Designers"
+  },
+  "source_tag": "bls_oews",
+  "suppression_markers": {
+    "*": "not_available",
+    "#": "top_coded_at_or_above_the_bls_publication_threshold"
+  },
+  "notes": "The five detailed occupations are the complete official 15-1250 broad-group membership. Only published annual mean and median wages are stored; unavailable or top-coded values remain null with an explicit status. Territories outside the FR1 region catalog are excluded.",
+  "record_counts": {
+    "state": 247,
+    "metro": 1169
+  }
+}
