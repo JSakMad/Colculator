@@ -3,6 +3,7 @@ import io
 import json
 import tempfile
 import unittest
+from decimal import Decimal
 from pathlib import Path
 
 import numpy as np
@@ -13,6 +14,7 @@ from colculator.county_features.build import (
     parse_tax_rates,
     parse_zillow,
 )
+from colculator.county_features.taxes import _progressive_tax
 from colculator.county_rpp.train import (
     MODEL_FEATURES,
     TrainConfig,
@@ -66,16 +68,48 @@ class CountyFeatureIngestionTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "tax.csv"
             path.write_text(
-                "county_fips,year,state_income_tax_rate,local_sales_tax_rate,source_url\n"
-                "06001,2024,0.093,0.0125,\n",
+                "county_fips,tax_year,state_income_tax_rate,local_sales_tax_rate,"
+                "state_income_tax_source_url,local_sales_tax_source_url\n"
+                "06001,2026,0.093,0.0125,,https://example.com/sales\n",
                 encoding="utf-8",
             )
             with self.assertRaisesRegex(ValueError, "Invalid or unsourced"):
-                parse_tax_rates(path, 2024)
+                parse_tax_rates(path)
+
+    def test_income_tax_brackets_are_applied_sequentially(self) -> None:
+        tax = _progressive_tax(
+            Decimal("100000"),
+            [(Decimal("0"), Decimal("0.02")), (Decimal("50000"), Decimal("0.04"))],
+        )
+        self.assertEqual(Decimal("3000.00"), tax)
+
+    def test_generated_tax_rates_cover_every_county_uniformly_by_state(self) -> None:
+        tax_path = ROOT / "data" / "manual" / "county_tax_rates.csv"
+        with tax_path.open(encoding="utf-8", newline="") as stream:
+            rows = list(csv.DictReader(stream))
+        catalog = json.loads(
+            (ROOT / "frontend" / "public" / "data" / "regions.json").read_text()
+        )
+        counties = [
+            region for region in catalog["regions"] if region.get("type") == "county"
+        ]
+        self.assertEqual(len(counties), len(rows))
+        state_values: dict[str, set[tuple[str, str]]] = {}
+        for row in rows:
+            state_values.setdefault(row["county_fips"][:2], set()).add(
+                (row["state_income_tax_rate"], row["local_sales_tax_rate"])
+            )
+            self.assertTrue(row["state_income_tax_source_url"].startswith("https://"))
+            self.assertTrue(row["local_sales_tax_source_url"].startswith("https://"))
+        self.assertTrue(all(len(values) == 1 for values in state_values.values()))
+        for state_fips in ("02", "12", "32", "33", "46", "47", "48", "53", "56"):
+            self.assertEqual("0", next(iter(state_values[state_fips]))[0])
 
     def test_hud_town_level_conflicts_are_never_silently_aggregated(self) -> None:
         payloads = {
-            "listStates": {"data": [{"state_code": "MA"}]},
+            "listStates": {
+                "data": [{"state_code": "MA", "state_num": "25.0"}]
+            },
             "statedata/MA": {
                 "data": {
                     "counties": [
@@ -103,10 +137,94 @@ class CountyFeatureIngestionTest(unittest.TestCase):
             return io.BytesIO(json.dumps(payloads[endpoint]).encode())
 
         with self.assertRaisesRegex(ValueError, "25023"):
-            HUDClient("fixture-token", opener=opener).county_fmrs(2024)
+            HUDClient("fixture-token", opener=opener).county_fmrs(
+                2024, allowed_counties={"25023"}
+            )
+
+    def test_hud_town_level_conflicts_use_census_population_weights(self) -> None:
+        payloads = {
+            "listStates": {
+                "data": [{"state_code": "MA", "state_num": "25.0"}]
+            },
+            "statedata/MA": {
+                "data": {
+                    "counties": [
+                        {
+                            "fips_code": "2502300010",
+                            "Efficiency": 1000,
+                            "One-Bedroom": 1100,
+                            "Two-Bedroom": 1200,
+                            "Three-Bedroom": 1300,
+                        },
+                        {
+                            "fips_code": "2502300020",
+                            "Efficiency": 2000,
+                            "One-Bedroom": 2100,
+                            "Two-Bedroom": 2200,
+                            "Three-Bedroom": 2300,
+                        },
+                    ]
+                }
+            },
+        }
+
+        def opener(request, timeout):
+            endpoint = request.full_url.split("/fmr/", 1)[1].split("?", 1)[0]
+            return io.BytesIO(json.dumps(payloads[endpoint]).encode())
+
+        values = HUDClient("fixture-token", opener=opener).county_fmrs(
+            2024,
+            allowed_counties={"25023"},
+            subdivision_population={
+                "2502300010": Decimal(100),
+                "2502300020": Decimal(300),
+            },
+        )
+        self.assertEqual("1750.000000", values["25023"]["hud_fmr_studio"])
+        self.assertEqual("1950.000000", values["25023"]["hud_fmr_2br"])
 
 
 class CountyEstimatorAcceptanceTest(unittest.TestCase):
+    def test_generated_estimates_cover_only_nonmetro_counties(self) -> None:
+        regions = json.loads(
+            (ROOT / "frontend" / "public" / "data" / "regions.json").read_text()
+        )["regions"]
+        estimates = json.loads(
+            (
+                ROOT
+                / "frontend"
+                / "public"
+                / "data"
+                / "county_rpp_estimates.json"
+            ).read_text()
+        )["records"]
+        nonmetro = {
+            str(region["fips"])
+            for region in regions
+            if region.get("type") == "county" and region.get("msa_id") is None
+        }
+        self.assertEqual(nonmetro, {row["county_fips"] for row in estimates})
+        for estimate in estimates:
+            self.assertEqual("modeled", estimate["source"])
+            self.assertEqual(0.95, estimate["confidence_interval"]["level"])
+
+        metrics = json.loads(
+            (
+                ROOT
+                / "frontend"
+                / "public"
+                / "data"
+                / "county_rpp_model.metrics.json"
+            ).read_text()
+        )
+        self.assertGreater(
+            metrics["commerce_experimental_comparison"]["overlap"], 0
+        )
+        self.assertEqual(
+            {"all_items", "housing"},
+            set(metrics["cross_validation"]["targets"]),
+        )
+
     def test_covered_metro_county_is_never_passed_to_a_model(self) -> None:
         regions = [
             {"type": "county", "fips": "01001", "msa_id": "US-METRO-10001"},

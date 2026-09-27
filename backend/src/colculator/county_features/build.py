@@ -9,6 +9,7 @@ import io
 import json
 import os
 import shutil
+import time
 import urllib.request
 import zipfile
 from dataclasses import dataclass
@@ -35,10 +36,27 @@ CENSUS_GAZETTEER_URL = (
     "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/"
     "2024_Gazetteer/2024_Gaz_counties_national.zip"
 )
+CENSUS_SUBDIVISION_GAZETTEER_URL = (
+    "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/"
+    "2024_Gazetteer/2024_Gaz_cousubs_national.zip"
+)
+CENSUS_REDISTRICTING_BASE_URL = (
+    "https://www2.census.gov/programs-surveys/decennial/2020/data/"
+    "01-Redistricting_File--PL_94-171"
+)
+CENSUS_SUBDIVISION_ARCHIVES = {
+    "09": ("Connecticut", "ct"),
+    "23": ("Maine", "me"),
+    "25": ("Massachusetts", "ma"),
+    "33": ("New_Hampshire", "nh"),
+    "44": ("Rhode_Island", "ri"),
+}
 HUD_API_URL = "https://www.huduser.gov/hudapi/public/fmr"
 HUD_PRODUCT_URL = "https://www.huduser.gov/portal/datasets/fmr.html"
 TAX_RATE_DEFINITION = (
-    "User-supplied official-source rates. Missing or unsourced values are rejected."
+    "Tax Foundation 2026 state income tax effective rate at $100,000 gross income "
+    "for a single filer, and combined state plus population-weighted-average local "
+    "sales tax rate. Both are applied uniformly to every county in the state."
 )
 
 FEATURE_FIELDS = (
@@ -59,8 +77,8 @@ SOURCE_TAGS = {
     "hud_fmr_1br": "hud_fmr",
     "hud_fmr_2br": "hud_fmr",
     "hud_fmr_3br": "hud_fmr",
-    "state_income_tax_rate": "official_tax_source",
-    "local_sales_tax_rate": "official_tax_source",
+    "state_income_tax_rate": "tax_foundation_2026",
+    "local_sales_tax_rate": "tax_foundation_2026",
     "population_density": "census_population_estimates_gazetteer",
 }
 
@@ -183,6 +201,37 @@ def parse_land_area(path: Path) -> dict[str, Decimal]:
     return values
 
 
+def parse_current_subdivision_counties(path: Path) -> dict[str, str]:
+    """Map state + county-subdivision code to its current county equivalent."""
+
+    with zipfile.ZipFile(path) as archive:
+        members = [name for name in archive.namelist() if name.endswith(".txt")]
+        if len(members) != 1:
+            raise ValueError("Census subdivision Gazetteer must contain one text file")
+        text = io.TextIOWrapper(archive.open(members[0]), encoding="utf-8-sig")
+        reader = csv.DictReader(text, delimiter="\t")
+        values: dict[str, str] = {}
+        for row in reader:
+            cleaned = {key.strip(): value.strip() for key, value in row.items()}
+            geoid = cleaned["GEOID"]
+            if len(geoid) != 10 or not geoid.isdigit():
+                continue
+            if not geoid.startswith("09"):
+                continue
+            # Code 00000 is a county balance, not a named town/subdivision, and
+            # is intentionally reused across counties.
+            if geoid.endswith("00000"):
+                continue
+            key = geoid[:2] + geoid[5:]
+            county_fips = geoid[:5]
+            existing = values.setdefault(key, county_fips)
+            if existing != county_fips:
+                raise ValueError(
+                    f"County-subdivision code {key} maps to multiple current counties"
+                )
+    return values
+
+
 class HUDClient:
     """Minimal authenticated client for HUD's free FMR dataset API."""
 
@@ -190,13 +239,21 @@ class HUDClient:
         self,
         token: str,
         opener: Callable[..., object] = urllib.request.urlopen,
+        cache_dir: Path | None = None,
     ) -> None:
         if not token.strip():
             raise ValueError("HUD_API_TOKEN is required")
         self._token = token.strip()
         self._opener = opener
+        self._cache_dir = cache_dir
 
     def _get(self, endpoint: str, *, year: int | None = None) -> object:
+        cache_path: Path | None = None
+        if self._cache_dir is not None:
+            suffix = "latest" if year is None else str(year)
+            cache_path = self._cache_dir / f"{endpoint.replace('/', '_')}_{suffix}.json"
+            if cache_path.exists() and cache_path.stat().st_size:
+                return json.loads(cache_path.read_text(encoding="utf-8"))
         suffix = "" if year is None else f"?year={year}"
         request = urllib.request.Request(
             f"{HUD_API_URL}/{endpoint}{suffix}",
@@ -205,23 +262,46 @@ class HUDClient:
                 "User-Agent": "Colculator county feature ingestion/0.1",
             },
         )
-        with self._opener(request, timeout=120) as response:
-            payload = json.load(response)
+        last_error: OSError | None = None
+        for attempt in range(3):
+            try:
+                with self._opener(request, timeout=120) as response:
+                    payload = json.load(response)
+                break
+            except OSError as error:
+                last_error = error
+                if attempt == 2:
+                    raise
+                time.sleep(2**attempt)
+        else:  # pragma: no cover - loop either succeeds or raises.
+            raise RuntimeError("HUD request failed") from last_error
         if isinstance(payload, dict) and str(payload.get("status", "")).startswith("4"):
             raise RuntimeError(f"HUD API error: {payload}")
+        if cache_path is not None:
+            cache_path.parent.mkdir(parents=True, exist_ok=True)
+            cache_path.write_text(json.dumps(payload, separators=(",", ":")), encoding="utf-8")
         return payload
 
     def county_fmrs(
-        self, year: int, *, allowed_counties: set[str] | None = None
+        self,
+        year: int,
+        *,
+        allowed_counties: set[str] | None = None,
+        subdivision_population: dict[str, Decimal] | None = None,
+        current_subdivision_county: dict[str, str] | None = None,
     ) -> dict[str, dict[str, str]]:
-        """Fetch one state at a time and reject ambiguous town-level duplicates."""
+        """Fetch states and population-weight conflicting New England town FMRs."""
 
         states = _hud_data_list(self._get("listStates"))
-        values: dict[str, dict[str, str]] = {}
+        county_entities: dict[str, list[tuple[str, dict[str, str]]]] = {}
         conflicts: set[str] = set()
         for state in states:
             state_code = str(state.get("state_code", "")).strip()
-            state_fips = str(state.get("state_num", "")).strip().zfill(2)
+            raw_state_fips = str(state.get("state_num", "")).strip()
+            try:
+                state_fips = str(int(Decimal(raw_state_fips))).zfill(2)
+            except (InvalidOperation, ValueError):
+                continue
             if allowed_counties is not None and not any(
                 fips.startswith(state_fips) for fips in allowed_counties
             ):
@@ -240,6 +320,12 @@ class HUDClient:
                 county_fips = entity_id[:5]
                 if len(county_fips) != 5 or not county_fips.isdigit():
                     continue
+                subdivision_key = entity_id[:2] + entity_id[5:]
+                if (
+                    current_subdivision_county
+                    and subdivision_key in current_subdivision_county
+                ):
+                    county_fips = current_subdivision_county[subdivision_key]
                 if allowed_counties is not None and county_fips not in allowed_counties:
                     continue
                 record = {
@@ -248,13 +334,54 @@ class HUDClient:
                     "hud_fmr_2br": _required_hud_value(county, "Two-Bedroom"),
                     "hud_fmr_3br": _required_hud_value(county, "Three-Bedroom"),
                 }
-                existing = values.setdefault(county_fips, record)
-                if existing != record:
-                    conflicts.add(county_fips)
+                county_entities.setdefault(county_fips, []).append((entity_id, record))
+
+        values: dict[str, dict[str, str]] = {}
+        for county_fips, entities in county_entities.items():
+            unique_records = {tuple(sorted(record.items())) for _, record in entities}
+            if len(unique_records) == 1:
+                values[county_fips] = entities[0][1]
+                continue
+            if subdivision_population is None:
+                conflicts.add(county_fips)
+                continue
+            missing = [
+                entity_id
+                for entity_id, _ in entities
+                if entity_id not in subdivision_population
+            ]
+            if missing:
+                raise ValueError(
+                    f"Missing Census subdivision population for HUD {county_fips}: "
+                    + ", ".join(sorted(missing))
+                )
+            total_population = sum(
+                subdivision_population[entity_id] for entity_id, _ in entities
+            )
+            if total_population <= 0:
+                raise ValueError(
+                    f"HUD county {county_fips} has no populated Census subdivisions"
+                )
+            values[county_fips] = {
+                field: format(
+                    sum(
+                        Decimal(record[field]) * subdivision_population[entity_id]
+                        for entity_id, record in entities
+                    )
+                    / total_population,
+                    ".6f",
+                )
+                for field in (
+                    "hud_fmr_studio",
+                    "hud_fmr_1br",
+                    "hud_fmr_2br",
+                    "hud_fmr_3br",
+                )
+            }
         if conflicts:
             raise ValueError(
                 "HUD publishes conflicting town-level FMRs within these county FIPS; "
-                "an approved aggregation rule is required: "
+                "Census subdivision populations are required to aggregate: "
                 + ", ".join(sorted(conflicts))
             )
         return values
@@ -274,10 +401,52 @@ def _required_hud_value(data: dict[str, object], name: str) -> str:
     return value
 
 
-def parse_tax_rates(path: Path, year: int) -> tuple[dict[str, dict[str, str]], set[str]]:
+def parse_subdivision_population(path: Path, state_abbreviation: str) -> dict[str, Decimal]:
+    """Read 2020 Census PL total population for summary-level 060 geographies."""
+
+    prefix = state_abbreviation.lower()
+    with zipfile.ZipFile(path) as archive:
+        populations_by_logrec: dict[str, Decimal] = {}
+        with archive.open(f"{prefix}000012020.pl") as raw_segment:
+            segment = io.TextIOWrapper(raw_segment, encoding="ascii")
+            for row in csv.reader(segment, delimiter="|"):
+                if len(row) > 5:
+                    populations_by_logrec[row[4]] = Decimal(row[5])
+
+        values: dict[str, Decimal] = {}
+        with archive.open(f"{prefix}geo2020.pl") as raw_geography:
+            geography = io.TextIOWrapper(raw_geography, encoding="cp1252")
+            for row in csv.reader(geography, delimiter="|"):
+                if len(row) <= 8 or row[2] != "060":
+                    continue
+                entity_id = row[8].removeprefix("0600000US")
+                population = populations_by_logrec.get(row[7])
+                if len(entity_id) == 10 and population is not None:
+                    values[entity_id] = population
+    return values
+
+
+def load_subdivision_population(cache_dir: Path) -> tuple[dict[str, Decimal], list[dict[str, str]]]:
+    values: dict[str, Decimal] = {}
+    sources: list[dict[str, str]] = []
+    for state_fips, (directory, abbreviation) in CENSUS_SUBDIVISION_ARCHIVES.items():
+        url = (
+            f"{CENSUS_REDISTRICTING_BASE_URL}/{directory}/"
+            f"{abbreviation}2020.pl.zip"
+        )
+        path = _download(url, cache_dir / f"census_pl_2020_{state_fips}.zip")
+        state_values = parse_subdivision_population(path, abbreviation)
+        if not state_values:
+            raise ValueError(f"No Census county subdivisions found in {path}")
+        values.update(state_values)
+        sources.append({"url": url, "sha256": _sha256(path)})
+    return values, sources
+
+
+def parse_tax_rates(path: Path) -> tuple[dict[str, dict[str, str]], set[str]]:
     if not path.exists():
         raise ValueError(
-            f"Official-source tax file is required at {path}; see the committed template"
+            f"Generated tax file is required at {path}; run `npm run build:taxes`"
         )
     rates: dict[str, dict[str, str]] = {}
     urls: set[str] = set()
@@ -285,19 +454,24 @@ def parse_tax_rates(path: Path, year: int) -> tuple[dict[str, dict[str, str]], s
         reader = csv.DictReader(stream)
         required = {
             "county_fips",
-            "year",
+            "tax_year",
             "state_income_tax_rate",
             "local_sales_tax_rate",
-            "source_url",
+            "state_income_tax_source_url",
+            "local_sales_tax_source_url",
         }
         if not reader.fieldnames or not required.issubset(reader.fieldnames):
             raise ValueError(f"Tax CSV must contain {sorted(required)}")
         for row in reader:
-            if int(row["year"]) != year:
-                continue
             fips = row["county_fips"].strip().zfill(5)
-            source_url = row["source_url"].strip()
-            if len(fips) != 5 or not fips.isdigit() or not source_url.startswith("https://"):
+            income_url = row["state_income_tax_source_url"].strip()
+            sales_url = row["local_sales_tax_source_url"].strip()
+            if (
+                len(fips) != 5
+                or not fips.isdigit()
+                or not income_url.startswith("https://")
+                or not sales_url.startswith("https://")
+            ):
                 raise ValueError(f"Invalid or unsourced tax row: {row}")
             rates[fips] = {
                 "state_income_tax_rate": _required_rate(
@@ -306,9 +480,11 @@ def parse_tax_rates(path: Path, year: int) -> tuple[dict[str, dict[str, str]], s
                 "local_sales_tax_rate": _required_rate(
                     row["local_sales_tax_rate"], "local_sales_tax_rate"
                 ),
-                "source_url": source_url,
+                "tax_year": str(int(row["tax_year"])),
+                "state_income_tax_source_url": income_url,
+                "local_sales_tax_source_url": sales_url,
             }
-            urls.add(source_url)
+            urls.update((income_url, sales_url))
     return rates, urls
 
 
@@ -389,13 +565,29 @@ def build_county_features(
     land_path = _download(
         CENSUS_GAZETTEER_URL, config.cache_dir / "census_gazetteer.zip"
     )
+    subdivision_geography_path = _download(
+        CENSUS_SUBDIVISION_GAZETTEER_URL,
+        config.cache_dir / "census_subdivision_gazetteer.zip",
+    )
     zhvi = parse_zillow(zhvi_path, config.year, "zhvi")
     zori = parse_zillow(zori_path, config.year, "zori")
     population = parse_population(population_path, config.year)
     land_area = parse_land_area(land_path)
-    taxes, tax_urls = parse_tax_rates(config.tax_csv, config.year)
-    hud = (hud_client or HUDClient(config.hud_api_token)).county_fmrs(
-        config.year, allowed_counties=set(counties)
+    current_subdivision_county = parse_current_subdivision_counties(
+        subdivision_geography_path
+    )
+    taxes, tax_urls = parse_tax_rates(config.tax_csv)
+    subdivision_population, subdivision_sources = load_subdivision_population(
+        config.cache_dir
+    )
+    hud = (
+        hud_client
+        or HUDClient(config.hud_api_token, cache_dir=config.cache_dir / "hud")
+    ).county_fmrs(
+        config.year,
+        allowed_counties=set(counties),
+        subdivision_population=subdivision_population,
+        current_subdivision_county=current_subdivision_county,
     )
 
     missing_required = {
@@ -405,8 +597,12 @@ def build_county_features(
         "tax": sorted(set(counties) - set(taxes)),
     }
     if any(missing_required.values()):
-        counts = {key: len(value) for key, value in missing_required.items() if value}
-        raise ValueError(f"Required county feature coverage is incomplete: {counts}")
+        details = {
+            key: {"count": len(value), "sample": value[:20]}
+            for key, value in missing_required.items()
+            if value
+        }
+        raise ValueError(f"Required county feature coverage is incomplete: {details}")
 
     records: list[dict[str, object]] = []
     for fips in sorted(counties):
@@ -429,7 +625,13 @@ def build_county_features(
                     "zillow_observation": f"{config.year}-12-31",
                     "hud_fiscal_year": config.year,
                     "census_population_year": config.year,
-                    "tax_source_url": taxes[fips]["source_url"],
+                    "tax_year": int(taxes[fips]["tax_year"]),
+                    "state_income_tax_source_url": taxes[fips][
+                        "state_income_tax_source_url"
+                    ],
+                    "local_sales_tax_source_url": taxes[fips][
+                        "local_sales_tax_source_url"
+                    ],
                 },
             }
         )
@@ -459,6 +661,18 @@ def build_county_features(
                 "product_url": HUD_PRODUCT_URL,
                 "fiscal_year": config.year,
                 "authentication": "free HUD USER dataset API bearer token",
+                "new_england_county_aggregation": (
+                    "Town-level FMRs are weighted by 2020 Census PL 94-171 county-"
+                    "subdivision population when HUD publishes multiple values within "
+                    "one FR1 county."
+                ),
+                "subdivision_population_sources": subdivision_sources,
+                "current_subdivision_geography_url": (
+                    CENSUS_SUBDIVISION_GAZETTEER_URL
+                ),
+                "current_subdivision_geography_sha256": _sha256(
+                    subdivision_geography_path
+                ),
             },
             "census": {
                 "publisher": "U.S. Census Bureau",
@@ -471,6 +685,10 @@ def build_county_features(
             "tax": {
                 "definition": TAX_RATE_DEFINITION,
                 "source_urls": sorted(tax_urls),
+                "income_locality_exclusion": (
+                    "Local income taxes, including New York City and municipal taxes "
+                    "in parts of Ohio and Pennsylvania, are not modeled in v1."
+                ),
             },
             "missing_values": {
                 "zhvi": sum(record["zhvi"] is None for record in records),

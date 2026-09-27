@@ -27,6 +27,7 @@ jobs:
       - run: npm ci
       - run: python -m venv .venv
       - run: .venv/bin/python -m pip install -e 'backend[test]'
+      - run: npm run build:taxes
       - run: npm run build:county-features
         env:
           HUD_API_TOKEN: ${{ secrets.HUD_API_TOKEN }}
@@ -51,6 +52,7 @@ jobs:
             frontend/public/data/county_features.sources.json \
             frontend/public/data/county_rpp_estimates.json \
             frontend/public/data/county_rpp_model.metrics.json \
+            data/manual/county_tax_rates.csv \
             supabase/seeds/county_features.sql \
             supabase/seeds/county_rpp_estimates.sql
           git commit -m "data: refresh county RPP model"

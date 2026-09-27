@@ -1,0 +1,3144 @@
+"","FIPS Code","State Name","County Name","RPP All Items, experimental estimate"
+"1","01001","Alabama","Autauga County",87.8734758401856
+"2","01003","Alabama","Baldwin County",92.022
+"3","01005","Alabama","Barbour County",82.4956418783195
+"4","01007","Alabama","Bibb County",82.5148198559587
+"5","01009","Alabama","Blount County",81.3748027570415
+"6","01011","Alabama","Bullock County",87.5583839426009
+"7","01013","Alabama","Butler County",81.5800014587974
+"8","01015","Alabama","Calhoun County",83.677
+"9","01017","Alabama","Chambers County",82.4402674574564
+"10","01019","Alabama","Cherokee County",81.9738133810767
+"11","01021","Alabama","Chilton County",84.1134778901778
+"12","01023","Alabama","Choctaw County",81.5208874774815
+"13","01025","Alabama","Clarke County",81.7156565680307
+"14","01027","Alabama","Clay County",79.5410379811731
+"15","01029","Alabama","Cleburne County",85.2578748919764
+"16","01031","Alabama","Coffee County",88.6563361531238
+"17","01033","Alabama","Colbert County",86.5007794985233
+"18","01035","Alabama","Conecuh County",81.8152012276349
+"19","01037","Alabama","Coosa County",83.9051483698532
+"20","01039","Alabama","Covington County",81.4704296753987
+"21","01041","Alabama","Crenshaw County",86.739284789369
+"22","01043","Alabama","Cullman County",86.4103662385393
+"23","01045","Alabama","Dale County",84.6677634602257
+"24","01047","Alabama","Dallas County",84.1120366836817
+"25","01049","Alabama","DeKalb County",81.0241056482867
+"26","01051","Alabama","Elmore County",87.8787370942689
+"27","01053","Alabama","Escambia County",81.5122668624019
+"28","01055","Alabama","Etowah County",84.383
+"29","01057","Alabama","Fayette County",80.4976580046117
+"30","01059","Alabama","Franklin County",78.7464062526933
+"31","01061","Alabama","Geneva County",82.3727759380992
+"32","01063","Alabama","Greene County",85.4465763738429
+"33","01065","Alabama","Hale County",86.0064625188416
+"34","01067","Alabama","Henry County",86.2757108495524
+"35","01069","Alabama","Houston County",86.8889104871158
+"36","01071","Alabama","Jackson County",80.8443672504987
+"37","01073","Alabama","Jefferson County",91.6410180384182
+"38","01075","Alabama","Lamar County",80.0829754542762
+"39","01077","Alabama","Lauderdale County",84.6767642537515
+"40","01079","Alabama","Lawrence County",81.1556047915656
+"41","01081","Alabama","Lee County",89.589
+"42","01083","Alabama","Limestone County",90.757069771675
+"43","01085","Alabama","Lowndes County",85.7273600134479
+"44","01087","Alabama","Macon County",89.0397045752735
+"45","01089","Alabama","Madison County",91.6070228176714
+"46","01091","Alabama","Marengo County",83.4603335525301
+"47","01093","Alabama","Marion County",80.5457132488303
+"48","01095","Alabama","Marshall County",83.1385992715367
+"49","01097","Alabama","Mobile County",87.9169086368989
+"50","01099","Alabama","Monroe County",81.5820530607275
+"51","01101","Alabama","Montgomery County",88.9536907709703
+"52","01103","Alabama","Morgan County",87.4350883134033
+"53","01105","Alabama","Perry County",82.7515464276258
+"54","01107","Alabama","Pickens County",81.1542685378887
+"55","01109","Alabama","Pike County",87.9382423648622
+"56","01111","Alabama","Randolph County",80.5849363843303
+"57","01113","Alabama","Russell County",86.2278905380351
+"58","01115","Alabama","St. Clair County",88.0874817441735
+"59","01117","Alabama","Shelby County",93.9104578239507
+"60","01119","Alabama","Sumter County",84.4080383573689
+"61","01121","Alabama","Talladega County",82.7394148189838
+"62","01123","Alabama","Tallapoosa County",84.184254223164
+"63","01125","Alabama","Tuscaloosa County",88.7578671181622
+"64","01127","Alabama","Walker County",82.7597132757945
+"65","01129","Alabama","Washington County",81.4614756457372
+"66","01131","Alabama","Wilcox County",83.4893152795721
+"67","01133","Alabama","Winston County",79.6874235212738
+"68","02013","Alaska","Aleutians East Borough",100.408230784543
+"69","02016","Alaska","Aleutians West Census Area",105.53883629705
+"70","02020","Alaska","Anchorage Municipality",107.239328968148
+"71","02050","Alaska","Bethel Census Area",104.935593726861
+"72","02060","Alaska","Bristol Bay Borough",100.698797145426
+"73","02063","Alaska","Chugach Census Area",99.9011325548094
+"74","02066","Alaska","Copper River Census Area",97.1186690150509
+"75","02068","Alaska","Denali Borough",98.1179258453455
+"76","02070","Alaska","Dillingham Census Area",101.291098761374
+"77","02090","Alaska","Fairbanks North Star Borough",104.461
+"78","02100","Alaska","Haines Borough",99.5099366733439
+"79","02105","Alaska","Hoonah-Angoon Census Area",98.8826983102934
+"80","02110","Alaska","Juneau City and Borough",103.66196091289
+"81","02122","Alaska","Kenai Peninsula Borough",101.787841298403
+"82","02130","Alaska","Ketchikan Gateway Borough",102.222879743955
+"83","02150","Alaska","Kodiak Island Borough",105.12862291081
+"84","02158","Alaska","Kusilvak Census Area",96.2652437379162
+"85","02164","Alaska","Lake and Peninsula Borough",97.1268911656877
+"86","02170","Alaska","Matanuska-Susitna Borough",104.902023365619
+"87","02180","Alaska","Nome Census Area",102.328097727283
+"88","02185","Alaska","North Slope Borough",98.4504528570342
+"89","02188","Alaska","Northwest Arctic Borough",100.638474056367
+"90","02195","Alaska","Petersburg Borough",98.8865416732603
+"91","02198","Alaska","Prince of Wales-Hyder Census Area",94.8304437680161
+"92","02220","Alaska","Sitka City and Borough",104.016721337966
+"93","02230","Alaska","Skagway Municipality",99.8854404623176
+"94","02240","Alaska","Southeast Fairbanks Census Area",97.6560220669362
+"95","02275","Alaska","Wrangell City and Borough",98.9962832184207
+"96","02282","Alaska","Yakutat City and Borough",99.0171096988664
+"97","02290","Alaska","Yukon-Koyukuk Census Area",95.2352958050976
+"98","04001","Arizona","Apache County",80.3826956832013
+"99","04003","Arizona","Cochise County",87.772
+"100","04005","Arizona","Coconino County",95.612
+"101","04007","Arizona","Gila County",82.4922962141017
+"102","04009","Arizona","Graham County",81.0282707926721
+"103","04011","Arizona","Greenlee County",78.0585440317288
+"104","04012","Arizona","La Paz County",81.0732559082522
+"105","04013","Arizona","Maricopa County",99.5894094273237
+"106","04015","Arizona","Mohave County",89.34
+"107","04017","Arizona","Navajo County",80.7469597593423
+"108","04019","Arizona","Pima County",92.856
+"109","04021","Arizona","Pinal County",94.1379916914545
+"110","04023","Arizona","Santa Cruz County",75.6317122373371
+"111","04025","Arizona","Yavapai County",93.961
+"112","04027","Arizona","Yuma County",89.29
+"113","05001","Arkansas","Arkansas County",85.6184604870556
+"114","05003","Arkansas","Ashley County",83.1304317332201
+"115","05005","Arkansas","Baxter County",88.4151257975343
+"116","05007","Arkansas","Benton County",93.2651468646258
+"117","05009","Arkansas","Boone County",86.2578998494828
+"118","05011","Arkansas","Bradley County",85.2146004041044
+"119","05013","Arkansas","Calhoun County",84.4094772042449
+"120","05015","Arkansas","Carroll County",85.6802535512255
+"121","05017","Arkansas","Chicot County",84.4629746161024
+"122","05019","Arkansas","Clark County",86.0479410982109
+"123","05021","Arkansas","Clay County",81.7190418846212
+"124","05023","Arkansas","Cleburne County",86.9727052415486
+"125","05025","Arkansas","Cleveland County",86.4331457013198
+"126","05027","Arkansas","Columbia County",85.5537810110111
+"127","05029","Arkansas","Conway County",84.0040877288703
+"128","05031","Arkansas","Craighead County",87.5364565001238
+"129","05033","Arkansas","Crawford County",86.4721030506558
+"130","05035","Arkansas","Crittenden County",82.9619236632786
+"131","05037","Arkansas","Cross County",83.3469965647596
+"132","05039","Arkansas","Dallas County",84.3639245034229
+"133","05041","Arkansas","Desha County",84.8862850387272
+"134","05043","Arkansas","Drew County",86.1251542516835
+"135","05045","Arkansas","Faulkner County",90.6302464034689
+"136","05047","Arkansas","Franklin County",83.9808336463928
+"137","05049","Arkansas","Fulton County",83.9326467099042
+"138","05051","Arkansas","Garland County",88.673
+"139","05053","Arkansas","Grant County",90.3586826660108
+"140","05055","Arkansas","Greene County",84.2385418359821
+"141","05057","Arkansas","Hempstead County",84.22556274915
+"142","05059","Arkansas","Hot Spring County",84.4537099963245
+"143","05061","Arkansas","Howard County",83.7675771854008
+"144","05063","Arkansas","Independence County",84.4677951925764
+"145","05065","Arkansas","Izard County",87.0545687149716
+"146","05067","Arkansas","Jackson County",83.5670663625728
+"147","05069","Arkansas","Jefferson County",87.5954105189584
+"148","05071","Arkansas","Johnson County",83.9924771532723
+"149","05073","Arkansas","Lafayette County",85.2208357863314
+"150","05075","Arkansas","Lawrence County",86.1967753122266
+"151","05077","Arkansas","Lee County",81.7319765352874
+"152","05079","Arkansas","Lincoln County",86.1347437176332
+"153","05081","Arkansas","Little River County",86.6077088205683
+"154","05083","Arkansas","Logan County",82.9585683130666
+"155","05085","Arkansas","Lonoke County",89.9022284572193
+"156","05087","Arkansas","Madison County",87.7600989145868
+"157","05089","Arkansas","Marion County",88.1785256964909
+"158","05091","Arkansas","Miller County",88.4288960855819
+"159","05093","Arkansas","Mississippi County",83.3181772734386
+"160","05095","Arkansas","Monroe County",80.6348617171578
+"161","05097","Arkansas","Montgomery County",86.1512351591771
+"162","05099","Arkansas","Nevada County",83.468178410866
+"163","05101","Arkansas","Newton County",85.353818131415
+"164","05103","Arkansas","Ouachita County",84.5673167499586
+"165","05105","Arkansas","Perry County",85.6554846620439
+"166","05107","Arkansas","Phillips County",84.6955879100549
+"167","05109","Arkansas","Pike County",85.5194454748961
+"168","05111","Arkansas","Poinsett County",82.5609696074341
+"169","05113","Arkansas","Polk County",84.9963656544648
+"170","05115","Arkansas","Pope County",85.4936270139915
+"171","05117","Arkansas","Prairie County",86.3771733513257
+"172","05119","Arkansas","Pulaski County",92.4955590930515
+"173","05121","Arkansas","Randolph County",84.4294994281193
+"174","05123","Arkansas","St. Francis County",83.1598882163713
+"175","05125","Arkansas","Saline County",91.337382108024
+"176","05127","Arkansas","Scott County",82.9847111655981
+"177","05129","Arkansas","Searcy County",86.8565975059523
+"178","05131","Arkansas","Sebastian County",87.8820094515178
+"179","05133","Arkansas","Sevier County",84.9932639738599
+"180","05135","Arkansas","Sharp County",83.4938525036031
+"181","05137","Arkansas","Stone County",86.1134809592057
+"182","05139","Arkansas","Union County",86.4875335665679
+"183","05141","Arkansas","Van Buren County",86.1484021791089
+"184","05143","Arkansas","Washington County",93.0410172503974
+"185","05145","Arkansas","White County",85.0025391445211
+"186","05147","Arkansas","Woodruff County",83.9465729772808
+"187","05149","Arkansas","Yell County",82.888973965134
+"188","06001","California","Alameda County",117.084861634707
+"189","06003","California","Alpine County",118.827780473698
+"190","06005","California","Amador County",102.789468391511
+"191","06007","California","Butte County",102.489
+"192","06009","California","Calaveras County",104.334925343687
+"193","06011","California","Colusa County",92.877920667185
+"194","06013","California","Contra Costa County",114.965981833729
+"195","06015","California","Del Norte County",95.1512330388905
+"196","06017","California","El Dorado County",112.025551404367
+"197","06019","California","Fresno County",101.52
+"198","06021","California","Glenn County",91.927036295987
+"199","06023","California","Humboldt County",103.427137520733
+"200","06025","California","Imperial County",95.582
+"201","06027","California","Inyo County",94.2162715443821
+"202","06029","California","Kern County",100.897
+"203","06031","California","Kings County",98.531
+"204","06033","California","Lake County",101.078020029731
+"205","06035","California","Lassen County",97.8098934249613
+"206","06037","California","Los Angeles County",112.106331115237
+"207","06039","California","Madera County",100.049
+"208","06041","California","Marin County",127.241773749929
+"209","06043","California","Mariposa County",99.2247223727285
+"210","06045","California","Mendocino County",100.578533260153
+"211","06047","California","Merced County",100.29
+"212","06049","California","Modoc County",93.6316765158112
+"213","06051","California","Mono County",101.515813310474
+"214","06053","California","Monterey County",109.268
+"215","06055","California","Napa County",112.486
+"216","06057","California","Nevada County",112.426077325753
+"217","06059","California","Orange County",120.302281584604
+"218","06061","California","Placer County",113.604931244119
+"219","06063","California","Plumas County",98.1522539233995
+"220","06065","California","Riverside County",106.966646969645
+"221","06067","California","Sacramento County",103.837603184234
+"222","06069","California","San Benito County",99.5883589137443
+"223","06071","California","San Bernardino County",103.844823950869
+"224","06073","California","San Diego County",115.091
+"225","06075","California","San Francisco County",123.255204868123
+"226","06077","California","San Joaquin County",104.609
+"227","06079","California","San Luis Obispo County",108.631
+"228","06081","California","San Mateo County",127.743894022551
+"229","06083","California","Santa Barbara County",111.817
+"230","06085","California","Santa Clara County",112.024151501688
+"231","06087","California","Santa Cruz County",109.095
+"232","06089","California","Shasta County",99.34
+"233","06091","California","Sierra County",109.562593037495
+"234","06093","California","Siskiyou County",94.0495146306271
+"235","06095","California","Solano County",109.41
+"236","06097","California","Sonoma County",109.878
+"237","06099","California","Stanislaus County",102.967
+"238","06101","California","Sutter County",103.172958535354
+"239","06103","California","Tehama County",93.9143658815699
+"240","06105","California","Trinity County",93.6763862692606
+"241","06107","California","Tulare County",98.924
+"242","06109","California","Tuolumne County",100.33564104472
+"243","06111","California","Ventura County",111.466
+"244","06113","California","Yolo County",105.42685488998
+"245","06115","California","Yuba County",99.478917588073
+"246","08001","Colorado","Adams County",103.767906643651
+"247","08003","Colorado","Alamosa County",90.6865617771374
+"248","08005","Colorado","Arapahoe County",108.235267053331
+"249","08007","Colorado","Archuleta County",99.7753422203483
+"250","08009","Colorado","Baca County",74.7974713866431
+"251","08011","Colorado","Bent County",85.0576344711876
+"252","08013","Colorado","Boulder County",101.026
+"253","08014","Colorado","Broomfield County",112.266566897312
+"254","08015","Colorado","Chaffee County",93.7400645861725
+"255","08017","Colorado","Cheyenne County",79.2437495186059
+"256","08019","Colorado","Clear Creek County",104.119493654174
+"257","08021","Colorado","Conejos County",88.3995378658588
+"258","08023","Colorado","Costilla County",88.3294504311953
+"259","08025","Colorado","Crowley County",87.7547021358938
+"260","08027","Colorado","Custer County",84.7654916928846
+"261","08029","Colorado","Delta County",87.9094171449916
+"262","08031","Colorado","Denver County",110.395321196349
+"263","08033","Colorado","Dolores County",87.2742883150641
+"264","08035","Colorado","Douglas County",116.156012309929
+"265","08037","Colorado","Eagle County",107.773956877262
+"266","08039","Colorado","Elbert County",102.228049402677
+"267","08041","Colorado","El Paso County",96.5088415873723
+"268","08043","Colorado","Fremont County",87.7797788500183
+"269","08045","Colorado","Garfield County",95.329774887778
+"270","08047","Colorado","Gilpin County",109.242316231406
+"271","08049","Colorado","Grand County",100.430120832713
+"272","08051","Colorado","Gunnison County",93.2564804084356
+"273","08053","Colorado","Hinsdale County",90.5419848766708
+"274","08055","Colorado","Huerfano County",84.1847815138939
+"275","08057","Colorado","Jackson County",94.6854379213436
+"276","08059","Colorado","Jefferson County",109.12825537846
+"277","08061","Colorado","Kiowa County",82.38458723357
+"278","08063","Colorado","Kit Carson County",83.0251222822343
+"279","08065","Colorado","Lake County",105.298430575272
+"280","08067","Colorado","La Plata County",99.5334758244935
+"281","08069","Colorado","Larimer County",97.722
+"282","08071","Colorado","Las Animas County",85.6384287105685
+"283","08073","Colorado","Lincoln County",88.2343835854365
+"284","08075","Colorado","Logan County",84.0010833938938
+"285","08077","Colorado","Mesa County",92.237
+"286","08079","Colorado","Mineral County",99.6077651915649
+"287","08081","Colorado","Moffat County",96.6345603645131
+"288","08083","Colorado","Montezuma County",87.7146727384991
+"289","08085","Colorado","Montrose County",92.1916789382527
+"290","08087","Colorado","Morgan County",85.9519169281391
+"291","08089","Colorado","Otero County",84.9935392362946
+"292","08091","Colorado","Ouray County",97.0196525000863
+"293","08093","Colorado","Park County",110.82292837015
+"294","08095","Colorado","Phillips County",83.3868129507362
+"295","08097","Colorado","Pitkin County",105.501738843062
+"296","08099","Colorado","Prowers County",80.1459383139811
+"297","08101","Colorado","Pueblo County",90.687
+"298","08103","Colorado","Rio Blanco County",88.0127242016934
+"299","08105","Colorado","Rio Grande County",84.8634318785046
+"300","08107","Colorado","Routt County",106.215437156566
+"301","08109","Colorado","Saguache County",83.2166899054265
+"302","08111","Colorado","San Juan County",96.8760559142151
+"303","08113","Colorado","San Miguel County",101.967998021197
+"304","08115","Colorado","Sedgwick County",80.2284917528543
+"305","08117","Colorado","Summit County",114.077216606138
+"306","08119","Colorado","Teller County",99.0194942853585
+"307","08121","Colorado","Washington County",83.2694169624387
+"308","08123","Colorado","Weld County",95.298
+"309","08125","Colorado","Yuma County",82.719784777017
+"310","09001","Connecticut","Fairfield County",106.137
+"311","09003","Connecticut","Hartford County",100.907545081856
+"312","09005","Connecticut","Litchfield County",98.86
+"313","09007","Connecticut","Middlesex County",103.801784243071
+"314","09009","Connecticut","New Haven County",101.322
+"315","09011","Connecticut","New London County",100.031
+"316","09013","Connecticut","Tolland County",105.134462787123
+"317","09015","Connecticut","Windham County",96.0780527695755
+"318","10001","Delaware","Kent County",95.859
+"319","10003","Delaware","New Castle County",98.6516779151809
+"320","10005","Delaware","Sussex County",95.7413302881005
+"321","11001","District of Columbia","District of Columbia",112.70088964497
+"322","12001","Florida","Alachua County",98.0163213186102
+"323","12003","Florida","Baker County",88.7020820202267
+"324","12005","Florida","Bay County",96.768
+"325","12007","Florida","Bradford County",89.0662982631314
+"326","12009","Florida","Brevard County",98.939
+"327","12011","Florida","Broward County",110.168037061106
+"328","12013","Florida","Calhoun County",86.3003436302299
+"329","12015","Florida","Charlotte County",96.235
+"330","12017","Florida","Citrus County",93.718
+"331","12019","Florida","Clay County",96.9619995362996
+"332","12021","Florida","Collier County",102.231
+"333","12023","Florida","Columbia County",91.1224310326792
+"334","12027","Florida","DeSoto County",90.1396690086996
+"335","12029","Florida","Dixie County",86.0761072242619
+"336","12031","Florida","Duval County",97.0469294133871
+"337","12033","Florida","Escambia County",94.2288003549607
+"338","12035","Florida","Flagler County",100.480720421593
+"339","12037","Florida","Franklin County",94.2728232991646
+"340","12039","Florida","Gadsden County",85.4286557540901
+"341","12041","Florida","Gilchrist County",86.5291201099289
+"342","12043","Florida","Glades County",87.2512207446184
+"343","12045","Florida","Gulf County",97.3976189045417
+"344","12047","Florida","Hamilton County",89.7929643074877
+"345","12049","Florida","Hardee County",88.2077674857965
+"346","12051","Florida","Hendry County",88.6918121950024
+"347","12053","Florida","Hernando County",93.2187843009912
+"348","12055","Florida","Highlands County",89.837
+"349","12057","Florida","Hillsborough County",98.7792618759616
+"350","12059","Florida","Holmes County",86.0872444662818
+"351","12061","Florida","Indian River County",98.12
+"352","12063","Florida","Jackson County",88.1145072486479
+"353","12065","Florida","Jefferson County",91.620572982656
+"354","12067","Florida","Lafayette County",88.8290578932677
+"355","12069","Florida","Lake County",96.9900293663353
+"356","12071","Florida","Lee County",99.965
+"357","12073","Florida","Leon County",97.030029461318
+"358","12075","Florida","Levy County",85.6098289037748
+"359","12077","Florida","Liberty County",87.911323812208
+"360","12079","Florida","Madison County",90.1480119546898
+"361","12081","Florida","Manatee County",97.1683020752951
+"362","12083","Florida","Marion County",93.833
+"363","12085","Florida","Martin County",101.489026949666
+"364","12086","Florida","Miami-Dade County",109.357749302237
+"365","12087","Florida","Monroe County",118.876143832893
+"366","12089","Florida","Nassau County",99.0491256059142
+"367","12091","Florida","Okaloosa County",96.5669923930208
+"368","12093","Florida","Okeechobee County",91.760843386367
+"369","12095","Florida","Orange County",100.633939733336
+"370","12097","Florida","Osceola County",96.8603444639573
+"371","12099","Florida","Palm Beach County",110.861630997812
+"372","12101","Florida","Pasco County",96.8944066207218
+"373","12103","Florida","Pinellas County",101.288440801278
+"374","12105","Florida","Polk County",96.097
+"375","12107","Florida","Putnam County",89.9219339415646
+"376","12109","Florida","St. Johns County",107.06529336874
+"377","12111","Florida","St. Lucie County",97.0779060534027
+"378","12113","Florida","Santa Rosa County",98.3465534932786
+"379","12115","Florida","Sarasota County",101.240195263392
+"380","12117","Florida","Seminole County",102.081823195244
+"381","12119","Florida","Sumter County",95.988
+"382","12121","Florida","Suwannee County",90.9746001777671
+"383","12123","Florida","Taylor County",87.7213612524083
+"384","12125","Florida","Union County",88.3480863716835
+"385","12127","Florida","Volusia County",97.2424511920436
+"386","12129","Florida","Wakulla County",89.9534180904136
+"387","12131","Florida","Walton County",97.6111831505752
+"388","12133","Florida","Washington County",86.083213990733
+"389","13001","Georgia","Appling County",85.3857087925604
+"390","13003","Georgia","Atkinson County",82.5941642486125
+"391","13005","Georgia","Bacon County",83.7851099328338
+"392","13007","Georgia","Baker County",83.398451679831
+"393","13009","Georgia","Baldwin County",88.7951617895737
+"394","13011","Georgia","Banks County",94.4195534033483
+"395","13013","Georgia","Barrow County",95.4637067541809
+"396","13015","Georgia","Bartow County",92.45175072064
+"397","13017","Georgia","Ben Hill County",87.7798945837562
+"398","13019","Georgia","Berrien County",87.6584252744912
+"399","13021","Georgia","Bibb County",87.8386222778782
+"400","13023","Georgia","Bleckley County",84.8002903880015
+"401","13025","Georgia","Brantley County",82.5764475234938
+"402","13027","Georgia","Brooks County",86.3190435813516
+"403","13029","Georgia","Bryan County",98.7595752487644
+"404","13031","Georgia","Bulloch County",88.907020897601
+"405","13033","Georgia","Burke County",84.7431800265634
+"406","13035","Georgia","Butts County",90.57522600866
+"407","13037","Georgia","Calhoun County",87.154704652854
+"408","13039","Georgia","Camden County",94.1858971910002
+"409","13043","Georgia","Candler County",86.4500395027966
+"410","13045","Georgia","Carroll County",91.0947947229436
+"411","13047","Georgia","Catoosa County",88.5918276808658
+"412","13049","Georgia","Charlton County",90.0671325599243
+"413","13051","Georgia","Chatham County",96.1464433291488
+"414","13053","Georgia","Chattahoochee County",89.8834509226284
+"415","13055","Georgia","Chattooga County",83.7141342148169
+"416","13057","Georgia","Cherokee County",100.152701603887
+"417","13059","Georgia","Clarke County",95.1591630265888
+"418","13061","Georgia","Clay County",84.078449770833
+"419","13063","Georgia","Clayton County",91.8666188608345
+"420","13065","Georgia","Clinch County",84.2866976102367
+"421","13067","Georgia","Cobb County",101.883564490741
+"422","13069","Georgia","Coffee County",84.432442862759
+"423","13071","Georgia","Colquitt County",88.3371716985558
+"424","13073","Georgia","Columbia County",96.3529825339041
+"425","13075","Georgia","Cook County",88.9507001839446
+"426","13077","Georgia","Coweta County",97.1955740345549
+"427","13079","Georgia","Crawford County",97.0643348810245
+"428","13081","Georgia","Crisp County",84.9747584232952
+"429","13083","Georgia","Dade County",84.0654312925598
+"430","13085","Georgia","Dawson County",97.8087843945409
+"431","13087","Georgia","Decatur County",86.1086768372975
+"432","13089","Georgia","DeKalb County",99.9388444911608
+"433","13091","Georgia","Dodge County",84.2369409499737
+"434","13093","Georgia","Dooly County",84.2494648057978
+"435","13095","Georgia","Dougherty County",89.3489264979449
+"436","13097","Georgia","Douglas County",94.8185978211559
+"437","13099","Georgia","Early County",90.4934459468193
+"438","13101","Georgia","Echols County",86.570702141805
+"439","13103","Georgia","Effingham County",89.951289002657
+"440","13105","Georgia","Elbert County",84.8273688425687
+"441","13107","Georgia","Emanuel County",82.7966496914574
+"442","13109","Georgia","Evans County",85.4525480156941
+"443","13111","Georgia","Fannin County",87.6047597710088
+"444","13113","Georgia","Fayette County",102.331521224977
+"445","13115","Georgia","Floyd County",90.898
+"446","13117","Georgia","Forsyth County",104.250487406196
+"447","13119","Georgia","Franklin County",89.166946974817
+"448","13121","Georgia","Fulton County",105.877832980596
+"449","13123","Georgia","Gilmer County",87.3798550542399
+"450","13125","Georgia","Glascock County",83.0023656552459
+"451","13127","Georgia","Glynn County",91.6831196988526
+"452","13129","Georgia","Gordon County",88.2534745679124
+"453","13131","Georgia","Grady County",84.8857626175945
+"454","13133","Georgia","Greene County",84.6196057479776
+"455","13135","Georgia","Gwinnett County",97.7516598882394
+"456","13137","Georgia","Habersham County",86.1382378668925
+"457","13139","Georgia","Hall County",94.046
+"458","13141","Georgia","Hancock County",88.080649803474
+"459","13143","Georgia","Haralson County",85.7839056726339
+"460","13145","Georgia","Harris County",87.7322603536046
+"461","13147","Georgia","Hart County",84.6387874498551
+"462","13149","Georgia","Heard County",83.704446211032
+"463","13151","Georgia","Henry County",96.0451223329405
+"464","13153","Georgia","Houston County",90.663724913146
+"465","13155","Georgia","Irwin County",88.0549634055385
+"466","13157","Georgia","Jackson County",94.8711794739029
+"467","13159","Georgia","Jasper County",91.7093117964045
+"468","13161","Georgia","Jeff Davis County",83.353230185586
+"469","13163","Georgia","Jefferson County",83.2595028880044
+"470","13165","Georgia","Jenkins County",83.3023150364624
+"471","13167","Georgia","Johnson County",86.1805953901485
+"472","13169","Georgia","Jones County",84.7619671582647
+"473","13171","Georgia","Lamar County",84.8918775483031
+"474","13173","Georgia","Lanier County",87.1553612627271
+"475","13175","Georgia","Laurens County",87.6585781764618
+"476","13177","Georgia","Lee County",92.3170701005574
+"477","13179","Georgia","Liberty County",94.4906467425286
+"478","13181","Georgia","Lincoln County",84.6861331836785
+"479","13183","Georgia","Long County",89.8440863538813
+"480","13185","Georgia","Lowndes County",88.6350632262744
+"481","13187","Georgia","Lumpkin County",90.1313582912338
+"482","13189","Georgia","McDuffie County",85.3686606314256
+"483","13191","Georgia","McIntosh County",90.316618017838
+"484","13193","Georgia","Macon County",100.157474227972
+"485","13195","Georgia","Madison County",88.6875978479605
+"486","13197","Georgia","Marion County",85.9875161783293
+"487","13199","Georgia","Meriwether County",87.7164440090375
+"488","13201","Georgia","Miller County",85.1416206537767
+"489","13205","Georgia","Mitchell County",84.5036636069058
+"490","13207","Georgia","Monroe County",83.3044957949103
+"491","13209","Georgia","Montgomery County",85.3209801300465
+"492","13211","Georgia","Morgan County",86.3342436916786
+"493","13213","Georgia","Murray County",90.877933621486
+"494","13215","Georgia","Muscogee County",90.1099798447001
+"495","13217","Georgia","Newton County",91.9220489600722
+"496","13219","Georgia","Oconee County",96.7230571570807
+"497","13221","Georgia","Oglethorpe County",93.3174830297744
+"498","13223","Georgia","Paulding County",95.6751994287839
+"499","13225","Georgia","Peach County",99.6981259886059
+"500","13227","Georgia","Pickens County",90.2734269458843
+"501","13229","Georgia","Pierce County",84.9971567046668
+"502","13231","Georgia","Pike County",89.9009672409889
+"503","13233","Georgia","Polk County",85.266854570303
+"504","13235","Georgia","Pulaski County",85.9889727104132
+"505","13237","Georgia","Putnam County",86.0679124482713
+"506","13239","Georgia","Quitman County",87.3661255926814
+"507","13241","Georgia","Rabun County",88.3106106844484
+"508","13243","Georgia","Randolph County",85.9171982374984
+"509","13245","Georgia","Richmond County",92.211847301686
+"510","13247","Georgia","Rockdale County",96.4344450562019
+"511","13249","Georgia","Schley County",86.0575789197796
+"512","13251","Georgia","Screven County",86.3163835627514
+"513","13253","Georgia","Seminole County",86.7668511688295
+"514","13255","Georgia","Spalding County",90.3513975849081
+"515","13257","Georgia","Stephens County",85.0779393762052
+"516","13259","Georgia","Stewart County",86.7613192088638
+"517","13261","Georgia","Sumter County",90.722300052228
+"518","13263","Georgia","Talbot County",85.5738338161028
+"519","13265","Georgia","Taliaferro County",82.7022042327588
+"520","13267","Georgia","Tattnall County",85.119454436792
+"521","13269","Georgia","Taylor County",100.202763621878
+"522","13271","Georgia","Telfair County",82.9094407220117
+"523","13273","Georgia","Terrell County",89.4437357623327
+"524","13275","Georgia","Thomas County",93.4636916953874
+"525","13277","Georgia","Tift County",88.2035989165258
+"526","13279","Georgia","Toombs County",84.9021224607977
+"527","13281","Georgia","Towns County",88.0411444646394
+"528","13283","Georgia","Treutlen County",84.1527309976293
+"529","13285","Georgia","Troup County",90.3504569869573
+"530","13287","Georgia","Turner County",82.7172779462717
+"531","13289","Georgia","Twiggs County",85.5049525036802
+"532","13291","Georgia","Union County",88.0152761664132
+"533","13293","Georgia","Upson County",84.7720635468356
+"534","13295","Georgia","Walker County",84.9298469001594
+"535","13297","Georgia","Walton County",92.2892558335472
+"536","13299","Georgia","Ware County",85.1904247035483
+"537","13301","Georgia","Warren County",83.3219181344818
+"538","13303","Georgia","Washington County",85.3237398928705
+"539","13305","Georgia","Wayne County",84.8845207021519
+"540","13307","Georgia","Webster County",89.292579021752
+"541","13309","Georgia","Wheeler County",84.164771640118
+"542","13311","Georgia","White County",87.0448244433753
+"543","13313","Georgia","Whitfield County",90.683621727216
+"544","13315","Georgia","Wilcox County",83.7988884788002
+"545","13317","Georgia","Wilkes County",84.1209575847666
+"546","13319","Georgia","Wilkinson County",87.7515050449537
+"547","13321","Georgia","Worth County",84.4784295140251
+"548","15001","Hawaii","Hawaii County",106.431829933623
+"549","15003","Hawaii","Honolulu County",114.025
+"550","15005","Hawaii","Kalawao County",117.529365601775
+"551","15007","Hawaii","Kauai County",110.562073238941
+"552","15009","Hawaii","Maui County",111.145
+"553","16001","Idaho","Ada County",97.1726633216537
+"554","16003","Idaho","Adams County",89.6347905528083
+"555","16005","Idaho","Bannock County",88.5824671908932
+"556","16007","Idaho","Bear Lake County",83.458749322865
+"557","16009","Idaho","Benewah County",89.2051511829135
+"558","16011","Idaho","Bingham County",82.7555172996386
+"559","16013","Idaho","Blaine County",103.376531356702
+"560","16015","Idaho","Boise County",92.0788156280847
+"561","16017","Idaho","Bonner County",89.8212734708703
+"562","16019","Idaho","Bonneville County",90.6221087603575
+"563","16021","Idaho","Boundary County",86.8474577603894
+"564","16023","Idaho","Butte County",99.8479684724473
+"565","16025","Idaho","Camas County",102.463544303184
+"566","16027","Idaho","Canyon County",87.9811258884246
+"567","16029","Idaho","Caribou County",86.0807534147947
+"568","16031","Idaho","Cassia County",82.4722249601606
+"569","16033","Idaho","Clark County",82.7938535029824
+"570","16035","Idaho","Clearwater County",95.3702894887835
+"571","16037","Idaho","Custer County",98.2588952169413
+"572","16039","Idaho","Elmore County",87.109262806437
+"573","16041","Idaho","Franklin County",92.6597882857879
+"574","16043","Idaho","Fremont County",84.3863476535531
+"575","16045","Idaho","Gem County",84.3928264836539
+"576","16047","Idaho","Gooding County",83.9103986364925
+"577","16049","Idaho","Idaho County",94.8185312744099
+"578","16051","Idaho","Jefferson County",88.5838352848065
+"579","16053","Idaho","Jerome County",85.4307206452244
+"580","16055","Idaho","Kootenai County",93.738
+"581","16057","Idaho","Latah County",92.4560454911225
+"582","16059","Idaho","Lemhi County",93.0560936288899
+"583","16061","Idaho","Lewis County",94.2855651909608
+"584","16063","Idaho","Lincoln County",82.9595812214413
+"585","16065","Idaho","Madison County",84.5394184330006
+"586","16067","Idaho","Minidoka County",80.5401453251227
+"587","16069","Idaho","Nez Perce County",89.9157509297965
+"588","16071","Idaho","Oneida County",85.13888629291
+"589","16073","Idaho","Owyhee County",83.6523881012368
+"590","16075","Idaho","Payette County",91.0696840917651
+"591","16077","Idaho","Power County",87.6613665883286
+"592","16079","Idaho","Shoshone County",89.0393681273305
+"593","16081","Idaho","Teton County",107.541604564571
+"594","16083","Idaho","Twin Falls County",90.948124266727
+"595","16085","Idaho","Valley County",92.4486894778008
+"596","16087","Idaho","Washington County",89.4792492072009
+"597","17001","Illinois","Adams County",88.9104974341577
+"598","17003","Illinois","Alexander County",84.2254126746092
+"599","17005","Illinois","Bond County",86.1338447902862
+"600","17007","Illinois","Boone County",92.977390540429
+"601","17009","Illinois","Brown County",88.4509148146498
+"602","17011","Illinois","Bureau County",88.1150233182919
+"603","17013","Illinois","Calhoun County",84.0475666446961
+"604","17015","Illinois","Carroll County",87.8321993872252
+"605","17017","Illinois","Cass County",84.8011340039108
+"606","17019","Illinois","Champaign County",93.3563343030953
+"607","17021","Illinois","Christian County",86.5090428506711
+"608","17023","Illinois","Clark County",86.5358815683271
+"609","17025","Illinois","Clay County",87.0952908428523
+"610","17027","Illinois","Clinton County",90.3499297709653
+"611","17029","Illinois","Coles County",86.583534202007
+"612","17031","Illinois","Cook County",105.57701810694
+"613","17033","Illinois","Crawford County",84.2196711711414
+"614","17035","Illinois","Cumberland County",86.4537628486221
+"615","17037","Illinois","DeKalb County",101.308236090383
+"616","17039","Illinois","De Witt County",88.045099029081
+"617","17041","Illinois","Douglas County",86.3244136221495
+"618","17043","Illinois","DuPage County",111.309714935859
+"619","17045","Illinois","Edgar County",86.224814354908
+"620","17047","Illinois","Edwards County",83.9287876383356
+"621","17049","Illinois","Effingham County",87.3068996503367
+"622","17051","Illinois","Fayette County",85.2000413404871
+"623","17053","Illinois","Ford County",90.1339982993061
+"624","17055","Illinois","Franklin County",84.8582349463113
+"625","17057","Illinois","Fulton County",87.9022728875251
+"626","17059","Illinois","Gallatin County",82.6222940273024
+"627","17061","Illinois","Greene County",84.5337052655958
+"628","17063","Illinois","Grundy County",100.806953528167
+"629","17065","Illinois","Hamilton County",84.3569305802061
+"630","17067","Illinois","Hancock County",87.4903917904812
+"631","17069","Illinois","Hardin County",82.4136468071229
+"632","17071","Illinois","Henderson County",89.3394688006161
+"633","17073","Illinois","Henry County",88.4149226957873
+"634","17075","Illinois","Iroquois County",85.4238578274354
+"635","17077","Illinois","Jackson County",86.4755086969416
+"636","17079","Illinois","Jasper County",85.5482675223407
+"637","17081","Illinois","Jefferson County",87.2478382620283
+"638","17083","Illinois","Jersey County",84.4773515231653
+"639","17085","Illinois","Jo Daviess County",88.9312412728661
+"640","17087","Illinois","Johnson County",84.939353798535
+"641","17089","Illinois","Kane County",103.761817866148
+"642","17091","Illinois","Kankakee County",91.849
+"643","17093","Illinois","Kendall County",104.963482491263
+"644","17095","Illinois","Knox County",87.794872099421
+"645","17097","Illinois","Lake County",106.97249583839
+"646","17099","Illinois","LaSalle County",90.8962271010055
+"647","17101","Illinois","Lawrence County",84.9616825677719
+"648","17103","Illinois","Lee County",88.2477343965729
+"649","17105","Illinois","Livingston County",88.6003599573787
+"650","17107","Illinois","Logan County",86.5287119018046
+"651","17109","Illinois","McDonough County",88.9341430150875
+"652","17111","Illinois","McHenry County",104.748520494948
+"653","17113","Illinois","McLean County",92.772
+"654","17115","Illinois","Macon County",89.406
+"655","17117","Illinois","Macoupin County",87.7114987626389
+"656","17119","Illinois","Madison County",90.9338033500799
+"657","17121","Illinois","Marion County",83.9440929526554
+"658","17123","Illinois","Marshall County",92.0376148580754
+"659","17125","Illinois","Mason County",88.8628301955236
+"660","17127","Illinois","Massac County",86.774763462838
+"661","17129","Illinois","Menard County",89.8966288374009
+"662","17131","Illinois","Mercer County",88.4969509561201
+"663","17133","Illinois","Monroe County",92.3730743508124
+"664","17135","Illinois","Montgomery County",86.0297984875576
+"665","17137","Illinois","Morgan County",85.4036785753576
+"666","17139","Illinois","Moultrie County",85.4019122921679
+"667","17141","Illinois","Ogle County",90.5422346254697
+"668","17143","Illinois","Peoria County",90.8819453012371
+"669","17145","Illinois","Perry County",83.8231463684546
+"670","17147","Illinois","Piatt County",91.7902489469974
+"671","17149","Illinois","Pike County",84.7200388892633
+"672","17151","Illinois","Pope County",81.9914969747263
+"673","17153","Illinois","Pulaski County",85.7669224135226
+"674","17155","Illinois","Putnam County",87.5862094344604
+"675","17157","Illinois","Randolph County",86.083722637574
+"676","17159","Illinois","Richland County",84.3433188937823
+"677","17161","Illinois","Rock Island County",90.437664877455
+"678","17163","Illinois","St. Clair County",92.8192700945832
+"679","17165","Illinois","Saline County",85.0389229315503
+"680","17167","Illinois","Sangamon County",91.6142336380033
+"681","17169","Illinois","Schuyler County",89.2206269572717
+"682","17171","Illinois","Scott County",83.7560634732501
+"683","17173","Illinois","Shelby County",84.439086852614
+"684","17175","Illinois","Stark County",86.9079026524044
+"685","17177","Illinois","Stephenson County",89.9464688405199
+"686","17179","Illinois","Tazewell County",88.5679681188623
+"687","17181","Illinois","Union County",87.4197135697854
+"688","17183","Illinois","Vermilion County",87.94
+"689","17185","Illinois","Wabash County",85.4555304163114
+"690","17187","Illinois","Warren County",88.3664895583879
+"691","17189","Illinois","Washington County",87.7099522842754
+"692","17191","Illinois","Wayne County",85.1941168931098
+"693","17193","Illinois","White County",86.8287434241902
+"694","17195","Illinois","Whiteside County",87.8955460724657
+"695","17197","Illinois","Will County",103.854915386594
+"696","17199","Illinois","Williamson County",86.5424678262671
+"697","17201","Illinois","Winnebago County",93.1526482579119
+"698","17203","Illinois","Woodford County",93.4848896138766
+"699","18001","Indiana","Adams County",85.6895776792674
+"700","18003","Indiana","Allen County",91.9387931977323
+"701","18005","Indiana","Bartholomew County",91.738
+"702","18007","Indiana","Benton County",90.2897642534346
+"703","18009","Indiana","Blackford County",87.4897322177886
+"704","18011","Indiana","Boone County",96.287058971064
+"705","18013","Indiana","Brown County",91.4558737608786
+"706","18015","Indiana","Carroll County",90.2959318360115
+"707","18017","Indiana","Cass County",86.3969844753512
+"708","18019","Indiana","Clark County",89.8794537202476
+"709","18021","Indiana","Clay County",86.3674807408947
+"710","18023","Indiana","Clinton County",86.600707518489
+"711","18025","Indiana","Crawford County",85.77980666044
+"712","18027","Indiana","Daviess County",86.1855758746199
+"713","18029","Indiana","Dearborn County",90.13595513186
+"714","18031","Indiana","Decatur County",88.5780719737387
+"715","18033","Indiana","DeKalb County",88.7187543900143
+"716","18035","Indiana","Delaware County",88.888
+"717","18037","Indiana","Dubois County",88.6261269878483
+"718","18039","Indiana","Elkhart County",87.619
+"719","18041","Indiana","Fayette County",85.7271584048067
+"720","18043","Indiana","Floyd County",90.4446920458168
+"721","18045","Indiana","Fountain County",90.5192613396649
+"722","18047","Indiana","Franklin County",91.0859457401807
+"723","18049","Indiana","Fulton County",87.7330975737615
+"724","18051","Indiana","Gibson County",87.2075794710389
+"725","18053","Indiana","Grant County",88.4303320814467
+"726","18055","Indiana","Greene County",84.9812636984625
+"727","18057","Indiana","Hamilton County",102.550101945675
+"728","18059","Indiana","Hancock County",94.6223269179281
+"729","18061","Indiana","Harrison County",85.241136028477
+"730","18063","Indiana","Hendricks County",95.1103675398236
+"731","18065","Indiana","Henry County",89.1185904760866
+"732","18067","Indiana","Howard County",90.552
+"733","18069","Indiana","Huntington County",87.5843567928773
+"734","18071","Indiana","Jackson County",87.4653632278793
+"735","18073","Indiana","Jasper County",97.3832996076282
+"736","18075","Indiana","Jay County",85.0947294289621
+"737","18077","Indiana","Jefferson County",88.835280619782
+"738","18079","Indiana","Jennings County",87.2845876850923
+"739","18081","Indiana","Johnson County",94.4941690901543
+"740","18083","Indiana","Knox County",87.1336983930029
+"741","18085","Indiana","Kosciusko County",91.2639725056739
+"742","18087","Indiana","LaGrange County",87.8209009167805
+"743","18089","Indiana","Lake County",99.2426596817821
+"744","18091","Indiana","LaPorte County",90.67
+"745","18093","Indiana","Lawrence County",86.4369495357171
+"746","18095","Indiana","Madison County",89.7674142021468
+"747","18097","Indiana","Marion County",93.2925399863018
+"748","18099","Indiana","Marshall County",89.8581662937941
+"749","18101","Indiana","Martin County",84.9980391443848
+"750","18103","Indiana","Miami County",89.899062634869
+"751","18105","Indiana","Monroe County",94.7217910379544
+"752","18107","Indiana","Montgomery County",88.314512987524
+"753","18109","Indiana","Morgan County",90.670178730937
+"754","18111","Indiana","Newton County",97.4016521333626
+"755","18113","Indiana","Noble County",87.006099142002
+"756","18115","Indiana","Ohio County",90.1893557099803
+"757","18117","Indiana","Orange County",86.6123471225036
+"758","18119","Indiana","Owen County",88.2806008516998
+"759","18121","Indiana","Parke County",86.8230263476122
+"760","18123","Indiana","Perry County",89.3775896333274
+"761","18125","Indiana","Pike County",85.7172121946952
+"762","18127","Indiana","Porter County",100.441852290435
+"763","18129","Indiana","Posey County",88.7762318719648
+"764","18131","Indiana","Pulaski County",90.440757274326
+"765","18133","Indiana","Putnam County",90.1409298942883
+"766","18135","Indiana","Randolph County",87.3622920385946
+"767","18137","Indiana","Ripley County",86.7387464985978
+"768","18139","Indiana","Rush County",88.9254440453202
+"769","18141","Indiana","St. Joseph County",92.169696981004
+"770","18143","Indiana","Scott County",87.3582852428972
+"771","18145","Indiana","Shelby County",90.4407510783997
+"772","18147","Indiana","Spencer County",90.3963217108508
+"773","18149","Indiana","Starke County",90.3405201132948
+"774","18151","Indiana","Steuben County",89.4596716984867
+"775","18153","Indiana","Sullivan County",84.7999798513984
+"776","18155","Indiana","Switzerland County",88.4878043982308
+"777","18157","Indiana","Tippecanoe County",92.6717238985782
+"778","18159","Indiana","Tipton County",89.1393737296182
+"779","18161","Indiana","Union County",87.5372936649011
+"780","18163","Indiana","Vanderburgh County",90.894559161042
+"781","18165","Indiana","Vermillion County",86.6472908577815
+"782","18167","Indiana","Vigo County",87.9166219505771
+"783","18169","Indiana","Wabash County",86.3175896337542
+"784","18171","Indiana","Warren County",90.8362096893554
+"785","18173","Indiana","Warrick County",90.2189120042665
+"786","18175","Indiana","Washington County",82.2857115139739
+"787","18177","Indiana","Wayne County",88.6557738622361
+"788","18179","Indiana","Wells County",86.6859031836622
+"789","18181","Indiana","White County",87.681267037418
+"790","18183","Indiana","Whitley County",91.2540843105493
+"791","19001","Iowa","Adair County",91.0307784231879
+"792","19003","Iowa","Adams County",84.2996961103059
+"793","19005","Iowa","Allamakee County",86.3205831502995
+"794","19007","Iowa","Appanoose County",84.0915041042808
+"795","19009","Iowa","Audubon County",85.5387805778722
+"796","19011","Iowa","Benton County",89.4117721680033
+"797","19013","Iowa","Black Hawk County",89.7165655492706
+"798","19015","Iowa","Boone County",87.4965145349208
+"799","19017","Iowa","Bremer County",86.6377710172666
+"800","19019","Iowa","Buchanan County",85.8854781772769
+"801","19021","Iowa","Buena Vista County",84.5162551583073
+"802","19023","Iowa","Butler County",86.3361563047212
+"803","19025","Iowa","Calhoun County",84.5325100851459
+"804","19027","Iowa","Carroll County",85.3780743500981
+"805","19029","Iowa","Cass County",86.5914259124767
+"806","19031","Iowa","Cedar County",86.1989566281898
+"807","19033","Iowa","Cerro Gordo County",88.8464092359293
+"808","19035","Iowa","Cherokee County",83.3387722838544
+"809","19037","Iowa","Chickasaw County",86.4820557662017
+"810","19039","Iowa","Clarke County",88.2688074055546
+"811","19041","Iowa","Clay County",83.7919917606108
+"812","19043","Iowa","Clayton County",88.8131935570216
+"813","19045","Iowa","Clinton County",86.2965831949784
+"814","19047","Iowa","Crawford County",86.2073368183904
+"815","19049","Iowa","Dallas County",94.7626359019375
+"816","19051","Iowa","Davis County",84.7936130192975
+"817","19053","Iowa","Decatur County",86.9915742752406
+"818","19055","Iowa","Delaware County",84.3843758982195
+"819","19057","Iowa","Des Moines County",87.5783668993338
+"820","19059","Iowa","Dickinson County",84.8099554064657
+"821","19061","Iowa","Dubuque County",88.155
+"822","19063","Iowa","Emmet County",87.9792440142755
+"823","19065","Iowa","Fayette County",84.9706867595071
+"824","19067","Iowa","Floyd County",87.3401553007256
+"825","19069","Iowa","Franklin County",87.4599351622965
+"826","19071","Iowa","Fremont County",90.9315788308995
+"827","19073","Iowa","Greene County",86.3300895998364
+"828","19075","Iowa","Grundy County",87.9828387076809
+"829","19077","Iowa","Guthrie County",91.5505268781145
+"830","19079","Iowa","Hamilton County",85.8109440577116
+"831","19081","Iowa","Hancock County",88.3388856457413
+"832","19083","Iowa","Hardin County",85.0437325264373
+"833","19085","Iowa","Harrison County",87.6492322719257
+"834","19087","Iowa","Henry County",85.2074000319412
+"835","19089","Iowa","Howard County",86.1038063628644
+"836","19091","Iowa","Humboldt County",85.3001711074006
+"837","19093","Iowa","Ida County",81.9300411509084
+"838","19095","Iowa","Iowa County",87.6823830628517
+"839","19097","Iowa","Jackson County",85.2322229075632
+"840","19099","Iowa","Jasper County",87.9001792045923
+"841","19101","Iowa","Jefferson County",85.1684029397283
+"842","19103","Iowa","Johnson County",94.111962807323
+"843","19105","Iowa","Jones County",85.8344162286278
+"844","19107","Iowa","Keokuk County",84.7401678706399
+"845","19109","Iowa","Kossuth County",87.5377382353285
+"846","19111","Iowa","Lee County",86.0255373937887
+"847","19113","Iowa","Linn County",92.8365603382866
+"848","19115","Iowa","Louisa County",85.7338930540527
+"849","19117","Iowa","Lucas County",85.9740420914174
+"850","19119","Iowa","Lyon County",85.1526334355406
+"851","19121","Iowa","Madison County",93.6363548245802
+"852","19123","Iowa","Mahaska County",84.6426707085812
+"853","19125","Iowa","Marion County",85.898036309119
+"854","19127","Iowa","Marshall County",86.5797344588286
+"855","19129","Iowa","Mills County",89.2866245358326
+"856","19131","Iowa","Mitchell County",85.124343400086
+"857","19133","Iowa","Monona County",86.5557447161767
+"858","19135","Iowa","Monroe County",84.9806298649327
+"859","19137","Iowa","Montgomery County",86.3830108720242
+"860","19139","Iowa","Muscatine County",87.55456964407
+"861","19141","Iowa","O'Brien County",84.539355407892
+"862","19143","Iowa","Osceola County",83.5866906141925
+"863","19145","Iowa","Page County",84.4136223185519
+"864","19147","Iowa","Palo Alto County",83.0295669474387
+"865","19149","Iowa","Plymouth County",85.652748318245
+"866","19151","Iowa","Pocahontas County",82.8577329461184
+"867","19153","Iowa","Polk County",93.7990937443939
+"868","19155","Iowa","Pottawattamie County",89.8257547856237
+"869","19157","Iowa","Poweshiek County",87.1263905252909
+"870","19159","Iowa","Ringgold County",83.8682891778778
+"871","19161","Iowa","Sac County",82.9898276693519
+"872","19163","Iowa","Scott County",93.2188372043666
+"873","19165","Iowa","Shelby County",86.181975130917
+"874","19167","Iowa","Sioux County",85.7696235336469
+"875","19169","Iowa","Story County",92.5904951662786
+"876","19171","Iowa","Tama County",86.0361255655452
+"877","19173","Iowa","Taylor County",83.8790632958925
+"878","19175","Iowa","Union County",90.8975276978712
+"879","19177","Iowa","Van Buren County",83.7178584793462
+"880","19179","Iowa","Wapello County",85.5003637858913
+"881","19181","Iowa","Warren County",91.7059470794944
+"882","19183","Iowa","Washington County",85.2499581231753
+"883","19185","Iowa","Wayne County",84.8707046790248
+"884","19187","Iowa","Webster County",86.4957697093144
+"885","19189","Iowa","Winnebago County",87.736865821638
+"886","19191","Iowa","Winneshiek County",86.5223641891674
+"887","19193","Iowa","Woodbury County",90.7815772079209
+"888","19195","Iowa","Worth County",87.6134231025012
+"889","19197","Iowa","Wright County",85.0905135236819
+"890","20001","Kansas","Allen County",85.0819081584617
+"891","20003","Kansas","Anderson County",87.6954407294341
+"892","20005","Kansas","Atchison County",88.7177514435012
+"893","20007","Kansas","Barber County",84.7200261509795
+"894","20009","Kansas","Barton County",85.6605016733271
+"895","20011","Kansas","Bourbon County",87.8196940031275
+"896","20013","Kansas","Brown County",87.3162000550995
+"897","20015","Kansas","Butler County",91.3779319810303
+"898","20017","Kansas","Chase County",85.8412373812591
+"899","20019","Kansas","Chautauqua County",88.464907098895
+"900","20021","Kansas","Cherokee County",86.8912971548531
+"901","20023","Kansas","Cheyenne County",86.5632355668065
+"902","20025","Kansas","Clark County",84.9794887195337
+"903","20027","Kansas","Clay County",87.8913681511104
+"904","20029","Kansas","Cloud County",87.0321325306282
+"905","20031","Kansas","Coffey County",86.1484862974184
+"906","20033","Kansas","Comanche County",84.2779620150074
+"907","20035","Kansas","Cowley County",84.6980960804856
+"908","20037","Kansas","Crawford County",88.2671755784315
+"909","20039","Kansas","Decatur County",85.674434928273
+"910","20041","Kansas","Dickinson County",87.0383136545939
+"911","20043","Kansas","Doniphan County",89.0111775456183
+"912","20045","Kansas","Douglas County",92.795
+"913","20047","Kansas","Edwards County",84.4901079992446
+"914","20049","Kansas","Elk County",84.1083537525038
+"915","20051","Kansas","Ellis County",87.7204817611924
+"916","20053","Kansas","Ellsworth County",86.4421764464221
+"917","20055","Kansas","Finney County",86.7804291457399
+"918","20057","Kansas","Ford County",86.209464860161
+"919","20059","Kansas","Franklin County",89.1755193848592
+"920","20061","Kansas","Geary County",87.2207681588374
+"921","20063","Kansas","Gove County",87.0058372749172
+"922","20065","Kansas","Graham County",86.3951442500452
+"923","20067","Kansas","Grant County",83.8676461647125
+"924","20069","Kansas","Gray County",85.1427259767924
+"925","20071","Kansas","Greeley County",84.0508432033211
+"926","20073","Kansas","Greenwood County",85.6733828294006
+"927","20075","Kansas","Hamilton County",86.2783504161999
+"928","20077","Kansas","Harper County",84.7050227404567
+"929","20079","Kansas","Harvey County",88.9710725605941
+"930","20081","Kansas","Haskell County",83.8509450317534
+"931","20083","Kansas","Hodgeman County",85.9434616439894
+"932","20085","Kansas","Jackson County",87.9624960750931
+"933","20087","Kansas","Jefferson County",91.5501002966599
+"934","20089","Kansas","Jewell County",86.1612793107522
+"935","20091","Kansas","Johnson County",98.4061537222684
+"936","20093","Kansas","Kearny County",87.4054701755796
+"937","20095","Kansas","Kingman County",86.9378395464431
+"938","20097","Kansas","Kiowa County",84.3092310029694
+"939","20099","Kansas","Labette County",85.3657650341048
+"940","20101","Kansas","Lane County",83.8107600067511
+"941","20103","Kansas","Leavenworth County",92.4693130605849
+"942","20105","Kansas","Lincoln County",85.9877466218328
+"943","20107","Kansas","Linn County",90.0575882037192
+"944","20109","Kansas","Logan County",85.7621321451537
+"945","20111","Kansas","Lyon County",87.2725990556487
+"946","20113","Kansas","McPherson County",88.2923734443424
+"947","20115","Kansas","Marion County",85.7530385925397
+"948","20117","Kansas","Marshall County",87.3087610498587
+"949","20119","Kansas","Meade County",83.8191221251269
+"950","20121","Kansas","Miami County",93.4494677414041
+"951","20123","Kansas","Mitchell County",86.7028676544232
+"952","20125","Kansas","Montgomery County",85.263627800308
+"953","20127","Kansas","Morris County",86.123931206841
+"954","20129","Kansas","Morton County",83.8330227480116
+"955","20131","Kansas","Nemaha County",87.0773858717021
+"956","20133","Kansas","Neosho County",84.9630023861193
+"957","20135","Kansas","Ness County",85.8905494417408
+"958","20137","Kansas","Norton County",85.1424383640909
+"959","20139","Kansas","Osage County",87.4537566471292
+"960","20141","Kansas","Osborne County",85.7150091579787
+"961","20143","Kansas","Ottawa County",87.6676987664995
+"962","20145","Kansas","Pawnee County",85.9443433905294
+"963","20147","Kansas","Phillips County",86.5035684580798
+"964","20149","Kansas","Pottawatomie County",87.0933785161375
+"965","20151","Kansas","Pratt County",87.2503800268461
+"966","20153","Kansas","Rawlins County",88.1821278081273
+"967","20155","Kansas","Reno County",87.3291070775174
+"968","20157","Kansas","Republic County",86.9489940366705
+"969","20159","Kansas","Rice County",86.0654886267651
+"970","20161","Kansas","Riley County",93.8194420987704
+"971","20163","Kansas","Rooks County",85.6572308599915
+"972","20165","Kansas","Rush County",85.9205533585397
+"973","20167","Kansas","Russell County",87.0874970610556
+"974","20169","Kansas","Saline County",88.332613308356
+"975","20171","Kansas","Scott County",85.9257460408561
+"976","20173","Kansas","Sedgwick County",91.2406340480336
+"977","20175","Kansas","Seward County",85.7054796141592
+"978","20177","Kansas","Shawnee County",89.4235352478724
+"979","20179","Kansas","Sheridan County",87.2304293314963
+"980","20181","Kansas","Sherman County",85.6684495979077
+"981","20183","Kansas","Smith County",86.7745603542723
+"982","20185","Kansas","Stafford County",84.1644527061705
+"983","20187","Kansas","Stanton County",83.9459782079166
+"984","20189","Kansas","Stevens County",85.0595489915728
+"985","20191","Kansas","Sumner County",87.3147744052967
+"986","20193","Kansas","Thomas County",84.7302798992284
+"987","20195","Kansas","Trego County",86.0937932413818
+"988","20197","Kansas","Wabaunsee County",88.4758701068899
+"989","20199","Kansas","Wallace County",83.5395915563211
+"990","20201","Kansas","Washington County",85.6106117032025
+"991","20203","Kansas","Wichita County",85.6762492274464
+"992","20205","Kansas","Wilson County",85.1552795306453
+"993","20207","Kansas","Woodson County",85.6657101503047
+"994","20209","Kansas","Wyandotte County",89.0586707902391
+"995","21001","Kentucky","Adair County",82.7538413587541
+"996","21003","Kentucky","Allen County",86.8642283497028
+"997","21005","Kentucky","Anderson County",85.5876923492879
+"998","21007","Kentucky","Ballard County",86.4198454086274
+"999","21009","Kentucky","Barren County",84.0070593244954
+"1000","21011","Kentucky","Bath County",83.7561331508416
+"1001","21013","Kentucky","Bell County",83.4680622746506
+"1002","21015","Kentucky","Boone County",95.9492910084178
+"1003","21017","Kentucky","Bourbon County",85.7617307080477
+"1004","21019","Kentucky","Boyd County",88.4686582050565
+"1005","21021","Kentucky","Boyle County",87.0926340425708
+"1006","21023","Kentucky","Bracken County",89.2140072251661
+"1007","21025","Kentucky","Breathitt County",83.7153664588788
+"1008","21027","Kentucky","Breckinridge County",86.4815165008522
+"1009","21029","Kentucky","Bullitt County",88.6395299871108
+"1010","21031","Kentucky","Butler County",80.9739010823457
+"1011","21033","Kentucky","Caldwell County",84.6707942198558
+"1012","21035","Kentucky","Calloway County",87.0478196778674
+"1013","21037","Kentucky","Campbell County",96.1261843730527
+"1014","21039","Kentucky","Carlisle County",82.8397443004142
+"1015","21041","Kentucky","Carroll County",85.7796497923283
+"1016","21043","Kentucky","Carter County",91.2282979629515
+"1017","21045","Kentucky","Casey County",81.4083962547625
+"1018","21047","Kentucky","Christian County",85.0826602079021
+"1019","21049","Kentucky","Clark County",87.7193375406507
+"1020","21051","Kentucky","Clay County",83.1413355240101
+"1021","21053","Kentucky","Clinton County",85.0877312122658
+"1022","21055","Kentucky","Crittenden County",84.4247744784555
+"1023","21057","Kentucky","Cumberland County",85.5312610105658
+"1024","21059","Kentucky","Daviess County",87.9338446462056
+"1025","21061","Kentucky","Edmonson County",87.2810401918363
+"1026","21063","Kentucky","Elliott County",89.4417306298167
+"1027","21065","Kentucky","Estill County",86.9730701439328
+"1028","21067","Kentucky","Fayette County",93.6034773308949
+"1029","21069","Kentucky","Fleming County",84.0267808596899
+"1030","21071","Kentucky","Floyd County",87.482814088707
+"1031","21073","Kentucky","Franklin County",88.5313547882717
+"1032","21075","Kentucky","Fulton County",82.8713641984498
+"1033","21077","Kentucky","Gallatin County",87.6687942557008
+"1034","21079","Kentucky","Garrard County",86.6708016242738
+"1035","21081","Kentucky","Grant County",87.1777096844611
+"1036","21083","Kentucky","Graves County",83.4995756741551
+"1037","21085","Kentucky","Grayson County",82.4737947932616
+"1038","21087","Kentucky","Green County",81.8363247233526
+"1039","21089","Kentucky","Greenup County",90.3048230636896
+"1040","21091","Kentucky","Hancock County",87.2016180313178
+"1041","21093","Kentucky","Hardin County",87.9020763783396
+"1042","21095","Kentucky","Harlan County",85.6745553837442
+"1043","21097","Kentucky","Harrison County",83.9907201187313
+"1044","21099","Kentucky","Hart County",82.9438935007727
+"1045","21101","Kentucky","Henderson County",87.2981304543839
+"1046","21103","Kentucky","Henry County",90.4971411689282
+"1047","21105","Kentucky","Hickman County",83.4958719734567
+"1048","21107","Kentucky","Hopkins County",85.4153543550651
+"1049","21109","Kentucky","Jackson County",83.26734885653
+"1050","21111","Kentucky","Jefferson County",93.4235354150307
+"1051","21113","Kentucky","Jessamine County",89.3414833280268
+"1052","21115","Kentucky","Johnson County",84.6278267718239
+"1053","21117","Kentucky","Kenton County",94.3550944113926
+"1054","21119","Kentucky","Knott County",85.7844601436359
+"1055","21121","Kentucky","Knox County",83.6428960840988
+"1056","21123","Kentucky","Larue County",86.3694089199961
+"1057","21125","Kentucky","Laurel County",84.7505777504811
+"1058","21127","Kentucky","Lawrence County",84.1462136047255
+"1059","21129","Kentucky","Lee County",83.9032808981753
+"1060","21131","Kentucky","Leslie County",84.8548518065698
+"1061","21133","Kentucky","Letcher County",86.8119801909248
+"1062","21135","Kentucky","Lewis County",82.6097575503308
+"1063","21137","Kentucky","Lincoln County",82.2054505297582
+"1064","21139","Kentucky","Livingston County",85.4570165473039
+"1065","21141","Kentucky","Logan County",83.0492782258967
+"1066","21143","Kentucky","Lyon County",85.391332345852
+"1067","21145","Kentucky","McCracken County",87.5380370091388
+"1068","21147","Kentucky","McCreary County",82.8040391546344
+"1069","21149","Kentucky","McLean County",83.2178586010017
+"1070","21151","Kentucky","Madison County",88.4089501891601
+"1071","21153","Kentucky","Magoffin County",84.2870391048337
+"1072","21155","Kentucky","Marion County",82.7917490739219
+"1073","21157","Kentucky","Marshall County",85.8242213365371
+"1074","21159","Kentucky","Martin County",84.2781041742401
+"1075","21161","Kentucky","Mason County",83.0149975000008
+"1076","21163","Kentucky","Meade County",87.032985846464
+"1077","21165","Kentucky","Menifee County",83.6141293517866
+"1078","21167","Kentucky","Mercer County",85.384540284826
+"1079","21169","Kentucky","Metcalfe County",82.8176222265471
+"1080","21171","Kentucky","Monroe County",82.17474092336
+"1081","21173","Kentucky","Montgomery County",85.1208696417292
+"1082","21175","Kentucky","Morgan County",84.4844608493814
+"1083","21177","Kentucky","Muhlenberg County",83.782027412796
+"1084","21179","Kentucky","Nelson County",86.8414309317354
+"1085","21181","Kentucky","Nicholas County",84.3439302882952
+"1086","21183","Kentucky","Ohio County",81.9328060391169
+"1087","21185","Kentucky","Oldham County",93.4265348046725
+"1088","21187","Kentucky","Owen County",83.9885731052214
+"1089","21189","Kentucky","Owsley County",81.5760639358821
+"1090","21191","Kentucky","Pendleton County",87.8418966032935
+"1091","21193","Kentucky","Perry County",85.6365819926179
+"1092","21195","Kentucky","Pike County",86.4034134558343
+"1093","21197","Kentucky","Powell County",85.3964742268575
+"1094","21199","Kentucky","Pulaski County",85.2137796168306
+"1095","21201","Kentucky","Robertson County",82.8476317063403
+"1096","21203","Kentucky","Rockcastle County",82.4086584360885
+"1097","21205","Kentucky","Rowan County",85.1533776679717
+"1098","21207","Kentucky","Russell County",83.6483392496483
+"1099","21209","Kentucky","Scott County",91.2968097319659
+"1100","21211","Kentucky","Shelby County",88.5345810595963
+"1101","21213","Kentucky","Simpson County",89.7612018596286
+"1102","21215","Kentucky","Spencer County",88.98951653882
+"1103","21217","Kentucky","Taylor County",83.0120372554154
+"1104","21219","Kentucky","Todd County",82.3946817617333
+"1105","21221","Kentucky","Trigg County",83.0956171235112
+"1106","21223","Kentucky","Trimble County",86.6138015564093
+"1107","21225","Kentucky","Union County",84.4934112223864
+"1108","21227","Kentucky","Warren County",89.6789277768065
+"1109","21229","Kentucky","Washington County",85.2829644327686
+"1110","21231","Kentucky","Wayne County",83.986382829633
+"1111","21233","Kentucky","Webster County",84.5607251660747
+"1112","21235","Kentucky","Whitley County",84.1635427900836
+"1113","21237","Kentucky","Wolfe County",82.5294990597072
+"1114","21239","Kentucky","Woodford County",91.1388969988073
+"1115","22001","Louisiana","Acadia Parish",87.3191413304298
+"1116","22003","Louisiana","Allen Parish",86.8995391261944
+"1117","22005","Louisiana","Ascension Parish",94.0028480955359
+"1118","22007","Louisiana","Assumption Parish",93.540549597969
+"1119","22009","Louisiana","Avoyelles Parish",85.9773962208579
+"1120","22011","Louisiana","Beauregard Parish",87.5133376505293
+"1121","22013","Louisiana","Bienville Parish",86.4444334907787
+"1122","22015","Louisiana","Bossier Parish",91.6291317917613
+"1123","22017","Louisiana","Caddo Parish",90.3804277786043
+"1124","22019","Louisiana","Calcasieu Parish",90.4431608357441
+"1125","22021","Louisiana","Caldwell Parish",87.9334493599334
+"1126","22023","Louisiana","Cameron Parish",88.9322037071785
+"1127","22025","Louisiana","Catahoula Parish",84.5715305591398
+"1128","22027","Louisiana","Claiborne Parish",85.7349320492829
+"1129","22029","Louisiana","Concordia Parish",85.2131554268176
+"1130","22031","Louisiana","De Soto Parish",86.0508121756088
+"1131","22033","Louisiana","East Baton Rouge Parish",94.1633067396685
+"1132","22035","Louisiana","East Carroll Parish",85.8580312752611
+"1133","22037","Louisiana","East Feliciana Parish",91.9881870729903
+"1134","22039","Louisiana","Evangeline Parish",85.9384485632945
+"1135","22041","Louisiana","Franklin Parish",85.7714597834591
+"1136","22043","Louisiana","Grant Parish",88.7848173434626
+"1137","22045","Louisiana","Iberia Parish",88.4932915889235
+"1138","22047","Louisiana","Iberville Parish",89.5828805699854
+"1139","22049","Louisiana","Jackson Parish",87.1960597045703
+"1140","22051","Louisiana","Jefferson Parish",93.6232895127733
+"1141","22053","Louisiana","Jefferson Davis Parish",87.7750291691724
+"1142","22055","Louisiana","Lafayette Parish",94.0646176907549
+"1143","22057","Louisiana","Lafourche Parish",87.58527298143
+"1144","22059","Louisiana","LaSalle Parish",85.9555919484623
+"1145","22061","Louisiana","Lincoln Parish",88.9820442011436
+"1146","22063","Louisiana","Livingston Parish",91.6411996718734
+"1147","22065","Louisiana","Madison Parish",86.7045949235219
+"1148","22067","Louisiana","Morehouse Parish",84.6474942487397
+"1149","22069","Louisiana","Natchitoches Parish",86.1794039183444
+"1150","22071","Louisiana","Orleans Parish",96.2880258017243
+"1151","22073","Louisiana","Ouachita Parish",87.3099724844792
+"1152","22075","Louisiana","Plaquemines Parish",93.1618205948031
+"1153","22077","Louisiana","Pointe Coupee Parish",89.2813240777881
+"1154","22079","Louisiana","Rapides Parish",89.4288064751065
+"1155","22081","Louisiana","Red River Parish",87.0460207702366
+"1156","22083","Louisiana","Richland Parish",84.8615065242749
+"1157","22085","Louisiana","Sabine Parish",84.0757538234748
+"1158","22087","Louisiana","St. Bernard Parish",90.1348590447813
+"1159","22089","Louisiana","St. Charles Parish",94.6088061364082
+"1160","22091","Louisiana","St. Helena Parish",90.5234049304814
+"1161","22093","Louisiana","St. James Parish",90.0924617655742
+"1162","22095","Louisiana","St. John the Baptist Parish",90.4330728320051
+"1163","22097","Louisiana","St. Landry Parish",85.0033576796365
+"1164","22099","Louisiana","St. Martin Parish",88.1371487351682
+"1165","22101","Louisiana","St. Mary Parish",87.0199170535117
+"1166","22103","Louisiana","St. Tammany Parish",94.4387006752288
+"1167","22105","Louisiana","Tangipahoa Parish",88.783
+"1168","22107","Louisiana","Tensas Parish",84.2599552039225
+"1169","22109","Louisiana","Terrebonne Parish",89.1139943580091
+"1170","22111","Louisiana","Union Parish",85.6959570999232
+"1171","22113","Louisiana","Vermilion Parish",86.525625343378
+"1172","22115","Louisiana","Vernon Parish",89.6217442625582
+"1173","22117","Louisiana","Washington Parish",87.5980140524722
+"1174","22119","Louisiana","Webster Parish",85.52119828945
+"1175","22121","Louisiana","West Baton Rouge Parish",91.8079427022317
+"1176","22123","Louisiana","West Carroll Parish",83.5945341865941
+"1177","22125","Louisiana","West Feliciana Parish",89.4347302557383
+"1178","22127","Louisiana","Winn Parish",86.0066651020925
+"1179","23001","Maine","Androscoggin County",93.801
+"1180","23003","Maine","Aroostook County",88.7464574946047
+"1181","23005","Maine","Cumberland County",103.873461792185
+"1182","23007","Maine","Franklin County",91.2389763599942
+"1183","23009","Maine","Hancock County",96.1328868507771
+"1184","23011","Maine","Kennebec County",93.0489655545435
+"1185","23013","Maine","Knox County",96.6370263642124
+"1186","23015","Maine","Lincoln County",97.2642060472746
+"1187","23017","Maine","Oxford County",90.1385276370303
+"1188","23019","Maine","Penobscot County",96.703
+"1189","23021","Maine","Piscataquis County",91.5525454346976
+"1190","23023","Maine","Sagadahoc County",101.477240496391
+"1191","23025","Maine","Somerset County",88.9545392244493
+"1192","23027","Maine","Waldo County",95.4034248302092
+"1193","23029","Maine","Washington County",89.2332235739717
+"1194","23031","Maine","York County",98.8965336890122
+"1195","24001","Maryland","Allegany County",92.4886308352237
+"1196","24003","Maryland","Anne Arundel County",107.875228492699
+"1197","24005","Maryland","Baltimore County",102.629272507999
+"1198","24009","Maryland","Calvert County",103.896332690442
+"1199","24011","Maryland","Caroline County",90.3453405393504
+"1200","24013","Maryland","Carroll County",101.719340437081
+"1201","24015","Maryland","Cecil County",96.1694294740307
+"1202","24017","Maryland","Charles County",103.535713673332
+"1203","24019","Maryland","Dorchester County",89.2553882362841
+"1204","24021","Maryland","Frederick County",103.224266387348
+"1205","24023","Maryland","Garrett County",85.8162591172622
+"1206","24025","Maryland","Harford County",102.885233099475
+"1207","24027","Maryland","Howard County",113.151483312955
+"1208","24029","Maryland","Kent County",97.9953020853741
+"1209","24031","Maryland","Montgomery County",114.335983653435
+"1210","24033","Maryland","Prince George's County",106.005346539752
+"1211","24035","Maryland","Queen Anne's County",104.605332583597
+"1212","24037","Maryland","St. Mary's County",96.456
+"1213","24039","Maryland","Somerset County",87.881978198379
+"1214","24041","Maryland","Talbot County",101.334401458775
+"1215","24043","Maryland","Washington County",96.090641727862
+"1216","24045","Maryland","Wicomico County",91.5054890636757
+"1217","24047","Maryland","Worcester County",93.0807999332666
+"1218","24510","Maryland","Baltimore city",103.011628137047
+"1219","25001","Massachusetts","Barnstable County",101.244
+"1220","25003","Massachusetts","Berkshire County",95.911
+"1221","25005","Massachusetts","Bristol County",98.4671160327304
+"1222","25007","Massachusetts","Dukes County",95.4502066510581
+"1223","25009","Massachusetts","Essex County",104.411639465834
+"1224","25011","Massachusetts","Franklin County",98.2234061170449
+"1225","25013","Massachusetts","Hampden County",95.9300582977336
+"1226","25015","Massachusetts","Hampshire County",103.170989774815
+"1227","25017","Massachusetts","Middlesex County",112.530420824082
+"1228","25019","Massachusetts","Nantucket County",98.9510945624836
+"1229","25021","Massachusetts","Norfolk County",113.634938811059
+"1230","25023","Massachusetts","Plymouth County",106.423571484029
+"1231","25025","Massachusetts","Suffolk County",112.297774628571
+"1232","25027","Massachusetts","Worcester County",100.614740941331
+"1233","26001","Michigan","Alcona County",86.6148660813261
+"1234","26003","Michigan","Alger County",90.5037202801436
+"1235","26005","Michigan","Allegan County",91.1349422180359
+"1236","26007","Michigan","Alpena County",85.5685846525866
+"1237","26009","Michigan","Antrim County",93.5576131522115
+"1238","26011","Michigan","Arenac County",85.0829550379257
+"1239","26013","Michigan","Baraga County",87.867989859371
+"1240","26015","Michigan","Barry County",89.3524142076172
+"1241","26017","Michigan","Bay County",91.39
+"1242","26019","Michigan","Benzie County",90.8435775883558
+"1243","26021","Michigan","Berrien County",91.882
+"1244","26023","Michigan","Branch County",86.4513901460786
+"1245","26025","Michigan","Calhoun County",90.336
+"1246","26027","Michigan","Cass County",88.573654374387
+"1247","26029","Michigan","Charlevoix County",96.4776050458787
+"1248","26031","Michigan","Cheboygan County",87.9581687975103
+"1249","26033","Michigan","Chippewa County",87.7087102980296
+"1250","26035","Michigan","Clare County",89.2409410580644
+"1251","26037","Michigan","Clinton County",92.4159494718008
+"1252","26039","Michigan","Crawford County",86.6554297895587
+"1253","26041","Michigan","Delta County",87.8410330516098
+"1254","26043","Michigan","Dickinson County",87.5409937999734
+"1255","26045","Michigan","Eaton County",92.8175780610522
+"1256","26047","Michigan","Emmet County",93.1281212082028
+"1257","26049","Michigan","Genesee County",88.891
+"1258","26051","Michigan","Gladwin County",90.5104832886728
+"1259","26053","Michigan","Gogebic County",87.7118004641428
+"1260","26055","Michigan","Grand Traverse County",93.1236439245581
+"1261","26057","Michigan","Gratiot County",85.2178302032834
+"1262","26059","Michigan","Hillsdale County",85.2749214712013
+"1263","26061","Michigan","Houghton County",90.5518323014513
+"1264","26063","Michigan","Huron County",84.3391967591913
+"1265","26065","Michigan","Ingham County",95.5820187230061
+"1266","26067","Michigan","Ionia County",90.8290844688723
+"1267","26069","Michigan","Iosco County",86.3072333987383
+"1268","26071","Michigan","Iron County",88.0495092733395
+"1269","26073","Michigan","Isabella County",88.1040243628299
+"1270","26075","Michigan","Jackson County",93.524
+"1271","26077","Michigan","Kalamazoo County",92.973
+"1272","26079","Michigan","Kalkaska County",92.2561061810165
+"1273","26081","Michigan","Kent County",97.3965569201187
+"1274","26083","Michigan","Keweenaw County",89.0939787405012
+"1275","26085","Michigan","Lake County",84.8987812130264
+"1276","26087","Michigan","Lapeer County",92.2083630616345
+"1277","26089","Michigan","Leelanau County",130.887438342642
+"1278","26091","Michigan","Lenawee County",88.6162148220591
+"1279","26093","Michigan","Livingston County",98.9358001673914
+"1280","26095","Michigan","Luce County",87.1361385397384
+"1281","26097","Michigan","Mackinac County",87.644585346427
+"1282","26099","Michigan","Macomb County",95.4572637577399
+"1283","26101","Michigan","Manistee County",88.9095981565361
+"1284","26103","Michigan","Marquette County",92.376895816404
+"1285","26105","Michigan","Mason County",88.5613332344373
+"1286","26107","Michigan","Mecosta County",87.3809533034484
+"1287","26109","Michigan","Menominee County",86.9826573656234
+"1288","26111","Michigan","Midland County",91.39
+"1289","26113","Michigan","Missaukee County",86.6214471558863
+"1290","26115","Michigan","Monroe County",91.936
+"1291","26117","Michigan","Montcalm County",89.4740663692177
+"1292","26119","Michigan","Montmorency County",87.4240023969097
+"1293","26121","Michigan","Muskegon County",91.868
+"1294","26123","Michigan","Newaygo County",86.0416323979314
+"1295","26125","Michigan","Oakland County",100.513127005862
+"1296","26127","Michigan","Oceana County",86.8971629921772
+"1297","26129","Michigan","Ogemaw County",85.8453622795095
+"1298","26131","Michigan","Ontonagon County",88.7111325250659
+"1299","26133","Michigan","Osceola County",85.1019213048136
+"1300","26135","Michigan","Oscoda County",85.4644160963829
+"1301","26137","Michigan","Otsego County",88.9619072532418
+"1302","26139","Michigan","Ottawa County",97.015008133235
+"1303","26141","Michigan","Presque Isle County",85.1208937544978
+"1304","26143","Michigan","Roscommon County",86.1760798027774
+"1305","26145","Michigan","Saginaw County",90.894
+"1306","26147","Michigan","St. Clair County",92.322086192346
+"1307","26149","Michigan","St. Joseph County",86.2119351826779
+"1308","26151","Michigan","Sanilac County",84.6197993884158
+"1309","26153","Michigan","Schoolcraft County",86.4592364348344
+"1310","26155","Michigan","Shiawassee County",89.7501901370979
+"1311","26157","Michigan","Tuscola County",85.5837709356947
+"1312","26159","Michigan","Van Buren County",87.7502321245616
+"1313","26161","Michigan","Washtenaw County",99.41
+"1314","26163","Michigan","Wayne County",94.0448622390668
+"1315","26165","Michigan","Wexford County",87.512744325913
+"1316","27001","Minnesota","Aitkin County",90.1769822364145
+"1317","27003","Minnesota","Anoka County",100.637226360392
+"1318","27005","Minnesota","Becker County",88.1681773768402
+"1319","27007","Minnesota","Beltrami County",87.4077969383657
+"1320","27009","Minnesota","Benton County",89.7690217001863
+"1321","27011","Minnesota","Big Stone County",85.2154009281876
+"1322","27013","Minnesota","Blue Earth County",87.8183582858825
+"1323","27015","Minnesota","Brown County",86.6651295526395
+"1324","27017","Minnesota","Carlton County",85.8413662650847
+"1325","27019","Minnesota","Carver County",108.136167588785
+"1326","27021","Minnesota","Cass County",88.7605548066719
+"1327","27023","Minnesota","Chippewa County",87.6954945694147
+"1328","27025","Minnesota","Chisago County",101.891686416504
+"1329","27027","Minnesota","Clay County",92.3343927338734
+"1330","27029","Minnesota","Clearwater County",85.6994121393445
+"1331","27031","Minnesota","Cook County",89.946986206532
+"1332","27033","Minnesota","Cottonwood County",83.9146194773531
+"1333","27035","Minnesota","Crow Wing County",90.8439952890892
+"1334","27037","Minnesota","Dakota County",103.356974377851
+"1335","27039","Minnesota","Dodge County",91.7098919739283
+"1336","27041","Minnesota","Douglas County",88.049068189357
+"1337","27043","Minnesota","Faribault County",86.7931155642115
+"1338","27045","Minnesota","Fillmore County",89.7898716393727
+"1339","27047","Minnesota","Freeborn County",87.0669452011908
+"1340","27049","Minnesota","Goodhue County",90.8570763729962
+"1341","27051","Minnesota","Grant County",88.5332439279613
+"1342","27053","Minnesota","Hennepin County",106.233523850989
+"1343","27055","Minnesota","Houston County",91.957652201671
+"1344","27057","Minnesota","Hubbard County",86.6484081426143
+"1345","27059","Minnesota","Isanti County",97.1774598030212
+"1346","27061","Minnesota","Itasca County",88.0642922234464
+"1347","27063","Minnesota","Jackson County",83.0604728551895
+"1348","27065","Minnesota","Kanabec County",87.4481906588162
+"1349","27067","Minnesota","Kandiyohi County",88.7982195557683
+"1350","27069","Minnesota","Kittson County",86.9047887802917
+"1351","27071","Minnesota","Koochiching County",85.5034507338098
+"1352","27073","Minnesota","Lac qui Parle County",85.4184147549132
+"1353","27075","Minnesota","Lake County",89.1187844762775
+"1354","27077","Minnesota","Lake of the Woods County",85.5014021304746
+"1355","27079","Minnesota","Le Sueur County",98.5247857695576
+"1356","27081","Minnesota","Lincoln County",85.2022573167045
+"1357","27083","Minnesota","Lyon County",86.2304099863018
+"1358","27085","Minnesota","McLeod County",88.1356574727413
+"1359","27087","Minnesota","Mahnomen County",86.750596102414
+"1360","27089","Minnesota","Marshall County",87.8519650929633
+"1361","27091","Minnesota","Martin County",87.9921359831389
+"1362","27093","Minnesota","Meeker County",86.6135520887817
+"1363","27095","Minnesota","Mille Lacs County",90.9990754280569
+"1364","27097","Minnesota","Morrison County",87.2921063321292
+"1365","27099","Minnesota","Mower County",87.5361321448526
+"1366","27101","Minnesota","Murray County",83.3304398073612
+"1367","27103","Minnesota","Nicollet County",89.3743483527627
+"1368","27105","Minnesota","Nobles County",84.7270140380667
+"1369","27107","Minnesota","Norman County",87.1347269648669
+"1370","27109","Minnesota","Olmsted County",93.2416192370509
+"1371","27111","Minnesota","Otter Tail County",85.2870811583614
+"1372","27113","Minnesota","Pennington County",86.6831232778587
+"1373","27115","Minnesota","Pine County",85.7033190429278
+"1374","27117","Minnesota","Pipestone County",85.7741586772232
+"1375","27119","Minnesota","Polk County",86.624129714323
+"1376","27121","Minnesota","Pope County",88.0511763182011
+"1377","27123","Minnesota","Ramsey County",102.80753868057
+"1378","27125","Minnesota","Red Lake County",84.7853530542449
+"1379","27127","Minnesota","Redwood County",86.0105238266063
+"1380","27129","Minnesota","Renville County",87.303980170157
+"1381","27131","Minnesota","Rice County",93.7652402766219
+"1382","27133","Minnesota","Rock County",87.0754111226153
+"1383","27135","Minnesota","Roseau County",83.9314575617618
+"1384","27137","Minnesota","St. Louis County",89.8823595000937
+"1385","27139","Minnesota","Scott County",101.011725893797
+"1386","27141","Minnesota","Sherburne County",98.2630221318504
+"1387","27143","Minnesota","Sibley County",87.8875470399877
+"1388","27145","Minnesota","Stearns County",86.8664915413792
+"1389","27147","Minnesota","Steele County",91.9733693816756
+"1390","27149","Minnesota","Stevens County",88.6999500150873
+"1391","27151","Minnesota","Swift County",86.5025944598642
+"1392","27153","Minnesota","Todd County",87.5390790484001
+"1393","27155","Minnesota","Traverse County",86.9001826718221
+"1394","27157","Minnesota","Wabasha County",84.5993903363445
+"1395","27159","Minnesota","Wadena County",84.4823302161662
+"1396","27161","Minnesota","Waseca County",90.0675841568616
+"1397","27163","Minnesota","Washington County",105.235070083016
+"1398","27165","Minnesota","Watonwan County",86.1734219835359
+"1399","27167","Minnesota","Wilkin County",84.9923320764006
+"1400","27169","Minnesota","Winona County",88.8894638828299
+"1401","27171","Minnesota","Wright County",99.7398385082032
+"1402","27173","Minnesota","Yellow Medicine County",85.1363204905469
+"1403","28001","Mississippi","Adams County",81.3851631339044
+"1404","28003","Mississippi","Alcorn County",82.4044404199909
+"1405","28005","Mississippi","Amite County",81.6051222274472
+"1406","28007","Mississippi","Attala County",80.1283767206919
+"1407","28009","Mississippi","Benton County",79.9108979028224
+"1408","28011","Mississippi","Bolivar County",83.7941884158831
+"1409","28013","Mississippi","Calhoun County",80.8477494643238
+"1410","28015","Mississippi","Carroll County",83.033531688594
+"1411","28017","Mississippi","Chickasaw County",81.3396776151225
+"1412","28019","Mississippi","Choctaw County",84.5590033697312
+"1413","28021","Mississippi","Claiborne County",83.3241714141087
+"1414","28023","Mississippi","Clarke County",83.751917472436
+"1415","28025","Mississippi","Clay County",85.1849880154474
+"1416","28027","Mississippi","Coahoma County",82.445604448858
+"1417","28029","Mississippi","Copiah County",83.4813309519469
+"1418","28031","Mississippi","Covington County",84.206651094535
+"1419","28033","Mississippi","DeSoto County",90.3744865976196
+"1420","28035","Mississippi","Forrest County",87.0441908614264
+"1421","28037","Mississippi","Franklin County",81.9440624503859
+"1422","28039","Mississippi","George County",80.9640143145823
+"1423","28041","Mississippi","Greene County",80.9617825036819
+"1424","28043","Mississippi","Grenada County",82.4151307104206
+"1425","28045","Mississippi","Hancock County",88.626053576189
+"1426","28047","Mississippi","Harrison County",88.745725942299
+"1427","28049","Mississippi","Hinds County",89.6658091777579
+"1428","28051","Mississippi","Holmes County",82.4869333157629
+"1429","28053","Mississippi","Humphreys County",82.684900109648
+"1430","28055","Mississippi","Issaquena County",82.5813060675275
+"1431","28057","Mississippi","Itawamba County",81.646163942931
+"1432","28059","Mississippi","Jackson County",89.6350002925887
+"1433","28061","Mississippi","Jasper County",81.8414457558791
+"1434","28063","Mississippi","Jefferson County",79.6854958780051
+"1435","28065","Mississippi","Jefferson Davis County",82.8653113315674
+"1436","28067","Mississippi","Jones County",82.3690158065195
+"1437","28069","Mississippi","Kemper County",79.0811351715076
+"1438","28071","Mississippi","Lafayette County",91.5484243009659
+"1439","28073","Mississippi","Lamar County",91.7819861501657
+"1440","28075","Mississippi","Lauderdale County",84.4283180763903
+"1441","28077","Mississippi","Lawrence County",82.0823864193665
+"1442","28079","Mississippi","Leake County",79.530385815812
+"1443","28081","Mississippi","Lee County",84.7051729429458
+"1444","28083","Mississippi","Leflore County",83.5930931791333
+"1445","28085","Mississippi","Lincoln County",82.0540020188813
+"1446","28087","Mississippi","Lowndes County",85.3996679661787
+"1447","28089","Mississippi","Madison County",89.7852303531993
+"1448","28091","Mississippi","Marion County",81.6292996886513
+"1449","28093","Mississippi","Marshall County",84.721070269632
+"1450","28095","Mississippi","Monroe County",80.8520854175877
+"1451","28097","Mississippi","Montgomery County",82.1158116446264
+"1452","28099","Mississippi","Neshoba County",80.1740869261081
+"1453","28101","Mississippi","Newton County",80.6020691383051
+"1454","28103","Mississippi","Noxubee County",83.838636621863
+"1455","28105","Mississippi","Oktibbeha County",86.2670760126509
+"1456","28107","Mississippi","Panola County",83.9551461425771
+"1457","28109","Mississippi","Pearl River County",84.524240880551
+"1458","28111","Mississippi","Perry County",84.0266138513528
+"1459","28113","Mississippi","Pike County",82.3237441226015
+"1460","28115","Mississippi","Pontotoc County",81.9514018413238
+"1461","28117","Mississippi","Prentiss County",79.5329609287592
+"1462","28119","Mississippi","Quitman County",82.4644680783815
+"1463","28121","Mississippi","Rankin County",89.7220235715374
+"1464","28123","Mississippi","Scott County",80.058696491065
+"1465","28125","Mississippi","Sharkey County",81.379142552563
+"1466","28127","Mississippi","Simpson County",83.6285817696148
+"1467","28129","Mississippi","Smith County",80.9970010932956
+"1468","28131","Mississippi","Stone County",86.6903798032776
+"1469","28133","Mississippi","Sunflower County",83.2018190406269
+"1470","28135","Mississippi","Tallahatchie County",82.4750822897296
+"1471","28137","Mississippi","Tate County",84.3233685587428
+"1472","28139","Mississippi","Tippah County",80.1490046910975
+"1473","28141","Mississippi","Tishomingo County",79.0875503821265
+"1474","28143","Mississippi","Tunica County",83.9810483125561
+"1475","28145","Mississippi","Union County",81.5137533031342
+"1476","28147","Mississippi","Walthall County",82.3024420608956
+"1477","28149","Mississippi","Warren County",85.6175735770033
+"1478","28151","Mississippi","Washington County",84.2207510707117
+"1479","28153","Mississippi","Wayne County",82.2862654625479
+"1480","28155","Mississippi","Webster County",84.4220184736686
+"1481","28157","Mississippi","Wilkinson County",79.9209887872351
+"1482","28159","Mississippi","Winston County",80.0040976311139
+"1483","28161","Mississippi","Yalobusha County",82.2606915930387
+"1484","28163","Mississippi","Yazoo County",84.495361804005
+"1485","29001","Missouri","Adair County",85.3243497652852
+"1486","29003","Missouri","Andrew County",89.0952403928755
+"1487","29005","Missouri","Atchison County",84.5924240680445
+"1488","29007","Missouri","Audrain County",83.5735345036614
+"1489","29009","Missouri","Barry County",83.0580901460963
+"1490","29011","Missouri","Barton County",84.3958736643241
+"1491","29013","Missouri","Bates County",87.1697861010002
+"1492","29015","Missouri","Benton County",84.3169520051489
+"1493","29017","Missouri","Bollinger County",86.9239519534477
+"1494","29019","Missouri","Boone County",90.0317945000765
+"1495","29021","Missouri","Buchanan County",88.5215600573573
+"1496","29023","Missouri","Butler County",81.8975537311843
+"1497","29025","Missouri","Caldwell County",88.0202224060147
+"1498","29027","Missouri","Callaway County",85.6962628042652
+"1499","29029","Missouri","Camden County",87.4164776109172
+"1500","29031","Missouri","Cape Girardeau County",88.9946539627092
+"1501","29033","Missouri","Carroll County",83.237913442473
+"1502","29035","Missouri","Carter County",81.198519296054
+"1503","29037","Missouri","Cass County",91.122581059871
+"1504","29039","Missouri","Cedar County",84.0860464156965
+"1505","29041","Missouri","Chariton County",81.8657424099525
+"1506","29043","Missouri","Christian County",89.6682788084124
+"1507","29045","Missouri","Clark County",85.2109869250917
+"1508","29047","Missouri","Clay County",92.5322020391256
+"1509","29049","Missouri","Clinton County",88.7793381598504
+"1510","29051","Missouri","Cole County",89.347577948227
+"1511","29053","Missouri","Cooper County",87.9024956003161
+"1512","29055","Missouri","Crawford County",84.5573868244002
+"1513","29057","Missouri","Dade County",82.7111980516898
+"1514","29059","Missouri","Dallas County",85.342993353456
+"1515","29061","Missouri","Daviess County",87.3864492450559
+"1516","29063","Missouri","DeKalb County",90.8951474443842
+"1517","29065","Missouri","Dent County",83.3737653195557
+"1518","29067","Missouri","Douglas County",82.799838786438
+"1519","29069","Missouri","Dunklin County",80.6662110194062
+"1520","29071","Missouri","Franklin County",91.1726739124797
+"1521","29073","Missouri","Gasconade County",85.1197984161782
+"1522","29075","Missouri","Gentry County",85.155833007889
+"1523","29077","Missouri","Greene County",89.9464737763986
+"1524","29079","Missouri","Grundy County",86.8642365321054
+"1525","29081","Missouri","Harrison County",84.1636650691219
+"1526","29083","Missouri","Henry County",83.4381804860213
+"1527","29085","Missouri","Hickory County",84.4526911825872
+"1528","29087","Missouri","Holt County",85.2200056120749
+"1529","29089","Missouri","Howard County",82.9256740802628
+"1530","29091","Missouri","Howell County",82.9072365523044
+"1531","29093","Missouri","Iron County",83.7181190160721
+"1532","29095","Missouri","Jackson County",92.0762196822826
+"1533","29097","Missouri","Jasper County",88.2534970687684
+"1534","29099","Missouri","Jefferson County",92.7881863267031
+"1535","29101","Missouri","Johnson County",87.6297264170597
+"1536","29103","Missouri","Knox County",84.1116037028248
+"1537","29105","Missouri","Laclede County",83.7640762159705
+"1538","29107","Missouri","Lafayette County",88.2528935831048
+"1539","29109","Missouri","Lawrence County",83.2611145278669
+"1540","29111","Missouri","Lewis County",86.2742246694701
+"1541","29113","Missouri","Lincoln County",90.3029814035762
+"1542","29115","Missouri","Linn County",84.1849529796423
+"1543","29117","Missouri","Livingston County",83.314710413257
+"1544","29119","Missouri","McDonald County",85.3231730044539
+"1545","29121","Missouri","Macon County",83.1155018327801
+"1546","29123","Missouri","Madison County",84.0127905458142
+"1547","29125","Missouri","Maries County",82.6368745194733
+"1548","29127","Missouri","Marion County",84.4348262670856
+"1549","29129","Missouri","Mercer County",86.558828294637
+"1550","29131","Missouri","Miller County",90.5897069602249
+"1551","29133","Missouri","Mississippi County",84.6140752587728
+"1552","29135","Missouri","Moniteau County",89.2309588882437
+"1553","29137","Missouri","Monroe County",83.086922026686
+"1554","29139","Missouri","Montgomery County",83.8474931912326
+"1555","29141","Missouri","Morgan County",81.9201470810236
+"1556","29143","Missouri","New Madrid County",84.6317519239311
+"1557","29145","Missouri","Newton County",87.4137069352906
+"1558","29147","Missouri","Nodaway County",86.2088070731136
+"1559","29149","Missouri","Oregon County",83.7685274940518
+"1560","29151","Missouri","Osage County",88.2848866279868
+"1561","29153","Missouri","Ozark County",86.6907873231385
+"1562","29155","Missouri","Pemiscot County",80.9448586966026
+"1563","29157","Missouri","Perry County",85.0917762564207
+"1564","29159","Missouri","Pettis County",84.1456777080681
+"1565","29161","Missouri","Phelps County",84.4527163714509
+"1566","29163","Missouri","Pike County",83.9046798168437
+"1567","29165","Missouri","Platte County",96.6547774837405
+"1568","29167","Missouri","Polk County",86.3006549362469
+"1569","29169","Missouri","Pulaski County",87.6859821305744
+"1570","29171","Missouri","Putnam County",84.3031078984536
+"1571","29173","Missouri","Ralls County",84.1885902212123
+"1572","29175","Missouri","Randolph County",83.0123868703381
+"1573","29177","Missouri","Ray County",85.0060744836584
+"1574","29179","Missouri","Reynolds County",82.9512155141172
+"1575","29181","Missouri","Ripley County",80.5107912567881
+"1576","29183","Missouri","St. Charles County",98.079533018623
+"1577","29185","Missouri","St. Clair County",82.7735126969775
+"1578","29186","Missouri","Ste. Genevieve County",85.2894101105352
+"1579","29187","Missouri","St. Francois County",84.3452007008225
+"1580","29189","Missouri","St. Louis County",100.306366990087
+"1581","29195","Missouri","Saline County",84.0172271957937
+"1582","29197","Missouri","Schuyler County",83.6264523798909
+"1583","29199","Missouri","Scotland County",84.2355459825237
+"1584","29201","Missouri","Scott County",84.8277990144022
+"1585","29203","Missouri","Shannon County",82.5826880578336
+"1586","29205","Missouri","Shelby County",82.0350543243558
+"1587","29207","Missouri","Stoddard County",81.9151978404774
+"1588","29209","Missouri","Stone County",86.7243304768054
+"1589","29211","Missouri","Sullivan County",84.5293605586849
+"1590","29213","Missouri","Taney County",88.2804989130319
+"1591","29215","Missouri","Texas County",82.0588637256167
+"1592","29217","Missouri","Vernon County",84.7660295457659
+"1593","29219","Missouri","Warren County",91.0522234304457
+"1594","29221","Missouri","Washington County",80.7991918101681
+"1595","29223","Missouri","Wayne County",81.0797818393331
+"1596","29225","Missouri","Webster County",85.2573121851971
+"1597","29227","Missouri","Worth County",85.3256646885037
+"1598","29229","Missouri","Wright County",81.7696125035997
+"1599","29510","Missouri","St. Louis city",97.9838297865542
+"1600","30001","Montana","Beaverhead County",87.2175693030893
+"1601","30003","Montana","Big Horn County",85.9164755110897
+"1602","30005","Montana","Blaine County",84.7082762557419
+"1603","30007","Montana","Broadwater County",87.2273989484369
+"1604","30009","Montana","Carbon County",90.432219049713
+"1605","30011","Montana","Carter County",87.8045471237651
+"1606","30013","Montana","Cascade County",86.885
+"1607","30015","Montana","Chouteau County",83.1024115014178
+"1608","30017","Montana","Custer County",90.3087138027766
+"1609","30019","Montana","Daniels County",85.5367136956065
+"1610","30021","Montana","Dawson County",87.6316776648809
+"1611","30023","Montana","Deer Lodge County",86.1836597132605
+"1612","30025","Montana","Fallon County",88.0609839229624
+"1613","30027","Montana","Fergus County",87.9690967078737
+"1614","30029","Montana","Flathead County",92.2632434760602
+"1615","30031","Montana","Gallatin County",97.9315814523071
+"1616","30033","Montana","Garfield County",86.199702649031
+"1617","30035","Montana","Glacier County",86.3990921867874
+"1618","30037","Montana","Golden Valley County",86.947488871817
+"1619","30039","Montana","Granite County",92.1662004734191
+"1620","30041","Montana","Hill County",85.1813476901321
+"1621","30043","Montana","Jefferson County",89.7037179492208
+"1622","30045","Montana","Judith Basin County",85.1933380684007
+"1623","30047","Montana","Lake County",89.4361558132466
+"1624","30049","Montana","Lewis and Clark County",89.1774234805063
+"1625","30051","Montana","Liberty County",84.6633489243882
+"1626","30053","Montana","Lincoln County",89.2990580721675
+"1627","30055","Montana","McCone County",84.5122004486429
+"1628","30057","Montana","Madison County",93.2578936319807
+"1629","30059","Montana","Meagher County",89.528424017413
+"1630","30061","Montana","Mineral County",87.9290667925122
+"1631","30063","Montana","Missoula County",94.627
+"1632","30065","Montana","Musselshell County",88.450930750017
+"1633","30067","Montana","Park County",94.1086379218607
+"1634","30069","Montana","Petroleum County",86.3858946812983
+"1635","30071","Montana","Phillips County",84.9690882379359
+"1636","30073","Montana","Pondera County",86.5664837236265
+"1637","30075","Montana","Powder River County",89.1283427788496
+"1638","30077","Montana","Powell County",88.4875985596395
+"1639","30079","Montana","Prairie County",86.7415454000689
+"1640","30081","Montana","Ravalli County",95.7569049583007
+"1641","30083","Montana","Richland County",89.8576216987037
+"1642","30085","Montana","Roosevelt County",85.7757246413414
+"1643","30087","Montana","Rosebud County",87.4702176872004
+"1644","30089","Montana","Sanders County",88.1168873108824
+"1645","30091","Montana","Sheridan County",88.6266410346141
+"1646","30093","Montana","Silver Bow County",88.3688966695969
+"1647","30095","Montana","Stillwater County",90.2857176402553
+"1648","30097","Montana","Sweet Grass County",91.3600284036336
+"1649","30099","Montana","Teton County",87.7746323454004
+"1650","30101","Montana","Toole County",86.7151145595028
+"1651","30103","Montana","Treasure County",88.7587266468765
+"1652","30105","Montana","Valley County",87.014656480392
+"1653","30107","Montana","Wheatland County",85.8716327895229
+"1654","30109","Montana","Wibaux County",90.2194746049912
+"1655","30111","Montana","Yellowstone County",92.6010127886235
+"1656","31001","Nebraska","Adams County",86.8401801889539
+"1657","31003","Nebraska","Antelope County",87.422604200714
+"1658","31005","Nebraska","Arthur County",86.4359316546142
+"1659","31007","Nebraska","Banner County",88.2408587666534
+"1660","31009","Nebraska","Blaine County",86.6841195121254
+"1661","31011","Nebraska","Boone County",87.3259931002801
+"1662","31013","Nebraska","Box Butte County",86.8835518712623
+"1663","31015","Nebraska","Boyd County",88.0289965763919
+"1664","31017","Nebraska","Brown County",87.6310066088551
+"1665","31019","Nebraska","Buffalo County",92.6293135262095
+"1666","31021","Nebraska","Burt County",87.6943464480585
+"1667","31023","Nebraska","Butler County",87.9586168977343
+"1668","31025","Nebraska","Cass County",94.2741094613613
+"1669","31027","Nebraska","Cedar County",87.8896120252385
+"1670","31029","Nebraska","Chase County",86.7090045616494
+"1671","31031","Nebraska","Cherry County",87.1338600407233
+"1672","31033","Nebraska","Cheyenne County",86.7003628959394
+"1673","31035","Nebraska","Clay County",84.8168104959444
+"1674","31037","Nebraska","Colfax County",87.9524363306435
+"1675","31039","Nebraska","Cuming County",86.5151734663303
+"1676","31041","Nebraska","Custer County",85.9434781391799
+"1677","31043","Nebraska","Dakota County",87.4136391248841
+"1678","31045","Nebraska","Dawes County",87.6794711814045
+"1679","31047","Nebraska","Dawson County",86.3716211445747
+"1680","31049","Nebraska","Deuel County",85.4300199621524
+"1681","31051","Nebraska","Dixon County",84.6269229719995
+"1682","31053","Nebraska","Dodge County",88.0558884949058
+"1683","31055","Nebraska","Douglas County",94.8681769519853
+"1684","31057","Nebraska","Dundy County",85.8256341658911
+"1685","31059","Nebraska","Fillmore County",84.2937494013824
+"1686","31061","Nebraska","Franklin County",83.881309131344
+"1687","31063","Nebraska","Frontier County",84.4342894059908
+"1688","31065","Nebraska","Furnas County",85.5980232608776
+"1689","31067","Nebraska","Gage County",85.8812996604244
+"1690","31069","Nebraska","Garden County",85.0304468286437
+"1691","31071","Nebraska","Garfield County",86.4464045113641
+"1692","31073","Nebraska","Gosper County",86.1290743507425
+"1693","31075","Nebraska","Grant County",87.3743930110179
+"1694","31077","Nebraska","Greeley County",85.831055779059
+"1695","31079","Nebraska","Hall County",89.3703228253486
+"1696","31081","Nebraska","Hamilton County",87.2193425252572
+"1697","31083","Nebraska","Harlan County",89.7459187504231
+"1698","31085","Nebraska","Hayes County",85.2848866075382
+"1699","31087","Nebraska","Hitchcock County",86.3561592567193
+"1700","31089","Nebraska","Holt County",88.1967130052088
+"1701","31091","Nebraska","Hooker County",85.7564809135093
+"1702","31093","Nebraska","Howard County",87.7468111692377
+"1703","31095","Nebraska","Jefferson County",85.8071600498962
+"1704","31097","Nebraska","Johnson County",86.3910295635959
+"1705","31099","Nebraska","Kearney County",90.5261575838956
+"1706","31101","Nebraska","Keith County",86.5076915013617
+"1707","31103","Nebraska","Keya Paha County",89.352893776467
+"1708","31105","Nebraska","Kimball County",88.1497171890358
+"1709","31107","Nebraska","Knox County",87.4434259585703
+"1710","31109","Nebraska","Lancaster County",93.3369487505356
+"1711","31111","Nebraska","Lincoln County",88.1652139962846
+"1712","31113","Nebraska","Logan County",86.0119933330268
+"1713","31115","Nebraska","Loup County",85.3164017829299
+"1714","31117","Nebraska","McPherson County",84.7731941507522
+"1715","31119","Nebraska","Madison County",89.2578038214047
+"1716","31121","Nebraska","Merrick County",88.3067041704332
+"1717","31123","Nebraska","Morrill County",86.7001538905927
+"1718","31125","Nebraska","Nance County",86.6127685332126
+"1719","31127","Nebraska","Nemaha County",92.4697578984021
+"1720","31129","Nebraska","Nuckolls County",84.4957675240343
+"1721","31131","Nebraska","Otoe County",93.9216063113976
+"1722","31133","Nebraska","Pawnee County",84.673152251895
+"1723","31135","Nebraska","Perkins County",87.4432376543827
+"1724","31137","Nebraska","Phelps County",90.7155886090279
+"1725","31139","Nebraska","Pierce County",88.1299221860652
+"1726","31141","Nebraska","Platte County",89.554337034963
+"1727","31143","Nebraska","Polk County",86.7845575412473
+"1728","31145","Nebraska","Red Willow County",85.0580563336914
+"1729","31147","Nebraska","Richardson County",85.8388988074363
+"1730","31149","Nebraska","Rock County",85.6094326312287
+"1731","31151","Nebraska","Saline County",92.3181444639481
+"1732","31153","Nebraska","Sarpy County",94.1478537584329
+"1733","31155","Nebraska","Saunders County",90.8502556930052
+"1734","31157","Nebraska","Scotts Bluff County",88.2019890064698
+"1735","31159","Nebraska","Seward County",91.5411201934932
+"1736","31161","Nebraska","Sheridan County",86.6688353041637
+"1737","31163","Nebraska","Sherman County",90.1446404790353
+"1738","31165","Nebraska","Sioux County",87.4842785058595
+"1739","31167","Nebraska","Stanton County",88.2410323137134
+"1740","31169","Nebraska","Thayer County",85.3390116900292
+"1741","31171","Nebraska","Thomas County",85.7415151107249
+"1742","31173","Nebraska","Thurston County",83.4965384015545
+"1743","31175","Nebraska","Valley County",85.5383670017812
+"1744","31177","Nebraska","Washington County",88.5156660981635
+"1745","31179","Nebraska","Wayne County",88.9107873628576
+"1746","31181","Nebraska","Webster County",85.632059025218
+"1747","31183","Nebraska","Wheeler County",86.3328063872898
+"1748","31185","Nebraska","York County",87.6622281319816
+"1749","32001","Nevada","Churchill County",91.3783374968041
+"1750","32003","Nevada","Clark County",95.41
+"1751","32005","Nevada","Douglas County",98.0754148652153
+"1752","32007","Nevada","Elko County",93.2525154755604
+"1753","32009","Nevada","Esmeralda County",90.2572510074922
+"1754","32011","Nevada","Eureka County",84.9038641171365
+"1755","32013","Nevada","Humboldt County",91.0333293941683
+"1756","32015","Nevada","Lander County",89.1645051012322
+"1757","32017","Nevada","Lincoln County",86.6482514684344
+"1758","32019","Nevada","Lyon County",91.8313619963016
+"1759","32021","Nevada","Mineral County",86.5355945063938
+"1760","32023","Nevada","Nye County",88.2882193449882
+"1761","32027","Nevada","Pershing County",87.4067825352665
+"1762","32029","Nevada","Storey County",91.8287454756831
+"1763","32031","Nevada","Washoe County",97.2584210563952
+"1764","32033","Nevada","White Pine County",90.4790004500531
+"1765","32510","Nevada","Carson City",94.066
+"1766","33001","New Hampshire","Belknap County",99.0741779445331
+"1767","33003","New Hampshire","Carroll County",100.164033018707
+"1768","33005","New Hampshire","Cheshire County",97.6039551974336
+"1769","33007","New Hampshire","Coos County",93.2506501482792
+"1770","33009","New Hampshire","Grafton County",99.3228158858471
+"1771","33011","New Hampshire","Hillsborough County",102.083
+"1772","33013","New Hampshire","Merrimack County",99.815581725936
+"1773","33015","New Hampshire","Rockingham County",104.379114808722
+"1774","33017","New Hampshire","Strafford County",98.6971547688504
+"1775","33019","New Hampshire","Sullivan County",95.1502450889166
+"1776","34001","New Jersey","Atlantic County",96.964
+"1777","34003","New Jersey","Bergen County",113.739868840176
+"1778","34005","New Jersey","Burlington County",100.705612167823
+"1779","34007","New Jersey","Camden County",96.8382402138204
+"1780","34009","New Jersey","Cape May County",94.225
+"1781","34011","New Jersey","Cumberland County",96.516
+"1782","34013","New Jersey","Essex County",107.659754933346
+"1783","34015","New Jersey","Gloucester County",96.8523372650882
+"1784","34017","New Jersey","Hudson County",106.552821762443
+"1785","34019","New Jersey","Hunterdon County",109.909946091484
+"1786","34021","New Jersey","Mercer County",101.892
+"1787","34023","New Jersey","Middlesex County",108.813170094189
+"1788","34025","New Jersey","Monmouth County",112.143987524831
+"1789","34027","New Jersey","Morris County",115.565544297941
+"1790","34029","New Jersey","Ocean County",107.486580221477
+"1791","34031","New Jersey","Passaic County",105.828402726092
+"1792","34033","New Jersey","Salem County",95.6181523682033
+"1793","34035","New Jersey","Somerset County",112.607978403159
+"1794","34037","New Jersey","Sussex County",107.889234386741
+"1795","34039","New Jersey","Union County",107.235703048413
+"1796","34041","New Jersey","Warren County",98.135898933465
+"1797","35001","New Mexico","Bernalillo County",92.476266033453
+"1798","35003","New Mexico","Catron County",86.0176741939558
+"1799","35005","New Mexico","Chaves County",84.5735812600208
+"1800","35006","New Mexico","Cibola County",81.9488907258225
+"1801","35007","New Mexico","Colfax County",89.4353311072422
+"1802","35009","New Mexico","Curry County",86.2052420688194
+"1803","35011","New Mexico","De Baca County",84.1057102256897
+"1804","35013","New Mexico","Doña Ana County",86.05
+"1805","35015","New Mexico","Eddy County",87.1597002833015
+"1806","35017","New Mexico","Grant County",85.6066155215178
+"1807","35019","New Mexico","Guadalupe County",80.711771107626
+"1808","35021","New Mexico","Harding County",85.6495093304521
+"1809","35023","New Mexico","Hidalgo County",85.1866087680795
+"1810","35025","New Mexico","Lea County",86.4766109246701
+"1811","35027","New Mexico","Lincoln County",86.6080797812393
+"1812","35028","New Mexico","Los Alamos County",94.8886119791381
+"1813","35029","New Mexico","Luna County",80.696940058468
+"1814","35031","New Mexico","McKinley County",84.7717507164844
+"1815","35033","New Mexico","Mora County",82.3789175307672
+"1816","35035","New Mexico","Otero County",86.2363179881138
+"1817","35037","New Mexico","Quay County",83.4388129097751
+"1818","35039","New Mexico","Rio Arriba County",81.8948383100672
+"1819","35041","New Mexico","Roosevelt County",85.8311261892156
+"1820","35043","New Mexico","Sandoval County",93.2180762761583
+"1821","35045","New Mexico","San Juan County",89.295
+"1822","35047","New Mexico","San Miguel County",84.2876454441063
+"1823","35049","New Mexico","Santa Fe County",93.323
+"1824","35051","New Mexico","Sierra County",85.3192235305959
+"1825","35053","New Mexico","Socorro County",83.8625931150361
+"1826","35055","New Mexico","Taos County",92.5875630804302
+"1827","35057","New Mexico","Torrance County",88.2991548132321
+"1828","35059","New Mexico","Union County",79.9261501501548
+"1829","35061","New Mexico","Valencia County",88.4452549651087
+"1830","36001","New York","Albany County",99.3976518352436
+"1831","36003","New York","Allegany County",90.7633851633956
+"1832","36005","New York","Bronx County",108.690686915893
+"1833","36007","New York","Broome County",94.5279388828935
+"1834","36009","New York","Cattaraugus County",89.1551210745079
+"1835","36011","New York","Cayuga County",92.7574342365453
+"1836","36013","New York","Chautauqua County",90.4476372001551
+"1837","36015","New York","Chemung County",94.725
+"1838","36017","New York","Chenango County",88.8626332066134
+"1839","36019","New York","Clinton County",94.0799781055637
+"1840","36021","New York","Columbia County",96.7922722667919
+"1841","36023","New York","Cortland County",92.8198224681822
+"1842","36025","New York","Delaware County",93.9448231948626
+"1843","36027","New York","Dutchess County",110.949522760908
+"1844","36029","New York","Erie County",95.5752712383044
+"1845","36031","New York","Essex County",95.4927315110765
+"1846","36033","New York","Franklin County",90.6995580616487
+"1847","36035","New York","Fulton County",90.2948160023938
+"1848","36037","New York","Genesee County",91.2602862767282
+"1849","36039","New York","Greene County",96.8174334479608
+"1850","36041","New York","Hamilton County",93.1681154430458
+"1851","36043","New York","Herkimer County",90.3291552546147
+"1852","36045","New York","Jefferson County",93.76
+"1853","36047","New York","Kings County",115.90117360545
+"1854","36049","New York","Lewis County",88.7219465468311
+"1855","36051","New York","Livingston County",94.2188262102597
+"1856","36053","New York","Madison County",93.5951965177251
+"1857","36055","New York","Monroe County",98.4496316416833
+"1858","36057","New York","Montgomery County",91.1517001631156
+"1859","36059","New York","Nassau County",120.56823257357
+"1860","36061","New York","New York County",132.605197210486
+"1861","36063","New York","Niagara County",92.0675789578275
+"1862","36065","New York","Oneida County",93.0750137733666
+"1863","36067","New York","Onondaga County",97.480212544676
+"1864","36069","New York","Ontario County",98.8000631140134
+"1865","36071","New York","Orange County",109.925307942231
+"1866","36073","New York","Orleans County",92.2236258845227
+"1867","36075","New York","Oswego County",93.2772537563204
+"1868","36077","New York","Otsego County",93.1702203414576
+"1869","36079","New York","Putnam County",116.974197034558
+"1870","36081","New York","Queens County",115.353278586403
+"1871","36083","New York","Rensselaer County",97.7681279507432
+"1872","36085","New York","Richmond County",112.572020929693
+"1873","36087","New York","Rockland County",111.076942369219
+"1874","36089","New York","St. Lawrence County",91.0706930020454
+"1875","36091","New York","Saratoga County",102.256633786942
+"1876","36093","New York","Schenectady County",96.5366092794022
+"1877","36095","New York","Schoharie County",91.421960975753
+"1878","36097","New York","Schuyler County",91.8404170471635
+"1879","36099","New York","Seneca County",91.0970358745073
+"1880","36101","New York","Steuben County",91.6843318356158
+"1881","36103","New York","Suffolk County",118.057551996108
+"1882","36105","New York","Sullivan County",93.618409917326
+"1883","36107","New York","Tioga County",93.916207263029
+"1884","36109","New York","Tompkins County",102.345
+"1885","36111","New York","Ulster County",100.04
+"1886","36113","New York","Warren County",95.7535932397871
+"1887","36115","New York","Washington County",95.2550006230811
+"1888","36117","New York","Wayne County",94.0168022937017
+"1889","36119","New York","Westchester County",116.676573593383
+"1890","36121","New York","Wyoming County",91.1092276680462
+"1891","36123","New York","Yates County",94.9640660268403
+"1892","37001","North Carolina","Alamance County",89.433
+"1893","37003","North Carolina","Alexander County",87.6794304268714
+"1894","37005","North Carolina","Alleghany County",83.6546902221431
+"1895","37007","North Carolina","Anson County",88.1250923484057
+"1896","37009","North Carolina","Ashe County",84.3838870754137
+"1897","37011","North Carolina","Avery County",94.573324384162
+"1898","37013","North Carolina","Beaufort County",87.7365256519343
+"1899","37015","North Carolina","Bertie County",85.5047832836603
+"1900","37017","North Carolina","Bladen County",86.8037701430235
+"1901","37019","North Carolina","Brunswick County",97.9443539435704
+"1902","37021","North Carolina","Buncombe County",97.7342232663682
+"1903","37023","North Carolina","Burke County",87.6703807556388
+"1904","37025","North Carolina","Cabarrus County",95.3948060832196
+"1905","37027","North Carolina","Caldwell County",86.707118281192
+"1906","37029","North Carolina","Camden County",94.5513094556343
+"1907","37031","North Carolina","Carteret County",95.5762123093352
+"1908","37033","North Carolina","Caswell County",86.0542119170192
+"1909","37035","North Carolina","Catawba County",91.3852343137856
+"1910","37037","North Carolina","Chatham County",93.5181218078683
+"1911","37039","North Carolina","Cherokee County",85.6211122201635
+"1912","37041","North Carolina","Chowan County",87.9712745503024
+"1913","37043","North Carolina","Clay County",88.0612694539261
+"1914","37045","North Carolina","Cleveland County",85.3477501433052
+"1915","37047","North Carolina","Columbus County",84.2499999938459
+"1916","37049","North Carolina","Craven County",91.5717806475235
+"1917","37051","North Carolina","Cumberland County",92.2655483864008
+"1918","37053","North Carolina","Currituck County",100.229340883116
+"1919","37055","North Carolina","Dare County",99.8201236868874
+"1920","37057","North Carolina","Davidson County",88.2105388977551
+"1921","37059","North Carolina","Davie County",88.462864760001
+"1922","37061","North Carolina","Duplin County",84.8568230220341
+"1923","37063","North Carolina","Durham County",96.5998582363854
+"1924","37065","North Carolina","Edgecombe County",85.8131472232422
+"1925","37067","North Carolina","Forsyth County",94.2852534015423
+"1926","37069","North Carolina","Franklin County",87.414201903022
+"1927","37071","North Carolina","Gaston County",90.784810881327
+"1928","37073","North Carolina","Gates County",90.4085629913112
+"1929","37075","North Carolina","Graham County",83.6414631174491
+"1930","37077","North Carolina","Granville County",88.2804608287099
+"1931","37079","North Carolina","Greene County",87.1801371434623
+"1932","37081","North Carolina","Guilford County",94.8173644674322
+"1933","37083","North Carolina","Halifax County",85.3330531626664
+"1934","37085","North Carolina","Harnett County",90.9113974241379
+"1935","37087","North Carolina","Haywood County",89.2153883987667
+"1936","37089","North Carolina","Henderson County",91.834945190052
+"1937","37091","North Carolina","Hertford County",85.8653508530511
+"1938","37093","North Carolina","Hoke County",89.3483087548399
+"1939","37095","North Carolina","Hyde County",99.7652685155969
+"1940","37097","North Carolina","Iredell County",94.9406582560441
+"1941","37099","North Carolina","Jackson County",87.1974669944184
+"1942","37101","North Carolina","Johnston County",90.309181759901
+"1943","37103","North Carolina","Jones County",88.3340905674608
+"1944","37105","North Carolina","Lee County",89.5896290691483
+"1945","37107","North Carolina","Lenoir County",86.8434064558321
+"1946","37109","North Carolina","Lincoln County",91.3971995101088
+"1947","37111","North Carolina","McDowell County",84.2543603652739
+"1948","37113","North Carolina","Macon County",86.1475297181072
+"1949","37115","North Carolina","Madison County",87.4456540128852
+"1950","37117","North Carolina","Martin County",84.5725148845937
+"1951","37119","North Carolina","Mecklenburg County",101.625475241168
+"1952","37121","North Carolina","Mitchell County",84.2037551539897
+"1953","37123","North Carolina","Montgomery County",82.8273290458036
+"1954","37125","North Carolina","Moore County",97.5099916320542
+"1955","37127","North Carolina","Nash County",88.603368966868
+"1956","37129","North Carolina","New Hanover County",98.5135932221841
+"1957","37131","North Carolina","Northampton County",85.2666916472907
+"1958","37133","North Carolina","Onslow County",89.549
+"1959","37135","North Carolina","Orange County",101.894706754279
+"1960","37137","North Carolina","Pamlico County",89.763495478713
+"1961","37139","North Carolina","Pasquotank County",89.3904437799323
+"1962","37141","North Carolina","Pender County",94.3838812445659
+"1963","37143","North Carolina","Perquimans County",88.4794348124761
+"1964","37145","North Carolina","Person County",85.5321087036885
+"1965","37147","North Carolina","Pitt County",89.54
+"1966","37149","North Carolina","Polk County",92.591570859535
+"1967","37151","North Carolina","Randolph County",88.7351609986839
+"1968","37153","North Carolina","Richmond County",85.722661965318
+"1969","37155","North Carolina","Robeson County",84.1748220275445
+"1970","37157","North Carolina","Rockingham County",86.9900583428706
+"1971","37159","North Carolina","Rowan County",90.4791438999197
+"1972","37161","North Carolina","Rutherford County",85.0130525028207
+"1973","37163","North Carolina","Sampson County",84.4229599255071
+"1974","37165","North Carolina","Scotland County",85.1637791858719
+"1975","37167","North Carolina","Stanly County",87.0604301461105
+"1976","37169","North Carolina","Stokes County",88.2503377717338
+"1977","37171","North Carolina","Surry County",85.1610199392971
+"1978","37173","North Carolina","Swain County",86.663556690055
+"1979","37175","North Carolina","Transylvania County",90.2593430824578
+"1980","37177","North Carolina","Tyrrell County",87.5463539063106
+"1981","37179","North Carolina","Union County",97.4085961417504
+"1982","37181","North Carolina","Vance County",85.6830448175562
+"1983","37183","North Carolina","Wake County",99.6628819135188
+"1984","37185","North Carolina","Warren County",84.4553243332155
+"1985","37187","North Carolina","Washington County",84.1558575567127
+"1986","37189","North Carolina","Watauga County",96.886992778743
+"1987","37191","North Carolina","Wayne County",90.018
+"1988","37193","North Carolina","Wilkes County",86.108322991614
+"1989","37195","North Carolina","Wilson County",88.5055605904492
+"1990","37197","North Carolina","Yadkin County",87.3871258096253
+"1991","37199","North Carolina","Yancey County",88.5038670282008
+"1992","38001","North Dakota","Adams County",86.7688505639025
+"1993","38003","North Dakota","Barnes County",86.4435922120664
+"1994","38005","North Dakota","Benson County",83.616844596649
+"1995","38007","North Dakota","Billings County",88.155335673795
+"1996","38009","North Dakota","Bottineau County",88.6225212390923
+"1997","38011","North Dakota","Bowman County",88.4127795965553
+"1998","38013","North Dakota","Burke County",88.589582008182
+"1999","38015","North Dakota","Burleigh County",95.1181577227552
+"2000","38017","North Dakota","Cass County",92.6561080146802
+"2001","38019","North Dakota","Cavalier County",88.3604908781034
+"2002","38021","North Dakota","Dickey County",86.9968783542619
+"2003","38023","North Dakota","Divide County",90.9886922326966
+"2004","38025","North Dakota","Dunn County",89.841628339897
+"2005","38027","North Dakota","Eddy County",84.9099755619503
+"2006","38029","North Dakota","Emmons County",87.3543547161542
+"2007","38031","North Dakota","Foster County",85.7154893535806
+"2008","38033","North Dakota","Golden Valley County",88.6860853629244
+"2009","38035","North Dakota","Grand Forks County",91.3749331139926
+"2010","38037","North Dakota","Grant County",85.5224014492172
+"2011","38039","North Dakota","Griggs County",84.8359689780942
+"2012","38041","North Dakota","Hettinger County",88.4762448834469
+"2013","38043","North Dakota","Kidder County",88.1023446171873
+"2014","38045","North Dakota","LaMoure County",85.216113608436
+"2015","38047","North Dakota","Logan County",87.0839741942847
+"2016","38049","North Dakota","McHenry County",88.981981627024
+"2017","38051","North Dakota","McIntosh County",84.8891145058409
+"2018","38053","North Dakota","McKenzie County",92.8913880106601
+"2019","38055","North Dakota","McLean County",86.0771772100422
+"2020","38057","North Dakota","Mercer County",87.3976363274253
+"2021","38059","North Dakota","Morton County",91.6177471348022
+"2022","38061","North Dakota","Mountrail County",88.040917617718
+"2023","38063","North Dakota","Nelson County",87.9300601249801
+"2024","38065","North Dakota","Oliver County",87.993288795028
+"2025","38067","North Dakota","Pembina County",89.0665771830179
+"2026","38069","North Dakota","Pierce County",87.1681900489182
+"2027","38071","North Dakota","Ramsey County",88.4911042744125
+"2028","38073","North Dakota","Ransom County",90.0830426032783
+"2029","38075","North Dakota","Renville County",87.858904922637
+"2030","38077","North Dakota","Richland County",90.1984778246965
+"2031","38079","North Dakota","Rolette County",85.7391873241576
+"2032","38081","North Dakota","Sargent County",90.2230048879403
+"2033","38083","North Dakota","Sheridan County",86.9125316065831
+"2034","38085","North Dakota","Sioux County",86.20298217378
+"2035","38087","North Dakota","Slope County",89.5897514532291
+"2036","38089","North Dakota","Stark County",90.8940754207927
+"2037","38091","North Dakota","Steele County",86.8235696935759
+"2038","38093","North Dakota","Stutsman County",88.324444189909
+"2039","38095","North Dakota","Towner County",87.9098916509665
+"2040","38097","North Dakota","Traill County",88.1820328051575
+"2041","38099","North Dakota","Walsh County",88.2886838606012
+"2042","38101","North Dakota","Ward County",90.3970515598044
+"2043","38103","North Dakota","Wells County",87.9594944420385
+"2044","38105","North Dakota","Williams County",91.990875460327
+"2045","39001","Ohio","Adams County",82.8750109126977
+"2046","39003","Ohio","Allen County",88.671
+"2047","39005","Ohio","Ashland County",89.773168678162
+"2048","39007","Ohio","Ashtabula County",89.8092840843594
+"2049","39009","Ohio","Athens County",90.2109051235978
+"2050","39011","Ohio","Auglaize County",89.2033348177882
+"2051","39013","Ohio","Belmont County",89.1383772283658
+"2052","39015","Ohio","Brown County",88.7358913875828
+"2053","39017","Ohio","Butler County",93.1933346903884
+"2054","39019","Ohio","Carroll County",92.2995256635104
+"2055","39021","Ohio","Champaign County",87.0856882844774
+"2056","39023","Ohio","Clark County",86.753
+"2057","39025","Ohio","Clermont County",92.7072800525393
+"2058","39027","Ohio","Clinton County",87.5035766285666
+"2059","39029","Ohio","Columbiana County",88.8787665473807
+"2060","39031","Ohio","Coshocton County",87.876364599296
+"2061","39033","Ohio","Crawford County",86.4081163287853
+"2062","39035","Ohio","Cuyahoga County",94.9233540580362
+"2063","39037","Ohio","Darke County",85.983801002375
+"2064","39039","Ohio","Defiance County",85.9851970077816
+"2065","39041","Ohio","Delaware County",99.5386167468268
+"2066","39043","Ohio","Erie County",89.9288484863889
+"2067","39045","Ohio","Fairfield County",91.8808703719375
+"2068","39047","Ohio","Fayette County",87.0793572584793
+"2069","39049","Ohio","Franklin County",95.8739562678941
+"2070","39051","Ohio","Fulton County",87.6114907799731
+"2071","39053","Ohio","Gallia County",86.2724008776163
+"2072","39055","Ohio","Geauga County",94.7625392672578
+"2073","39057","Ohio","Greene County",93.5595380432352
+"2074","39059","Ohio","Guernsey County",87.6485507470615
+"2075","39061","Ohio","Hamilton County",94.512811490039
+"2076","39063","Ohio","Hancock County",89.0296146117274
+"2077","39065","Ohio","Hardin County",83.6303586245983
+"2078","39067","Ohio","Harrison County",87.275655905889
+"2079","39069","Ohio","Henry County",85.7273872995605
+"2080","39071","Ohio","Highland County",85.1419219761633
+"2081","39073","Ohio","Hocking County",87.4137606932781
+"2082","39075","Ohio","Holmes County",87.0122707475076
+"2083","39077","Ohio","Huron County",87.6431676578822
+"2084","39079","Ohio","Jackson County",85.7627876094255
+"2085","39081","Ohio","Jefferson County",87.8704143666052
+"2086","39083","Ohio","Knox County",88.9158751645953
+"2087","39085","Ohio","Lake County",93.7715069085913
+"2088","39087","Ohio","Lawrence County",87.2753298995395
+"2089","39089","Ohio","Licking County",91.4427531898602
+"2090","39091","Ohio","Logan County",87.7698494762281
+"2091","39093","Ohio","Lorain County",89.5513849196983
+"2092","39095","Ohio","Lucas County",89.7880359526788
+"2093","39097","Ohio","Madison County",89.649336425359
+"2094","39099","Ohio","Mahoning County",87.7791633967973
+"2095","39101","Ohio","Marion County",86.6843257921599
+"2096","39103","Ohio","Medina County",94.3898647253287
+"2097","39105","Ohio","Meigs County",87.6399478012859
+"2098","39107","Ohio","Mercer County",84.2983257954235
+"2099","39109","Ohio","Miami County",90.9006825841036
+"2100","39111","Ohio","Monroe County",86.3165464534317
+"2101","39113","Ohio","Montgomery County",92.1016689532963
+"2102","39115","Ohio","Morgan County",85.2775671619164
+"2103","39117","Ohio","Morrow County",88.8670368078073
+"2104","39119","Ohio","Muskingum County",87.4466245213073
+"2105","39121","Ohio","Noble County",86.2943550961645
+"2106","39123","Ohio","Ottawa County",91.4428305696049
+"2107","39125","Ohio","Paulding County",85.1293433663684
+"2108","39127","Ohio","Perry County",85.7747005177011
+"2109","39129","Ohio","Pickaway County",88.9540296869495
+"2110","39131","Ohio","Pike County",85.5132652919195
+"2111","39133","Ohio","Portage County",92.835439988139
+"2112","39135","Ohio","Preble County",84.8631521879731
+"2113","39137","Ohio","Putnam County",85.6291390721202
+"2114","39139","Ohio","Richland County",88.2
+"2115","39141","Ohio","Ross County",88.0111362947498
+"2116","39143","Ohio","Sandusky County",87.2400415422677
+"2117","39145","Ohio","Scioto County",86.3009890607456
+"2118","39147","Ohio","Seneca County",86.305108350866
+"2119","39149","Ohio","Shelby County",87.3749984996197
+"2120","39151","Ohio","Stark County",89.4654164985883
+"2121","39153","Ohio","Summit County",93.6339843214619
+"2122","39155","Ohio","Trumbull County",86.3486191424431
+"2123","39157","Ohio","Tuscarawas County",90.7267352611031
+"2124","39159","Ohio","Union County",92.9525916846908
+"2125","39161","Ohio","Van Wert County",83.0333034709804
+"2126","39163","Ohio","Vinton County",84.5473926732772
+"2127","39165","Ohio","Warren County",97.3943317759528
+"2128","39167","Ohio","Washington County",88.256850609824
+"2129","39169","Ohio","Wayne County",93.3710544045752
+"2130","39171","Ohio","Williams County",84.525611228981
+"2131","39173","Ohio","Wood County",91.8290430370827
+"2132","39175","Ohio","Wyandot County",86.4381839304077
+"2133","40001","Oklahoma","Adair County",85.1963151111293
+"2134","40003","Oklahoma","Alfalfa County",85.5684009982365
+"2135","40005","Oklahoma","Atoka County",83.939662186214
+"2136","40007","Oklahoma","Beaver County",82.7960580531728
+"2137","40009","Oklahoma","Beckham County",85.8145761511707
+"2138","40011","Oklahoma","Blaine County",85.5936648840196
+"2139","40013","Oklahoma","Bryan County",85.2310831608841
+"2140","40015","Oklahoma","Caddo County",81.8509588149291
+"2141","40017","Oklahoma","Canadian County",93.7627868680593
+"2142","40019","Oklahoma","Carter County",86.8655669976083
+"2143","40021","Oklahoma","Cherokee County",86.7578042493127
+"2144","40023","Oklahoma","Choctaw County",83.7169269817043
+"2145","40025","Oklahoma","Cimarron County",81.6693655399246
+"2146","40027","Oklahoma","Cleveland County",93.3425841214944
+"2147","40029","Oklahoma","Coal County",83.6991585984555
+"2148","40031","Oklahoma","Comanche County",87.0811952471931
+"2149","40033","Oklahoma","Cotton County",85.9538790815503
+"2150","40035","Oklahoma","Craig County",86.2939344286265
+"2151","40037","Oklahoma","Creek County",87.8256803587354
+"2152","40039","Oklahoma","Custer County",86.8877622003721
+"2153","40041","Oklahoma","Delaware County",86.1336014985894
+"2154","40043","Oklahoma","Dewey County",86.4183105335798
+"2155","40045","Oklahoma","Ellis County",85.392125499096
+"2156","40047","Oklahoma","Garfield County",86.927
+"2157","40049","Oklahoma","Garvin County",83.8918103396622
+"2158","40051","Oklahoma","Grady County",88.556967299122
+"2159","40053","Oklahoma","Grant County",85.7988373789426
+"2160","40055","Oklahoma","Greer County",84.5346199772351
+"2161","40057","Oklahoma","Harmon County",84.7807310675608
+"2162","40059","Oklahoma","Harper County",85.9510187674477
+"2163","40061","Oklahoma","Haskell County",83.4744269288618
+"2164","40063","Oklahoma","Hughes County",82.5318409862869
+"2165","40065","Oklahoma","Jackson County",85.1553674251521
+"2166","40067","Oklahoma","Jefferson County",84.053539629401
+"2167","40069","Oklahoma","Johnston County",84.3467063034996
+"2168","40071","Oklahoma","Kay County",85.0194076060322
+"2169","40073","Oklahoma","Kingfisher County",85.5838321042522
+"2170","40075","Oklahoma","Kiowa County",83.6375817781158
+"2171","40077","Oklahoma","Latimer County",84.6029443278569
+"2172","40079","Oklahoma","Le Flore County",84.0776896778228
+"2173","40081","Oklahoma","Lincoln County",87.0414789238422
+"2174","40083","Oklahoma","Logan County",88.0812692536943
+"2175","40085","Oklahoma","Love County",86.5651607612456
+"2176","40087","Oklahoma","McClain County",88.4057909975428
+"2177","40089","Oklahoma","McCurtain County",83.8367460652842
+"2178","40091","Oklahoma","McIntosh County",85.6705307915641
+"2179","40093","Oklahoma","Major County",85.6141993154943
+"2180","40095","Oklahoma","Marshall County",84.6471946630214
+"2181","40097","Oklahoma","Mayes County",84.5785951835889
+"2182","40099","Oklahoma","Murray County",84.6357298135108
+"2183","40101","Oklahoma","Muskogee County",85.5359767382784
+"2184","40103","Oklahoma","Noble County",85.826986932312
+"2185","40105","Oklahoma","Nowata County",86.9933344455715
+"2186","40107","Oklahoma","Okfuskee County",82.5554431459026
+"2187","40109","Oklahoma","Oklahoma County",92.8785974943671
+"2188","40111","Oklahoma","Okmulgee County",85.7985307679798
+"2189","40113","Oklahoma","Osage County",87.7730340869804
+"2190","40115","Oklahoma","Ottawa County",82.8265321022473
+"2191","40117","Oklahoma","Pawnee County",88.1187584853967
+"2192","40119","Oklahoma","Payne County",87.2271291997738
+"2193","40121","Oklahoma","Pittsburg County",85.6412834295887
+"2194","40123","Oklahoma","Pontotoc County",84.3637456415285
+"2195","40125","Oklahoma","Pottawatomie County",86.7242345745817
+"2196","40127","Oklahoma","Pushmataha County",83.7055803790003
+"2197","40129","Oklahoma","Roger Mills County",85.5232854643511
+"2198","40131","Oklahoma","Rogers County",91.1981291499799
+"2199","40133","Oklahoma","Seminole County",82.833613827241
+"2200","40135","Oklahoma","Sequoyah County",89.238018087829
+"2201","40137","Oklahoma","Stephens County",85.5443878326658
+"2202","40139","Oklahoma","Texas County",83.8280885266141
+"2203","40141","Oklahoma","Tillman County",84.0917409196641
+"2204","40143","Oklahoma","Tulsa County",93.1732995333286
+"2205","40145","Oklahoma","Wagoner County",89.1940841807153
+"2206","40147","Oklahoma","Washington County",87.0701693212838
+"2207","40149","Oklahoma","Washita County",85.7372618007134
+"2208","40151","Oklahoma","Woods County",85.8493201878438
+"2209","40153","Oklahoma","Woodward County",86.489438313275
+"2210","41001","Oregon","Baker County",93.2812131407109
+"2211","41003","Oregon","Benton County",101.892
+"2212","41005","Oregon","Clackamas County",105.249555884517
+"2213","41007","Oregon","Clatsop County",99.672772717356
+"2214","41009","Oregon","Columbia County",99.5887309240776
+"2215","41011","Oregon","Coos County",96.3626617243794
+"2216","41013","Oregon","Crook County",122.589958948482
+"2217","41015","Oregon","Curry County",98.8112503864207
+"2218","41017","Oregon","Deschutes County",102.824
+"2219","41019","Oregon","Douglas County",96.2031343466663
+"2220","41021","Oregon","Gilliam County",97.6288378956428
+"2221","41023","Oregon","Grant County",93.1724219122201
+"2222","41025","Oregon","Harney County",109.555880131217
+"2223","41027","Oregon","Hood River County",104.175212673498
+"2224","41029","Oregon","Jackson County",102.192
+"2225","41031","Oregon","Jefferson County",96.8520163493022
+"2226","41033","Oregon","Josephine County",98.786
+"2227","41035","Oregon","Klamath County",95.8828291656132
+"2228","41037","Oregon","Lake County",93.4266295647911
+"2229","41039","Oregon","Lane County",100.741
+"2230","41041","Oregon","Lincoln County",100.560367911267
+"2231","41043","Oregon","Linn County",101.892
+"2232","41045","Oregon","Malheur County",89.6767534713693
+"2233","41047","Oregon","Marion County",101.427517647503
+"2234","41049","Oregon","Morrow County",92.1583782231284
+"2235","41051","Oregon","Multnomah County",106.434818603542
+"2236","41053","Oregon","Polk County",103.947760037696
+"2237","41055","Oregon","Sherman County",96.3453732754327
+"2238","41057","Oregon","Tillamook County",98.8658118936185
+"2239","41059","Oregon","Umatilla County",93.6896456326911
+"2240","41061","Oregon","Union County",95.516179605213
+"2241","41063","Oregon","Wallowa County",93.8174388136682
+"2242","41065","Oregon","Wasco County",97.6477079648243
+"2243","41067","Oregon","Washington County",107.338284152165
+"2244","41069","Oregon","Wheeler County",110.053761287615
+"2245","41071","Oregon","Yamhill County",101.345983914905
+"2246","42001","Pennsylvania","Adams County",95.346
+"2247","42003","Pennsylvania","Allegheny County",97.6099891681109
+"2248","42005","Pennsylvania","Armstrong County",87.6938687397126
+"2249","42007","Pennsylvania","Beaver County",91.635561975327
+"2250","42009","Pennsylvania","Bedford County",89.9732422430809
+"2251","42011","Pennsylvania","Berks County",96.048
+"2252","42013","Pennsylvania","Blair County",89.177
+"2253","42015","Pennsylvania","Bradford County",88.9709233849151
+"2254","42017","Pennsylvania","Bucks County",100.677567034719
+"2255","42019","Pennsylvania","Butler County",93.786289919246
+"2256","42021","Pennsylvania","Cambria County",86.082
+"2257","42023","Pennsylvania","Cameron County",87.6536711432991
+"2258","42025","Pennsylvania","Carbon County",91.4310320530161
+"2259","42027","Pennsylvania","Centre County",95.51
+"2260","42029","Pennsylvania","Chester County",103.125089920611
+"2261","42031","Pennsylvania","Clarion County",87.731287375617
+"2262","42033","Pennsylvania","Clearfield County",88.9551109089425
+"2263","42035","Pennsylvania","Clinton County",88.2063830256705
+"2264","42037","Pennsylvania","Columbia County",89.5057032975029
+"2265","42039","Pennsylvania","Crawford County",89.0207796620197
+"2266","42041","Pennsylvania","Cumberland County",99.1414769856958
+"2267","42043","Pennsylvania","Dauphin County",96.5061095161398
+"2268","42045","Pennsylvania","Delaware County",98.8921145803155
+"2269","42047","Pennsylvania","Elk County",87.5811876144429
+"2270","42049","Pennsylvania","Erie County",91.854
+"2271","42051","Pennsylvania","Fayette County",88.2831753033824
+"2272","42053","Pennsylvania","Forest County",85.8953009505623
+"2273","42055","Pennsylvania","Franklin County",94.904
+"2274","42057","Pennsylvania","Fulton County",89.4189557695026
+"2275","42059","Pennsylvania","Greene County",88.9277727992187
+"2276","42061","Pennsylvania","Huntingdon County",87.6656413164077
+"2277","42063","Pennsylvania","Indiana County",89.9390032695398
+"2278","42065","Pennsylvania","Jefferson County",88.4717050063404
+"2279","42067","Pennsylvania","Juniata County",88.8351124296504
+"2280","42069","Pennsylvania","Lackawanna County",93.4106547457321
+"2281","42071","Pennsylvania","Lancaster County",96.884
+"2282","42073","Pennsylvania","Lawrence County",91.9422371425843
+"2283","42075","Pennsylvania","Lebanon County",95.801
+"2284","42077","Pennsylvania","Lehigh County",98.0040140341815
+"2285","42079","Pennsylvania","Luzerne County",93.017055893721
+"2286","42081","Pennsylvania","Lycoming County",91.42
+"2287","42083","Pennsylvania","McKean County",89.0441695984311
+"2288","42085","Pennsylvania","Mercer County",86.4520114654172
+"2289","42087","Pennsylvania","Mifflin County",87.4334356873673
+"2290","42089","Pennsylvania","Monroe County",97.612
+"2291","42091","Pennsylvania","Montgomery County",102.458349313379
+"2292","42093","Pennsylvania","Montour County",89.123264703492
+"2293","42095","Pennsylvania","Northampton County",99.4554155606619
+"2294","42097","Pennsylvania","Northumberland County",88.089715987018
+"2295","42099","Pennsylvania","Perry County",91.6433784840656
+"2296","42101","Pennsylvania","Philadelphia County",96.8308332801698
+"2297","42103","Pennsylvania","Pike County",102.992020476577
+"2298","42105","Pennsylvania","Potter County",90.2207332844176
+"2299","42107","Pennsylvania","Schuylkill County",89.549201954169
+"2300","42109","Pennsylvania","Snyder County",89.9670757714458
+"2301","42111","Pennsylvania","Somerset County",87.9989782052088
+"2302","42113","Pennsylvania","Sullivan County",88.5892212903064
+"2303","42115","Pennsylvania","Susquehanna County",94.338375464934
+"2304","42117","Pennsylvania","Tioga County",88.2637323368672
+"2305","42119","Pennsylvania","Union County",91.6753451845481
+"2306","42121","Pennsylvania","Venango County",88.4238345855195
+"2307","42123","Pennsylvania","Warren County",88.3266185914283
+"2308","42125","Pennsylvania","Washington County",93.2480613023192
+"2309","42127","Pennsylvania","Wayne County",92.9836787682883
+"2310","42129","Pennsylvania","Westmoreland County",91.9705759851621
+"2311","42131","Pennsylvania","Wyoming County",90.8011938070213
+"2312","42133","Pennsylvania","York County",96.587
+"2313","44001","Rhode Island","Bristol County",110.833566275439
+"2314","44003","Rhode Island","Kent County",100.9044701013
+"2315","44005","Rhode Island","Newport County",111.574011605995
+"2316","44007","Rhode Island","Providence County",100.973558758076
+"2317","44009","Rhode Island","Washington County",104.887975375688
+"2318","45001","South Carolina","Abbeville County",86.8202305619715
+"2319","45003","South Carolina","Aiken County",90.4572132644361
+"2320","45005","South Carolina","Allendale County",82.3602528054022
+"2321","45007","South Carolina","Anderson County",89.6586556943362
+"2322","45009","South Carolina","Bamberg County",83.1134648850934
+"2323","45011","South Carolina","Barnwell County",82.7523952716516
+"2324","45013","South Carolina","Beaufort County",99.7382489367589
+"2325","45015","South Carolina","Berkeley County",95.3521673431632
+"2326","45017","South Carolina","Calhoun County",87.8513431513396
+"2327","45019","South Carolina","Charleston County",102.255672813661
+"2328","45021","South Carolina","Cherokee County",86.0575507246015
+"2329","45023","South Carolina","Chester County",82.8846335886395
+"2330","45025","South Carolina","Chesterfield County",85.1952939965897
+"2331","45027","South Carolina","Clarendon County",82.5034979106605
+"2332","45029","South Carolina","Colleton County",86.1465035260421
+"2333","45031","South Carolina","Darlington County",88.0986202000434
+"2334","45033","South Carolina","Dillon County",83.9295145016762
+"2335","45035","South Carolina","Dorchester County",96.997640183536
+"2336","45037","South Carolina","Edgefield County",86.6201939349268
+"2337","45039","South Carolina","Fairfield County",88.4264518229466
+"2338","45041","South Carolina","Florence County",91.6211108231949
+"2339","45043","South Carolina","Georgetown County",93.6080272877942
+"2340","45045","South Carolina","Greenville County",96.5283484025337
+"2341","45047","South Carolina","Greenwood County",88.9883525684152
+"2342","45049","South Carolina","Hampton County",86.5672058459664
+"2343","45051","South Carolina","Horry County",93.5366645217105
+"2344","45053","South Carolina","Jasper County",95.1619012087276
+"2345","45055","South Carolina","Kershaw County",86.8033219009315
+"2346","45057","South Carolina","Lancaster County",88.8969856383371
+"2347","45059","South Carolina","Laurens County",85.875458532004
+"2348","45061","South Carolina","Lee County",85.3430027353609
+"2349","45063","South Carolina","Lexington County",92.5590379105792
+"2350","45065","South Carolina","McCormick County",87.4422234042459
+"2351","45067","South Carolina","Marion County",84.0527271686037
+"2352","45069","South Carolina","Marlboro County",82.943886328184
+"2353","45071","South Carolina","Newberry County",84.9332012144406
+"2354","45073","South Carolina","Oconee County",89.3750586265355
+"2355","45075","South Carolina","Orangeburg County",85.6655335782115
+"2356","45077","South Carolina","Pickens County",90.9165419704959
+"2357","45079","South Carolina","Richland County",95.5008397559039
+"2358","45081","South Carolina","Saluda County",86.5953506893925
+"2359","45083","South Carolina","Spartanburg County",92.59
+"2360","45085","South Carolina","Sumter County",87.5276361464094
+"2361","45087","South Carolina","Union County",84.0174386179149
+"2362","45089","South Carolina","Williamsburg County",87.1292935153437
+"2363","45091","South Carolina","York County",92.8169067961008
+"2364","46003","South Dakota","Aurora County",86.4838498589794
+"2365","46005","South Dakota","Beadle County",86.787974159667
+"2366","46007","South Dakota","Bennett County",87.4569757109101
+"2367","46009","South Dakota","Bon Homme County",86.5414456432944
+"2368","46011","South Dakota","Brookings County",89.5796193619046
+"2369","46013","South Dakota","Brown County",86.2257879854772
+"2370","46015","South Dakota","Brule County",86.8664551810381
+"2371","46017","South Dakota","Buffalo County",84.6042258496885
+"2372","46019","South Dakota","Butte County",89.120727608825
+"2373","46021","South Dakota","Campbell County",87.5287051527759
+"2374","46023","South Dakota","Charles Mix County",85.5397452245881
+"2375","46025","South Dakota","Clark County",84.6724023972458
+"2376","46027","South Dakota","Clay County",87.8778423020165
+"2377","46029","South Dakota","Codington County",87.6967965031659
+"2378","46031","South Dakota","Corson County",85.5317252251905
+"2379","46033","South Dakota","Custer County",89.9404480317934
+"2380","46035","South Dakota","Davison County",87.2054921426406
+"2381","46037","South Dakota","Day County",85.0480356738291
+"2382","46039","South Dakota","Deuel County",86.7132648254801
+"2383","46041","South Dakota","Dewey County",85.1517987355219
+"2384","46043","South Dakota","Douglas County",86.011091960614
+"2385","46045","South Dakota","Edmunds County",86.6672717169347
+"2386","46047","South Dakota","Fall River County",89.2641270305297
+"2387","46049","South Dakota","Faulk County",86.3605942316369
+"2388","46051","South Dakota","Grant County",88.2378004737994
+"2389","46053","South Dakota","Gregory County",85.1906899018932
+"2390","46055","South Dakota","Haakon County",86.0191510744603
+"2391","46057","South Dakota","Hamlin County",86.1708179400618
+"2392","46059","South Dakota","Hand County",85.1598509594036
+"2393","46061","South Dakota","Hanson County",88.9040495776042
+"2394","46063","South Dakota","Harding County",83.6094693746056
+"2395","46065","South Dakota","Hughes County",87.3399421539099
+"2396","46067","South Dakota","Hutchinson County",85.6626242801677
+"2397","46069","South Dakota","Hyde County",85.6076130568452
+"2398","46071","South Dakota","Jackson County",86.2835265964346
+"2399","46073","South Dakota","Jerauld County",85.2846711571011
+"2400","46075","South Dakota","Jones County",87.2392072753602
+"2401","46077","South Dakota","Kingsbury County",86.8070769644294
+"2402","46079","South Dakota","Lake County",87.6940830763318
+"2403","46081","South Dakota","Lawrence County",89.7380143235084
+"2404","46083","South Dakota","Lincoln County",95.7876412823395
+"2405","46085","South Dakota","Lyman County",84.8209735523704
+"2406","46087","South Dakota","McCook County",90.5226326565565
+"2407","46089","South Dakota","McPherson County",84.4941551438715
+"2408","46091","South Dakota","Marshall County",85.136878297095
+"2409","46093","South Dakota","Meade County",91.1336857281099
+"2410","46095","South Dakota","Mellette County",87.3817049554341
+"2411","46097","South Dakota","Miner County",86.7866568396092
+"2412","46099","South Dakota","Minnehaha County",92.4908708440015
+"2413","46101","South Dakota","Moody County",87.438820471255
+"2414","46102","South Dakota","Oglala Lakota County",85.6265143299927
+"2415","46103","South Dakota","Pennington County",92.1591043896327
+"2416","46105","South Dakota","Perkins County",87.204665417623
+"2417","46107","South Dakota","Potter County",85.4879245598618
+"2418","46109","South Dakota","Roberts County",85.156376116441
+"2419","46111","South Dakota","Sanborn County",86.477470345308
+"2420","46115","South Dakota","Spink County",84.9862380329621
+"2421","46117","South Dakota","Stanley County",86.8577326861771
+"2422","46119","South Dakota","Sully County",86.8606141081069
+"2423","46121","South Dakota","Todd County",85.4424514595083
+"2424","46123","South Dakota","Tripp County",86.2069423020921
+"2425","46125","South Dakota","Turner County",90.2975492929785
+"2426","46127","South Dakota","Union County",91.7654285432972
+"2427","46129","South Dakota","Walworth County",88.5165637768187
+"2428","46135","South Dakota","Yankton County",86.6235502600666
+"2429","46137","South Dakota","Ziebach County",84.5732875043535
+"2430","47001","Tennessee","Anderson County",87.9478397837645
+"2431","47003","Tennessee","Bedford County",85.011624224859
+"2432","47005","Tennessee","Benton County",83.4833333963818
+"2433","47007","Tennessee","Bledsoe County",85.2720211931144
+"2434","47009","Tennessee","Blount County",89.3187328136406
+"2435","47011","Tennessee","Bradley County",88.0972275842372
+"2436","47013","Tennessee","Campbell County",83.6294091225672
+"2437","47015","Tennessee","Cannon County",82.1939611057456
+"2438","47017","Tennessee","Carroll County",82.6196332626949
+"2439","47019","Tennessee","Carter County",83.9819598671342
+"2440","47021","Tennessee","Cheatham County",88.4385148249748
+"2441","47023","Tennessee","Chester County",85.5481282208706
+"2442","47025","Tennessee","Claiborne County",84.9270555971247
+"2443","47027","Tennessee","Clay County",84.1303835151883
+"2444","47029","Tennessee","Cocke County",84.579912224037
+"2445","47031","Tennessee","Coffee County",87.4138841029059
+"2446","47033","Tennessee","Crockett County",82.7046262517216
+"2447","47035","Tennessee","Cumberland County",87.8424508969209
+"2448","47037","Tennessee","Davidson County",97.5138391738829
+"2449","47039","Tennessee","Decatur County",83.0770553135336
+"2450","47041","Tennessee","DeKalb County",83.0803064875332
+"2451","47043","Tennessee","Dickson County",86.9293331715119
+"2452","47045","Tennessee","Dyer County",85.0015873610543
+"2453","47047","Tennessee","Fayette County",88.1970877846356
+"2454","47049","Tennessee","Fentress County",84.5792565344404
+"2455","47051","Tennessee","Franklin County",84.9432735451204
+"2456","47053","Tennessee","Gibson County",82.4758483733476
+"2457","47055","Tennessee","Giles County",83.4607250688716
+"2458","47057","Tennessee","Grainger County",84.1315895465771
+"2459","47059","Tennessee","Greene County",86.7048836175886
+"2460","47061","Tennessee","Grundy County",84.0320907967914
+"2461","47063","Tennessee","Hamblen County",83.3799602817473
+"2462","47065","Tennessee","Hamilton County",91.9835709786949
+"2463","47067","Tennessee","Hancock County",81.259476886334
+"2464","47069","Tennessee","Hardeman County",83.2834979326553
+"2465","47071","Tennessee","Hardin County",83.9012074040151
+"2466","47073","Tennessee","Hawkins County",84.4921723516893
+"2467","47075","Tennessee","Haywood County",82.1804113791546
+"2468","47077","Tennessee","Henderson County",83.5241056875763
+"2469","47079","Tennessee","Henry County",83.5324833974148
+"2470","47081","Tennessee","Hickman County",85.8720987574263
+"2471","47083","Tennessee","Houston County",84.6344721867953
+"2472","47085","Tennessee","Humphreys County",85.465285801551
+"2473","47087","Tennessee","Jackson County",86.8493830258217
+"2474","47089","Tennessee","Jefferson County",85.5228948580959
+"2475","47091","Tennessee","Johnson County",86.3990608991348
+"2476","47093","Tennessee","Knox County",92.351173966853
+"2477","47095","Tennessee","Lake County",82.4616911616423
+"2478","47097","Tennessee","Lauderdale County",81.8809040437668
+"2479","47099","Tennessee","Lawrence County",82.8549147300641
+"2480","47101","Tennessee","Lewis County",84.8973653185015
+"2481","47103","Tennessee","Lincoln County",84.426077461979
+"2482","47105","Tennessee","Loudon County",87.954149890015
+"2483","47107","Tennessee","McMinn County",85.9089911853635
+"2484","47109","Tennessee","McNairy County",81.5667581349441
+"2485","47111","Tennessee","Macon County",82.2572757870659
+"2486","47113","Tennessee","Madison County",86.9131797973613
+"2487","47115","Tennessee","Marion County",83.6076761270911
+"2488","47117","Tennessee","Marshall County",84.2848212970966
+"2489","47119","Tennessee","Maury County",90.6502210792364
+"2490","47121","Tennessee","Meigs County",85.8086346071636
+"2491","47123","Tennessee","Monroe County",84.8541795805635
+"2492","47125","Tennessee","Montgomery County",92.6948440296171
+"2493","47127","Tennessee","Moore County",84.8499188052053
+"2494","47129","Tennessee","Morgan County",84.5636731808508
+"2495","47131","Tennessee","Obion County",82.1076288999084
+"2496","47133","Tennessee","Overton County",84.6052450251937
+"2497","47135","Tennessee","Perry County",84.6843582027905
+"2498","47137","Tennessee","Pickett County",84.1236382335627
+"2499","47139","Tennessee","Polk County",85.5426828431459
+"2500","47141","Tennessee","Putnam County",88.6554247864546
+"2501","47143","Tennessee","Rhea County",85.713710738078
+"2502","47145","Tennessee","Roane County",85.410328521487
+"2503","47147","Tennessee","Robertson County",87.9709584981284
+"2504","47149","Tennessee","Rutherford County",93.2360994696985
+"2505","47151","Tennessee","Scott County",82.0564676111819
+"2506","47153","Tennessee","Sequatchie County",89.3781698883892
+"2507","47155","Tennessee","Sevier County",91.0204075079833
+"2508","47157","Tennessee","Shelby County",91.4727628455248
+"2509","47159","Tennessee","Smith County",81.6819653994871
+"2510","47161","Tennessee","Stewart County",89.1718087477518
+"2511","47163","Tennessee","Sullivan County",86.3957276399005
+"2512","47165","Tennessee","Sumner County",93.0844858825954
+"2513","47167","Tennessee","Tipton County",87.5826241358239
+"2514","47169","Tennessee","Trousdale County",83.8909798154561
+"2515","47171","Tennessee","Unicoi County",86.879791257634
+"2516","47173","Tennessee","Union County",86.8991475913744
+"2517","47175","Tennessee","Van Buren County",81.5697003862208
+"2518","47177","Tennessee","Warren County",82.8327887194748
+"2519","47179","Tennessee","Washington County",88.2607386565584
+"2520","47181","Tennessee","Wayne County",81.8299330184393
+"2521","47183","Tennessee","Weakley County",82.5781207278486
+"2522","47185","Tennessee","White County",83.5613124783126
+"2523","47187","Tennessee","Williamson County",104.34935682976
+"2524","47189","Tennessee","Wilson County",94.8625632508662
+"2525","48001","Texas","Anderson County",89.644931226865
+"2526","48003","Texas","Andrews County",96.0746763843908
+"2527","48005","Texas","Angelina County",91.8611619399655
+"2528","48007","Texas","Aransas County",92.9276175874347
+"2529","48009","Texas","Archer County",88.6283225098397
+"2530","48011","Texas","Armstrong County",90.7176868561744
+"2531","48013","Texas","Atascosa County",90.7577323437979
+"2532","48015","Texas","Austin County",95.6454847003451
+"2533","48017","Texas","Bailey County",93.8662158056538
+"2534","48019","Texas","Bandera County",97.0219909584276
+"2535","48021","Texas","Bastrop County",91.9895572866027
+"2536","48023","Texas","Baylor County",91.8943176072699
+"2537","48025","Texas","Bee County",90.3473788418065
+"2538","48027","Texas","Bell County",93.7290490199774
+"2539","48029","Texas","Bexar County",95.9822253540006
+"2540","48031","Texas","Blanco County",88.2493788989592
+"2541","48033","Texas","Borden County",93.288849316926
+"2542","48035","Texas","Bosque County",89.5764900440731
+"2543","48037","Texas","Bowie County",87.8152251136045
+"2544","48039","Texas","Brazoria County",98.7630184871612
+"2545","48041","Texas","Brazos County",95.4660910733454
+"2546","48043","Texas","Brewster County",90.6830075809138
+"2547","48045","Texas","Briscoe County",88.6632885136922
+"2548","48047","Texas","Brooks County",86.0030548930294
+"2549","48049","Texas","Brown County",92.4046673887609
+"2550","48051","Texas","Burleson County",91.6636758904962
+"2551","48053","Texas","Burnet County",94.4074409848046
+"2552","48055","Texas","Caldwell County",89.8311263256632
+"2553","48057","Texas","Calhoun County",89.1570547958921
+"2554","48059","Texas","Callahan County",89.2909053937806
+"2555","48061","Texas","Cameron County",87.923
+"2556","48063","Texas","Camp County",88.723363680318
+"2557","48065","Texas","Carson County",91.6622796372026
+"2558","48067","Texas","Cass County",89.0638551317108
+"2559","48069","Texas","Castro County",89.4348793521031
+"2560","48071","Texas","Chambers County",96.6577337113837
+"2561","48073","Texas","Cherokee County",91.9189679730802
+"2562","48075","Texas","Childress County",91.3253674265953
+"2563","48077","Texas","Clay County",89.797867314547
+"2564","48079","Texas","Cochran County",88.6435425342673
+"2565","48081","Texas","Coke County",88.1983944886759
+"2566","48083","Texas","Coleman County",92.1425987276717
+"2567","48085","Texas","Collin County",110.13710371143
+"2568","48087","Texas","Collingsworth County",86.6100664259863
+"2569","48089","Texas","Colorado County",88.6860749562289
+"2570","48091","Texas","Comal County",100.340045740416
+"2571","48093","Texas","Comanche County",87.2142113652229
+"2572","48095","Texas","Concho County",88.670821560817
+"2573","48097","Texas","Cooke County",93.869115321961
+"2574","48099","Texas","Coryell County",92.5197506870838
+"2575","48101","Texas","Cottle County",85.9950279685568
+"2576","48103","Texas","Crane County",89.9778107619651
+"2577","48105","Texas","Crockett County",87.6018978664655
+"2578","48107","Texas","Crosby County",89.0407040188521
+"2579","48109","Texas","Culberson County",90.5507601187325
+"2580","48111","Texas","Dallam County",89.8692362367728
+"2581","48113","Texas","Dallas County",102.488920169636
+"2582","48115","Texas","Dawson County",91.3779003949628
+"2583","48117","Texas","Deaf Smith County",93.2664529072645
+"2584","48119","Texas","Delta County",88.8435106544745
+"2585","48121","Texas","Denton County",108.517005963391
+"2586","48123","Texas","DeWitt County",88.987368469325
+"2587","48125","Texas","Dickens County",91.5607004399304
+"2588","48127","Texas","Dimmit County",83.7032652101222
+"2589","48129","Texas","Donley County",90.5608490278928
+"2590","48131","Texas","Duval County",88.1466232189
+"2591","48133","Texas","Eastland County",86.9356894024408
+"2592","48135","Texas","Ector County",96.445
+"2593","48137","Texas","Edwards County",86.0698717423788
+"2594","48139","Texas","Ellis County",98.6057906399825
+"2595","48141","Texas","El Paso County",92.917801055109
+"2596","48143","Texas","Erath County",90.7412034362125
+"2597","48145","Texas","Falls County",91.3985086796076
+"2598","48147","Texas","Fannin County",92.1303478558149
+"2599","48149","Texas","Fayette County",90.8291133975926
+"2600","48151","Texas","Fisher County",88.7129727247931
+"2601","48153","Texas","Floyd County",88.3061358399929
+"2602","48155","Texas","Foard County",88.4493409788713
+"2603","48157","Texas","Fort Bend County",104.036133520389
+"2604","48159","Texas","Franklin County",89.3484976649035
+"2605","48161","Texas","Freestone County",85.9346754038204
+"2606","48163","Texas","Frio County",89.5235789553409
+"2607","48165","Texas","Gaines County",89.6345425217585
+"2608","48167","Texas","Galveston County",98.8209916659491
+"2609","48169","Texas","Garza County",93.2936118200015
+"2610","48171","Texas","Gillespie County",89.5977722864377
+"2611","48173","Texas","Glasscock County",89.740878288868
+"2612","48175","Texas","Goliad County",91.0210199347753
+"2613","48177","Texas","Gonzales County",87.515712125947
+"2614","48179","Texas","Gray County",91.5445549650286
+"2615","48181","Texas","Grayson County",92.932
+"2616","48183","Texas","Gregg County",94.2679331326873
+"2617","48185","Texas","Grimes County",91.2025360951739
+"2618","48187","Texas","Guadalupe County",98.1451926193626
+"2619","48189","Texas","Hale County",89.3295884302648
+"2620","48191","Texas","Hall County",89.3894501851447
+"2621","48193","Texas","Hamilton County",87.5337635415978
+"2622","48195","Texas","Hansford County",88.4867500847662
+"2623","48197","Texas","Hardeman County",88.8872882271827
+"2624","48199","Texas","Hardin County",91.1067109294272
+"2625","48201","Texas","Harris County",98.8341909468766
+"2626","48203","Texas","Harrison County",91.4445022064707
+"2627","48205","Texas","Hartley County",90.4437312499324
+"2628","48207","Texas","Haskell County",91.0702920853547
+"2629","48209","Texas","Hays County",95.1936842297518
+"2630","48211","Texas","Hemphill County",91.8475942039849
+"2631","48213","Texas","Henderson County",91.6929337764351
+"2632","48215","Texas","Hidalgo County",87.314
+"2633","48217","Texas","Hill County",89.9419138286523
+"2634","48219","Texas","Hockley County",90.7643117567105
+"2635","48221","Texas","Hood County",93.1135194333419
+"2636","48223","Texas","Hopkins County",91.1640222154809
+"2637","48225","Texas","Houston County",87.1235823461826
+"2638","48227","Texas","Howard County",90.5809745369378
+"2639","48229","Texas","Hudspeth County",90.5296449211345
+"2640","48231","Texas","Hunt County",95.9280850426912
+"2641","48233","Texas","Hutchinson County",93.2656282625526
+"2642","48235","Texas","Irion County",91.9598735609952
+"2643","48237","Texas","Jack County",88.4861005151574
+"2644","48239","Texas","Jackson County",87.7694792148447
+"2645","48241","Texas","Jasper County",89.3120868917029
+"2646","48243","Texas","Jeff Davis County",89.34353787529
+"2647","48245","Texas","Jefferson County",93.4699187878398
+"2648","48247","Texas","Jim Hogg County",86.959968436303
+"2649","48249","Texas","Jim Wells County",89.387535024606
+"2650","48251","Texas","Johnson County",97.5288508276205
+"2651","48253","Texas","Jones County",90.7815356730129
+"2652","48255","Texas","Karnes County",88.8846230692195
+"2653","48257","Texas","Kaufman County",100.233390414916
+"2654","48259","Texas","Kendall County",102.227074629207
+"2655","48261","Texas","Kenedy County",85.8861531802136
+"2656","48263","Texas","Kent County",91.0129410184535
+"2657","48265","Texas","Kerr County",92.0623493791953
+"2658","48267","Texas","Kimble County",88.4048745816943
+"2659","48269","Texas","King County",91.1202947163943
+"2660","48271","Texas","Kinney County",84.70126556131
+"2661","48273","Texas","Kleberg County",90.7654458344945
+"2662","48275","Texas","Knox County",90.6005043211297
+"2663","48277","Texas","Lamar County",90.3116780569029
+"2664","48279","Texas","Lamb County",90.1640389997418
+"2665","48281","Texas","Lampasas County",90.4173585356549
+"2666","48283","Texas","La Salle County",89.7388605564702
+"2667","48285","Texas","Lavaca County",87.7425503517998
+"2668","48287","Texas","Lee County",92.0084524281108
+"2669","48289","Texas","Leon County",85.6369644506728
+"2670","48291","Texas","Liberty County",91.2637137303881
+"2671","48293","Texas","Limestone County",85.7592878141187
+"2672","48295","Texas","Lipscomb County",90.4306940636363
+"2673","48297","Texas","Live Oak County",89.2453113722687
+"2674","48299","Texas","Llano County",85.7904120509708
+"2675","48301","Texas","Loving County",94.0566378475981
+"2676","48303","Texas","Lubbock County",93.9045439761208
+"2677","48305","Texas","Lynn County",90.6393477614425
+"2678","48307","Texas","McCulloch County",93.1536371069975
+"2679","48309","Texas","McLennan County",94.7403025444277
+"2680","48311","Texas","McMullen County",90.8473436998329
+"2681","48313","Texas","Madison County",90.8974001074842
+"2682","48315","Texas","Marion County",90.2388124809453
+"2683","48317","Texas","Martin County",95.3037611500391
+"2684","48319","Texas","Mason County",85.5961130722792
+"2685","48321","Texas","Matagorda County",90.2935957085917
+"2686","48323","Texas","Maverick County",83.074633415047
+"2687","48325","Texas","Medina County",92.5679405538583
+"2688","48327","Texas","Menard County",88.5849217021751
+"2689","48329","Texas","Midland County",97.9057691819608
+"2690","48331","Texas","Milam County",90.0539522250895
+"2691","48333","Texas","Mills County",90.4538868307292
+"2692","48335","Texas","Mitchell County",88.6963398032295
+"2693","48337","Texas","Montague County",92.3273821311133
+"2694","48339","Texas","Montgomery County",101.608468492631
+"2695","48341","Texas","Moore County",89.7759954634196
+"2696","48343","Texas","Morris County",88.0785129603711
+"2697","48345","Texas","Motley County",88.1956900130703
+"2698","48347","Texas","Nacogdoches County",91.6121425005607
+"2699","48349","Texas","Navarro County",88.2707423808691
+"2700","48351","Texas","Newton County",89.3036446500373
+"2701","48353","Texas","Nolan County",92.2571184274661
+"2702","48355","Texas","Nueces County",94.7879516592908
+"2703","48357","Texas","Ochiltree County",89.0970606284968
+"2704","48359","Texas","Oldham County",93.3150645712869
+"2705","48361","Texas","Orange County",93.2230101612817
+"2706","48363","Texas","Palo Pinto County",90.125850315369
+"2707","48365","Texas","Panola County",88.4624065636438
+"2708","48367","Texas","Parker County",100.162540603982
+"2709","48369","Texas","Parmer County",93.9167198193852
+"2710","48371","Texas","Pecos County",90.8110337038236
+"2711","48373","Texas","Polk County",88.9546171779666
+"2712","48375","Texas","Potter County",91.5657153474146
+"2713","48377","Texas","Presidio County",86.6827629025812
+"2714","48379","Texas","Rains County",91.8195181043846
+"2715","48381","Texas","Randall County",95.4095555957451
+"2716","48383","Texas","Reagan County",90.7842503809387
+"2717","48385","Texas","Real County",85.9784760045237
+"2718","48387","Texas","Red River County",89.2032557202725
+"2719","48389","Texas","Reeves County",90.4684048459052
+"2720","48391","Texas","Refugio County",89.2347446551979
+"2721","48393","Texas","Roberts County",90.8342009130355
+"2722","48395","Texas","Robertson County",91.8159886930303
+"2723","48397","Texas","Rockwall County",108.086012321895
+"2724","48399","Texas","Runnels County",89.9900242841161
+"2725","48401","Texas","Rusk County",90.4573507184482
+"2726","48403","Texas","Sabine County",89.3704151889738
+"2727","48405","Texas","San Augustine County",87.4493313390344
+"2728","48407","Texas","San Jacinto County",90.5458763967475
+"2729","48409","Texas","San Patricio County",94.0947943258668
+"2730","48411","Texas","San Saba County",87.3205850632769
+"2731","48413","Texas","Schleicher County",86.305468318521
+"2732","48415","Texas","Scurry County",90.6751907556194
+"2733","48417","Texas","Shackelford County",89.7880360947276
+"2734","48419","Texas","Shelby County",88.5495214947327
+"2735","48421","Texas","Sherman County",89.7927425416753
+"2736","48423","Texas","Smith County",94.605
+"2737","48425","Texas","Somervell County",91.4723201331154
+"2738","48427","Texas","Starr County",86.4544844416926
+"2739","48429","Texas","Stephens County",90.4405661031575
+"2740","48431","Texas","Sterling County",89.2509063523038
+"2741","48433","Texas","Stonewall County",90.9413150096713
+"2742","48435","Texas","Sutton County",88.5205341226618
+"2743","48437","Texas","Swisher County",89.384471003163
+"2744","48439","Texas","Tarrant County",103.051795143384
+"2745","48441","Texas","Taylor County",92.1454871300738
+"2746","48443","Texas","Terrell County",83.1210013129524
+"2747","48445","Texas","Terry County",90.235172188583
+"2748","48447","Texas","Throckmorton County",89.464046355693
+"2749","48449","Texas","Titus County",88.3846499367899
+"2750","48451","Texas","Tom Green County",91.8086954808367
+"2751","48453","Texas","Travis County",102.060107357926
+"2752","48455","Texas","Trinity County",86.5062859996269
+"2753","48457","Texas","Tyler County",88.028898414428
+"2754","48459","Texas","Upshur County",91.3807239001216
+"2755","48461","Texas","Upton County",89.810351424808
+"2756","48463","Texas","Uvalde County",86.4208954741486
+"2757","48465","Texas","Val Verde County",85.7661109952551
+"2758","48467","Texas","Van Zandt County",92.3989864740811
+"2759","48469","Texas","Victoria County",91.8619681579666
+"2760","48471","Texas","Walker County",93.2358668864535
+"2761","48473","Texas","Waller County",97.0397036373931
+"2762","48475","Texas","Ward County",90.9743666874874
+"2763","48477","Texas","Washington County",91.2255181909791
+"2764","48479","Texas","Webb County",89.597
+"2765","48481","Texas","Wharton County",87.4259907432443
+"2766","48483","Texas","Wheeler County",91.3412088545068
+"2767","48485","Texas","Wichita County",91.0274593204154
+"2768","48487","Texas","Wilbarger County",89.9186423632354
+"2769","48489","Texas","Willacy County",85.6907537592144
+"2770","48491","Texas","Williamson County",99.9241839267278
+"2771","48493","Texas","Wilson County",92.734116134021
+"2772","48495","Texas","Winkler County",90.4171727408919
+"2773","48497","Texas","Wise County",97.787033128355
+"2774","48499","Texas","Wood County",91.9162483019937
+"2775","48501","Texas","Yoakum County",92.4095532109424
+"2776","48503","Texas","Young County",88.9055306865481
+"2777","48505","Texas","Zapata County",84.806735341574
+"2778","48507","Texas","Zavala County",84.7652080315574
+"2779","49001","Utah","Beaver County",84.7999162081627
+"2780","49003","Utah","Box Elder County",89.3061436830143
+"2781","49005","Utah","Cache County",91.8588453450255
+"2782","49007","Utah","Carbon County",82.4855560371571
+"2783","49009","Utah","Daggett County",85.8905223018427
+"2784","49011","Utah","Davis County",95.2316739945871
+"2785","49013","Utah","Duchesne County",84.3170932167938
+"2786","49015","Utah","Emery County",81.3069158029477
+"2787","49017","Utah","Garfield County",84.009293016277
+"2788","49019","Utah","Grand County",93.1374601983675
+"2789","49021","Utah","Iron County",84.9192877022097
+"2790","49023","Utah","Juab County",90.2042193481638
+"2791","49025","Utah","Kane County",87.4830329712387
+"2792","49027","Utah","Millard County",82.745469273331
+"2793","49029","Utah","Morgan County",93.2657396613736
+"2794","49031","Utah","Piute County",82.5953153241589
+"2795","49033","Utah","Rich County",83.1808433316438
+"2796","49035","Utah","Salt Lake County",96.6131460638888
+"2797","49037","Utah","San Juan County",88.6292863555787
+"2798","49039","Utah","Sanpete County",83.3691411429244
+"2799","49041","Utah","Sevier County",82.1806900688288
+"2800","49043","Utah","Summit County",111.034069707536
+"2801","49045","Utah","Tooele County",89.9141313588893
+"2802","49047","Utah","Uintah County",84.5460973403583
+"2803","49049","Utah","Utah County",95.9203756310861
+"2804","49051","Utah","Wasatch County",97.8211826939548
+"2805","49053","Utah","Washington County",94.179
+"2806","49055","Utah","Wayne County",81.8835964742032
+"2807","49057","Utah","Weber County",92.4754283627136
+"2808","50001","Vermont","Addison County",98.4077070919094
+"2809","50003","Vermont","Bennington County",94.814436280249
+"2810","50005","Vermont","Caledonia County",94.5963399302434
+"2811","50007","Vermont","Chittenden County",104.597421663367
+"2812","50009","Vermont","Essex County",89.9000252442024
+"2813","50011","Vermont","Franklin County",96.3757420336165
+"2814","50013","Vermont","Grand Isle County",95.6930206699598
+"2815","50015","Vermont","Lamoille County",98.6441667476308
+"2816","50017","Vermont","Orange County",96.4365654235053
+"2817","50019","Vermont","Orleans County",91.384439428136
+"2818","50021","Vermont","Rutland County",94.5205167696947
+"2819","50023","Vermont","Washington County",98.3437369743124
+"2820","50025","Vermont","Windham County",96.9613451766138
+"2821","50027","Vermont","Windsor County",99.1218555374528
+"2822","51001","Virginia","Accomack County",87.9057897894485
+"2823","51003","Virginia","Albemarle County",102.439544059668
+"2824","51005","Virginia","Alleghany County",89.0498026667069
+"2825","51007","Virginia","Amelia County",92.8953431783492
+"2826","51009","Virginia","Amherst County",88.2962128187159
+"2827","51011","Virginia","Appomattox County",87.7102271365956
+"2828","51013","Virginia","Arlington County",125.163469306373
+"2829","51015","Virginia","Augusta County",92.3654975546978
+"2830","51017","Virginia","Bath County",85.0826460779951
+"2831","51019","Virginia","Bedford County",92.3363443163636
+"2832","51021","Virginia","Bland County",86.3152495282725
+"2833","51023","Virginia","Botetourt County",95.0670071578498
+"2834","51025","Virginia","Brunswick County",86.0482616776225
+"2835","51027","Virginia","Buchanan County",84.234314586213
+"2836","51029","Virginia","Buckingham County",87.5716870574339
+"2837","51031","Virginia","Campbell County",88.8010966163006
+"2838","51033","Virginia","Caroline County",94.7344650414027
+"2839","51035","Virginia","Carroll County",86.101789658642
+"2840","51036","Virginia","Charles City County",92.2415188367176
+"2841","51037","Virginia","Charlotte County",85.6650660490486
+"2842","51041","Virginia","Chesterfield County",98.4556825056264
+"2843","51043","Virginia","Clarke County",97.5130061670305
+"2844","51045","Virginia","Craig County",89.7342553662268
+"2845","51047","Virginia","Culpeper County",97.4415537555694
+"2846","51049","Virginia","Cumberland County",86.8943554658041
+"2847","51051","Virginia","Dickenson County",86.0620105318068
+"2848","51053","Virginia","Dinwiddie County",92.174944982591
+"2849","51057","Virginia","Essex County",90.9769274051858
+"2850","51059","Virginia","Fairfax County",117.515299770719
+"2851","51061","Virginia","Fauquier County",102.592430130262
+"2852","51063","Virginia","Floyd County",90.6386325411832
+"2853","51065","Virginia","Fluvanna County",95.3858125959804
+"2854","51067","Virginia","Franklin County",89.5681451373897
+"2855","51069","Virginia","Frederick County",99.7319111574924
+"2856","51071","Virginia","Giles County",84.811418111747
+"2857","51073","Virginia","Gloucester County",93.5279175941029
+"2858","51075","Virginia","Goochland County",95.0461270086069
+"2859","51077","Virginia","Grayson County",84.7731158836076
+"2860","51079","Virginia","Greene County",93.4499262977772
+"2861","51081","Virginia","Greensville County",87.7176499237803
+"2862","51083","Virginia","Halifax County",85.6848503113919
+"2863","51085","Virginia","Hanover County",97.9071949247137
+"2864","51087","Virginia","Henrico County",99.5836030799225
+"2865","51089","Virginia","Henry County",83.858673127526
+"2866","51091","Virginia","Highland County",88.4176619196784
+"2867","51093","Virginia","Isle of Wight County",96.0524149005997
+"2868","51095","Virginia","James City County",103.312806533228
+"2869","51097","Virginia","King and Queen County",93.2147540820973
+"2870","51099","Virginia","King George County",96.9371016217711
+"2871","51101","Virginia","King William County",94.2623556356762
+"2872","51103","Virginia","Lancaster County",90.4570437562029
+"2873","51105","Virginia","Lee County",82.9829717955018
+"2874","51107","Virginia","Loudoun County",115.246495185707
+"2875","51109","Virginia","Louisa County",94.1931394849919
+"2876","51111","Virginia","Lunenburg County",85.9413163449172
+"2877","51113","Virginia","Madison County",91.3565518006901
+"2878","51115","Virginia","Mathews County",92.8820277429406
+"2879","51117","Virginia","Mecklenburg County",86.5706404303827
+"2880","51119","Virginia","Middlesex County",91.3920754744971
+"2881","51121","Virginia","Montgomery County",95.7581214732511
+"2882","51125","Virginia","Nelson County",88.3485133656497
+"2883","51127","Virginia","New Kent County",98.9090540965815
+"2884","51131","Virginia","Northampton County",87.1981916561992
+"2885","51133","Virginia","Northumberland County",94.3444717940615
+"2886","51135","Virginia","Nottoway County",87.9311361290315
+"2887","51137","Virginia","Orange County",91.6634414451956
+"2888","51139","Virginia","Page County",87.9752454602861
+"2889","51141","Virginia","Patrick County",83.7689778523859
+"2890","51143","Virginia","Pittsylvania County",88.0162346604694
+"2891","51145","Virginia","Powhatan County",92.5420518061018
+"2892","51147","Virginia","Prince Edward County",86.7329652430741
+"2893","51149","Virginia","Prince George County",96.1386683280823
+"2894","51153","Virginia","Prince William County",108.203949457045
+"2895","51155","Virginia","Pulaski County",86.3978433749324
+"2896","51157","Virginia","Rappahannock County",94.8481982901627
+"2897","51159","Virginia","Richmond County",92.5227247294995
+"2898","51161","Virginia","Roanoke County",96.7910420196233
+"2899","51163","Virginia","Rockbridge County",89.6558522277651
+"2900","51165","Virginia","Rockingham County",92.2768590414658
+"2901","51167","Virginia","Russell County",84.6097474014254
+"2902","51169","Virginia","Scott County",81.1863856349701
+"2903","51171","Virginia","Shenandoah County",90.2056590862733
+"2904","51173","Virginia","Smyth County",85.8353325745936
+"2905","51175","Virginia","Southampton County",87.624214628351
+"2906","51177","Virginia","Spotsylvania County",102.615915654234
+"2907","51179","Virginia","Stafford County",105.319032100732
+"2908","51181","Virginia","Surry County",97.2886879570546
+"2909","51183","Virginia","Sussex County",91.1219309176524
+"2910","51185","Virginia","Tazewell County",85.2305140641598
+"2911","51187","Virginia","Warren County",96.7604419486485
+"2912","51191","Virginia","Washington County",85.8966420049897
+"2913","51193","Virginia","Westmoreland County",91.3584072365435
+"2914","51195","Virginia","Wise County",87.1459845226918
+"2915","51197","Virginia","Wythe County",85.5149810144669
+"2916","51199","Virginia","York County",98.9975329327359
+"2917","51510","Virginia","Alexandria city",119.861371274268
+"2918","51520","Virginia","Bristol city",85.0586919293233
+"2919","51530","Virginia","Buena Vista city",88.8619617117737
+"2920","51540","Virginia","Charlottesville city",105.765572481609
+"2921","51550","Virginia","Chesapeake city",98.95647293661
+"2922","51570","Virginia","Colonial Heights city",91.337498804699
+"2923","51580","Virginia","Covington city",89.7294680942545
+"2924","51590","Virginia","Danville city",87.0096961650308
+"2925","51595","Virginia","Emporia city",86.6367733793884
+"2926","51600","Virginia","Fairfax city",115.930722310369
+"2927","51610","Virginia","Falls Church city",120.157540546707
+"2928","51620","Virginia","Franklin city",90.9837799427008
+"2929","51630","Virginia","Fredericksburg city",106.202294826492
+"2930","51640","Virginia","Galax city",86.0855683479491
+"2931","51650","Virginia","Hampton city",94.6495594205118
+"2932","51660","Virginia","Harrisonburg city",96.7932958324768
+"2933","51670","Virginia","Hopewell city",91.917412550763
+"2934","51678","Virginia","Lexington city",90.5117972991124
+"2935","51680","Virginia","Lynchburg city",93.1340107185424
+"2936","51683","Virginia","Manassas city",106.053117343624
+"2937","51685","Virginia","Manassas Park city",107.524570818676
+"2938","51690","Virginia","Martinsville city",84.8885276530632
+"2939","51700","Virginia","Newport News city",95.2109000236734
+"2940","51710","Virginia","Norfolk city",95.6744162390011
+"2941","51720","Virginia","Norton city",86.442443774068
+"2942","51730","Virginia","Petersburg city",89.683618992219
+"2943","51735","Virginia","Poquoson city",98.0041098921771
+"2944","51740","Virginia","Portsmouth city",94.3411893579127
+"2945","51750","Virginia","Radford city",88.5514097480592
+"2946","51760","Virginia","Richmond city",100.52232568148
+"2947","51770","Virginia","Roanoke city",92.3653136243258
+"2948","51775","Virginia","Salem city",94.830521692622
+"2949","51790","Virginia","Staunton city",94.0426115800096
+"2950","51800","Virginia","Suffolk city",96.8512486786791
+"2951","51810","Virginia","Virginia Beach city",101.434667647037
+"2952","51820","Virginia","Waynesboro city",92.6435884751253
+"2953","51830","Virginia","Williamsburg city",100.869325640967
+"2954","51840","Virginia","Winchester city",98.1330587190705
+"2955","53001","Washington","Adams County",88.5460142095448
+"2956","53003","Washington","Asotin County",80.8921266935097
+"2957","53005","Washington","Benton County",102.007745182941
+"2958","53007","Washington","Chelan County",103.166905225682
+"2959","53009","Washington","Clallam County",98.5143550506506
+"2960","53011","Washington","Clark County",103.077569986509
+"2961","53013","Washington","Columbia County",93.2741634615819
+"2962","53015","Washington","Cowlitz County",98.781
+"2963","53017","Washington","Douglas County",102.885857566362
+"2964","53019","Washington","Ferry County",91.1421562887361
+"2965","53021","Washington","Franklin County",97.1913398254197
+"2966","53023","Washington","Garfield County",90.4363126588703
+"2967","53025","Washington","Grant County",92.7641950532351
+"2968","53027","Washington","Grays Harbor County",94.4517822763212
+"2969","53029","Washington","Island County",106.312864434007
+"2970","53031","Washington","Jefferson County",105.965493115179
+"2971","53033","Washington","King County",117.813297922219
+"2972","53035","Washington","Kitsap County",103.629
+"2973","53037","Washington","Kittitas County",102.715786715128
+"2974","53039","Washington","Klickitat County",94.5128532669652
+"2975","53041","Washington","Lewis County",94.8970451804722
+"2976","53043","Washington","Lincoln County",93.7352475921278
+"2977","53045","Washington","Mason County",97.3389345550067
+"2978","53047","Washington","Okanogan County",89.306836855122
+"2979","53049","Washington","Pacific County",92.4208683844719
+"2980","53051","Washington","Pend Oreille County",91.2610555376738
+"2981","53053","Washington","Pierce County",108.266422918434
+"2982","53055","Washington","San Juan County",106.611067516208
+"2983","53057","Washington","Skagit County",100.35
+"2984","53059","Washington","Skamania County",95.9861032011176
+"2985","53061","Washington","Snohomish County",112.386311402079
+"2986","53063","Washington","Spokane County",99.1164733828256
+"2987","53065","Washington","Stevens County",93.8006726704746
+"2988","53067","Washington","Thurston County",103.525
+"2989","53069","Washington","Wahkiakum County",96.0827591839831
+"2990","53071","Washington","Walla Walla County",99.118
+"2991","53073","Washington","Whatcom County",104.605
+"2992","53075","Washington","Whitman County",97.0989551383028
+"2993","53077","Washington","Yakima County",97.705
+"2994","54001","West Virginia","Barbour County",84.7408423561556
+"2995","54003","West Virginia","Berkeley County",94.6371142309672
+"2996","54005","West Virginia","Boone County",87.4412204169754
+"2997","54007","West Virginia","Braxton County",85.8905432176298
+"2998","54009","West Virginia","Brooke County",87.1744392576273
+"2999","54011","West Virginia","Cabell County",89.2430376775819
+"3000","54013","West Virginia","Calhoun County",83.9977803513747
+"3001","54015","West Virginia","Clay County",87.068076489249
+"3002","54017","West Virginia","Doddridge County",86.0230061524244
+"3003","54019","West Virginia","Fayette County",88.7694586967692
+"3004","54021","West Virginia","Gilmer County",84.4830581171515
+"3005","54023","West Virginia","Grant County",86.4028558867526
+"3006","54025","West Virginia","Greenbrier County",87.5379116930212
+"3007","54027","West Virginia","Hampshire County",87.065955688431
+"3008","54029","West Virginia","Hancock County",93.9130049073917
+"3009","54031","West Virginia","Hardy County",88.5006697811742
+"3010","54033","West Virginia","Harrison County",90.1972042583103
+"3011","54035","West Virginia","Jackson County",88.5298893571155
+"3012","54037","West Virginia","Jefferson County",93.9489461550557
+"3013","54039","West Virginia","Kanawha County",91.827937579319
+"3014","54041","West Virginia","Lewis County",85.4466372234222
+"3015","54043","West Virginia","Lincoln County",92.1917960325282
+"3016","54045","West Virginia","Logan County",85.373895583984
+"3017","54047","West Virginia","McDowell County",86.5242908753737
+"3018","54049","West Virginia","Marion County",89.8149345269599
+"3019","54051","West Virginia","Marshall County",87.8321864996393
+"3020","54053","West Virginia","Mason County",84.5406765985923
+"3021","54055","West Virginia","Mercer County",86.9179691501352
+"3022","54057","West Virginia","Mineral County",87.8361715174199
+"3023","54059","West Virginia","Mingo County",86.3331177434803
+"3024","54061","West Virginia","Monongalia County",97.6082644430343
+"3025","54063","West Virginia","Monroe County",86.6308490140686
+"3026","54065","West Virginia","Morgan County",93.1668207602156
+"3027","54067","West Virginia","Nicholas County",86.7969454376149
+"3028","54069","West Virginia","Ohio County",90.8188834704749
+"3029","54071","West Virginia","Pendleton County",90.442446091826
+"3030","54073","West Virginia","Pleasants County",87.3690388249366
+"3031","54075","West Virginia","Pocahontas County",86.9714573153827
+"3032","54077","West Virginia","Preston County",90.236114861738
+"3033","54079","West Virginia","Putnam County",89.5977382568394
+"3034","54081","West Virginia","Raleigh County",89.6327190584013
+"3035","54083","West Virginia","Randolph County",86.9505495436375
+"3036","54085","West Virginia","Ritchie County",86.2528285219358
+"3037","54087","West Virginia","Roane County",84.9070465947632
+"3038","54089","West Virginia","Summers County",87.0285136898531
+"3039","54091","West Virginia","Taylor County",90.2289024917576
+"3040","54093","West Virginia","Tucker County",86.7187582188815
+"3041","54095","West Virginia","Tyler County",86.0924106411867
+"3042","54097","West Virginia","Upshur County",85.3091860351012
+"3043","54099","West Virginia","Wayne County",85.5472142472926
+"3044","54101","West Virginia","Webster County",86.1392304450301
+"3045","54103","West Virginia","Wetzel County",86.3751877999578
+"3046","54105","West Virginia","Wirt County",87.6535481392962
+"3047","54107","West Virginia","Wood County",89.7815067258766
+"3048","54109","West Virginia","Wyoming County",87.4737639451562
+"3049","55001","Wisconsin","Adams County",85.4923208143985
+"3050","55003","Wisconsin","Ashland County",87.5185092716641
+"3051","55005","Wisconsin","Barron County",89.8526456699052
+"3052","55007","Wisconsin","Bayfield County",88.2754201798142
+"3053","55009","Wisconsin","Brown County",93.6697857951403
+"3054","55011","Wisconsin","Buffalo County",87.0287627969273
+"3055","55013","Wisconsin","Burnett County",86.4278815298133
+"3056","55015","Wisconsin","Calumet County",91.2954544815152
+"3057","55017","Wisconsin","Chippewa County",89.7116964531421
+"3058","55019","Wisconsin","Clark County",88.2853653896574
+"3059","55021","Wisconsin","Columbia County",90.0363888463605
+"3060","55023","Wisconsin","Crawford County",86.9763770495714
+"3061","55025","Wisconsin","Dane County",98.2540494720229
+"3062","55027","Wisconsin","Dodge County",89.2254559779719
+"3063","55029","Wisconsin","Door County",92.980773173399
+"3064","55031","Wisconsin","Douglas County",86.4710841824814
+"3065","55033","Wisconsin","Dunn County",89.5731105869449
+"3066","55035","Wisconsin","Eau Claire County",93.1747851692937
+"3067","55037","Wisconsin","Florence County",85.074377570897
+"3068","55039","Wisconsin","Fond du Lac County",92.104
+"3069","55041","Wisconsin","Forest County",86.179174891002
+"3070","55043","Wisconsin","Grant County",87.7302657147364
+"3071","55045","Wisconsin","Green County",87.1055076832571
+"3072","55047","Wisconsin","Green Lake County",87.1646826068345
+"3073","55049","Wisconsin","Iowa County",87.2387952736346
+"3074","55051","Wisconsin","Iron County",88.3509831259704
+"3075","55053","Wisconsin","Jackson County",86.8489531338067
+"3076","55055","Wisconsin","Jefferson County",90.7774341678509
+"3077","55057","Wisconsin","Juneau County",92.1120036195415
+"3078","55059","Wisconsin","Kenosha County",100.058199705348
+"3079","55061","Wisconsin","Kewaunee County",85.5637043544501
+"3080","55063","Wisconsin","La Crosse County",95.2145224910908
+"3081","55065","Wisconsin","Lafayette County",87.7515018919078
+"3082","55067","Wisconsin","Langlade County",85.9449838572934
+"3083","55069","Wisconsin","Lincoln County",87.0666036932814
+"3084","55071","Wisconsin","Manitowoc County",88.1022696810109
+"3085","55073","Wisconsin","Marathon County",90.4085928141219
+"3086","55075","Wisconsin","Marinette County",86.0882556468468
+"3087","55077","Wisconsin","Marquette County",87.0215250394172
+"3088","55078","Wisconsin","Menominee County",84.2183872562008
+"3089","55079","Wisconsin","Milwaukee County",94.4186237195341
+"3090","55081","Wisconsin","Monroe County",89.412141975279
+"3091","55083","Wisconsin","Oconto County",85.8515597272793
+"3092","55085","Wisconsin","Oneida County",88.4819905185101
+"3093","55087","Wisconsin","Outagamie County",93.9022299157357
+"3094","55089","Wisconsin","Ozaukee County",97.1475131669205
+"3095","55091","Wisconsin","Pepin County",86.553421772417
+"3096","55093","Wisconsin","Pierce County",100.220383114395
+"3097","55095","Wisconsin","Polk County",90.0802250756168
+"3098","55097","Wisconsin","Portage County",91.4041217644593
+"3099","55099","Wisconsin","Price County",87.1678041134261
+"3100","55101","Wisconsin","Racine County",92.074
+"3101","55103","Wisconsin","Richland County",86.6910467568104
+"3102","55105","Wisconsin","Rock County",92.951
+"3103","55107","Wisconsin","Rusk County",87.700498844276
+"3104","55109","Wisconsin","St. Croix County",97.8267770862946
+"3105","55111","Wisconsin","Sauk County",90.4266240000086
+"3106","55113","Wisconsin","Sawyer County",88.6301210094123
+"3107","55115","Wisconsin","Shawano County",86.0724174623963
+"3108","55117","Wisconsin","Sheboygan County",93.173
+"3109","55119","Wisconsin","Taylor County",88.6368089111947
+"3110","55121","Wisconsin","Trempealeau County",87.1955927901567
+"3111","55123","Wisconsin","Vernon County",88.4812876909581
+"3112","55125","Wisconsin","Vilas County",88.8341997460697
+"3113","55127","Wisconsin","Walworth County",91.7638679914689
+"3114","55129","Wisconsin","Washburn County",89.0222925171073
+"3115","55131","Wisconsin","Washington County",93.9378423400199
+"3116","55133","Wisconsin","Waukesha County",98.0734470826002
+"3117","55135","Wisconsin","Waupaca County",88.7687938812297
+"3118","55137","Wisconsin","Waushara County",87.1461286086068
+"3119","55139","Wisconsin","Winnebago County",92.457
+"3120","55141","Wisconsin","Wood County",89.416026554863
+"3121","56001","Wyoming","Albany County",90.7816789374603
+"3122","56003","Wyoming","Big Horn County",88.4679979007875
+"3123","56005","Wyoming","Campbell County",89.9034904668199
+"3124","56007","Wyoming","Carbon County",90.2941756982914
+"3125","56009","Wyoming","Converse County",89.0961894655362
+"3126","56011","Wyoming","Crook County",89.0368716308927
+"3127","56013","Wyoming","Fremont County",89.3480128486346
+"3128","56015","Wyoming","Goshen County",85.9436780072726
+"3129","56017","Wyoming","Hot Springs County",88.377169872622
+"3130","56019","Wyoming","Johnson County",90.9625196751069
+"3131","56021","Wyoming","Laramie County",92.91
+"3132","56023","Wyoming","Lincoln County",101.279884911441
+"3133","56025","Wyoming","Natrona County",91.383
+"3134","56027","Wyoming","Niobrara County",85.2930009048929
+"3135","56029","Wyoming","Park County",90.7330109746984
+"3136","56031","Wyoming","Platte County",86.3464962435875
+"3137","56033","Wyoming","Sheridan County",90.2579569967945
+"3138","56035","Wyoming","Sublette County",91.8804073730556
+"3139","56037","Wyoming","Sweetwater County",89.1289968998128
+"3140","56039","Wyoming","Teton County",109.620940692285
+"3141","56041","Wyoming","Uinta County",86.7561732943478
+"3142","56043","Wyoming","Washakie County",88.0616524270262
+"3143","56045","Wyoming","Weston County",89.3482585547925

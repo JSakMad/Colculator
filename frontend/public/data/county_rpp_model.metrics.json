@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "model_version": "elasticnet-2024-bf9a6cbb29e0",
+  "year": 2024,
+  "selected_model": "ElasticNetCV",
+  "selection_reason": "ElasticNet is the required baseline; no more complex model was selected.",
+  "feature_names": [
+    "zhvi",
+    "zori",
+    "hud_fmr_studio",
+    "hud_fmr_1br",
+    "hud_fmr_2br",
+    "hud_fmr_3br",
+    "state_income_tax_rate",
+    "local_sales_tax_rate",
+    "population_density"
+  ],
+  "explicitly_excluded_features": [
+    "local_wage",
+    "salary",
+    "median_wage"
+  ],
+  "training_labels": {
+    "source": "official_bea",
+    "geographies": "state_and_metro",
+    "count": 438
+  },
+  "training_inputs": {
+    "regions_sha256": "7ce837f77e9f30bd4ffda6c4a5f31631e41c5f9d16f1012f565e4d066d0669c8",
+    "official_rpp_sha256": "6b187812e2a1e68277d56ac39c62ae6a622fd033804a539b0a5ebb7a92c773b9",
+    "county_features_sha256": "4a5cad9705ec67053496163e1852536ea122850513c37cd20653ac7d0e5a82a6"
+  },
+  "cross_validation": {
+    "method": "KFold",
+    "folds": 5,
+    "shuffle": true,
+    "random_state": 1729,
+    "targets": {
+      "all_items": {
+        "cv_rmse": 2.763749,
+        "interval_absolute_residual_quantile": 5.281648
+      },
+      "housing": {
+        "cv_rmse": 10.46865,
+        "interval_absolute_residual_quantile": 20.811183
+      }
+    }
+  },
+  "confidence_interval": {
+    "level": 0.95,
+    "method": "cross_validated_absolute_residual"
+  },
+  "commerce_experimental_comparison": {
+    "status": "computed",
+    "reference_kind": "research_estimate_not_verified_truth",
+    "overlap": 1956,
+    "rmse": 4.203789,
+    "mean_absolute_difference": 3.295768,
+    "source_url": "https://www.commerce.gov/sites/default/files/2024-03/0324-experimental-data-set.csv",
+    "source_sha256": "d39692c6d03171a5e6eaac188d49d896a1058f07ffeba8c47e0a002dcb0269fd"
+  },
+  "prediction_scope": {
+    "county_type": "nonmetropolitan_only",
+    "count": 1958
+  }
+}

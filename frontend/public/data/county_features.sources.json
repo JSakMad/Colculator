@@ -1,0 +1,79 @@
+{
+  "year": 2024,
+  "fields": {
+    "zhvi": "zillow_research",
+    "zori": "zillow_research",
+    "hud_fmr_studio": "hud_fmr",
+    "hud_fmr_1br": "hud_fmr",
+    "hud_fmr_2br": "hud_fmr",
+    "hud_fmr_3br": "hud_fmr",
+    "state_income_tax_rate": "tax_foundation_2026",
+    "local_sales_tax_rate": "tax_foundation_2026",
+    "population_density": "census_population_estimates_gazetteer"
+  },
+  "zillow": {
+    "publisher": "Zillow Research",
+    "zhvi_url": "https://files.zillowstatic.com/research/public_csvs/zhvi/County_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv",
+    "zori_url": "https://files.zillowstatic.com/research/public_csvs/zori/County_zori_uc_sfrcondomfr_sm_month.csv",
+    "zhvi_sha256": "334e267a88028068d8c485363bf367a613c24a32dba3b1e288754e9728933867",
+    "zori_sha256": "acaf08953b7e853bec6268fe6de0c021e2af1ed91c0e296ab663e891e0ec9c81",
+    "observation": "2024-12-31",
+    "attribution_required": true
+  },
+  "hud": {
+    "publisher": "U.S. Department of Housing and Urban Development",
+    "api_url": "https://www.huduser.gov/hudapi/public/fmr",
+    "product_url": "https://www.huduser.gov/portal/datasets/fmr.html",
+    "fiscal_year": 2024,
+    "authentication": "free HUD USER dataset API bearer token",
+    "new_england_county_aggregation": "Town-level FMRs are weighted by 2020 Census PL 94-171 county-subdivision population when HUD publishes multiple values within one FR1 county.",
+    "subdivision_population_sources": [
+      {
+        "url": "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/Connecticut/ct2020.pl.zip",
+        "sha256": "c4a2d42a79c52de10ea9397cca43db59c2df38e6d6e66b4396a0de8bd3f66780"
+      },
+      {
+        "url": "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/Maine/me2020.pl.zip",
+        "sha256": "f9bb6fe4cf13bb28b44e4d6a8d5d3e5209f9249ebc402db7ea5c24f8a673ac07"
+      },
+      {
+        "url": "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/Massachusetts/ma2020.pl.zip",
+        "sha256": "9857362fbc1162d3943685134a77a91542a70eb667f3477559d07fd0a81e4889"
+      },
+      {
+        "url": "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/New_Hampshire/nh2020.pl.zip",
+        "sha256": "31852c0cfa871ea81f933bb1df904f0d45997097e38ade83db87ba58255d4468"
+      },
+      {
+        "url": "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/Rhode_Island/ri2020.pl.zip",
+        "sha256": "a2a6de20d0bac0dfe91aef66d3c2dde0eb768863884fbc45d4f3df5c49f5dcd0"
+      }
+    ],
+    "current_subdivision_geography_url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2024_Gazetteer/2024_Gaz_cousubs_national.zip",
+    "current_subdivision_geography_sha256": "5b9404979bdd978f6eaf6b37dc2bd995f9aedbdbfac1fe7c98c407bc1a337f75"
+  },
+  "census": {
+    "publisher": "U.S. Census Bureau",
+    "population_url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2024/counties/totals/co-est2024-alldata.csv",
+    "gazetteer_url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2024_Gazetteer/2024_Gaz_counties_national.zip",
+    "population_sha256": "abcc8720d669e793bbfdcd440eeec37a78db3b452adbe4ccd1eadf7c72b522b9",
+    "gazetteer_sha256": "3c337402b5c6e8d5aa26b4278ccf4edc8989f2683765b3ffbf22296cdb2df3a0",
+    "density_formula": "POPESTIMATE2024 / ALAND_SQMI"
+  },
+  "tax": {
+    "definition": "Tax Foundation 2026 state income tax effective rate at $100,000 gross income for a single filer, and combined state plus population-weighted-average local sales tax rate. Both are applied uniformly to every county in the state.",
+    "source_urls": [
+      "https://taxfoundation.org/data/all/state/sales-tax-rates/",
+      "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    ],
+    "income_locality_exclusion": "Local income taxes, including New York City and municipal taxes in parts of Ohio and Pennsylvania, are not modeled in v1."
+  },
+  "missing_values": {
+    "zhvi": 81,
+    "zori": 2200,
+    "policy": "Unavailable Zillow observations remain null; no values are invented."
+  },
+  "training_metadata": {
+    "population_weight": "Census POPESTIMATE2024; retained for geographic aggregation only and excluded from model features."
+  }
+}

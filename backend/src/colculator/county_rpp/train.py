@@ -31,6 +31,10 @@ TARGETS = {
     "all_items": "rpp_all_items",
     "housing": "rpp_housing",
 }
+COMMERCE_SOURCE_URL = (
+    "https://www.commerce.gov/sites/default/files/2024-03/"
+    "0324-experimental-data-set.csv"
+)
 
 
 @dataclass(frozen=True)
@@ -217,13 +221,23 @@ def _commerce_comparison(
     research: dict[str, float] = {}
     with path.open(encoding="utf-8-sig", newline="") as stream:
         reader = csv.DictReader(stream)
-        required = {"county_fips", "rpp_all_items"}
-        if not reader.fieldnames or not required.issubset(reader.fieldnames):
-            raise ValueError(f"Commerce CSV must contain {sorted(required)}")
-        for row in reader:
-            research[row["county_fips"].strip().zfill(5)] = _numeric(
-                row["rpp_all_items"]
+        fieldnames = set(reader.fieldnames or [])
+        if {"county_fips", "rpp_all_items"}.issubset(fieldnames):
+            fips_field = "county_fips"
+            rpp_field = "rpp_all_items"
+        elif {
+            "FIPS Code",
+            "RPP All Items, experimental estimate",
+        }.issubset(fieldnames):
+            fips_field = "FIPS Code"
+            rpp_field = "RPP All Items, experimental estimate"
+        else:
+            raise ValueError(
+                "Commerce CSV must be the official experimental dataset or use "
+                "normalized county_fips/rpp_all_items columns"
             )
+        for row in reader:
+            research[row[fips_field].strip().zfill(5)] = _numeric(row[rpp_field])
     pairs = [
         (float(row["predicted_rpp_all_items"]), research[str(row["county_fips"])])
         for row in estimates
@@ -238,6 +252,8 @@ def _commerce_comparison(
         "overlap": len(pairs),
         "rmse": round(float(mean_squared_error(reference, predicted) ** 0.5), 6),
         "mean_absolute_difference": round(float(np.mean(np.abs(reference - predicted))), 6),
+        "source_url": COMMERCE_SOURCE_URL,
+        "source_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
     }
 
 
@@ -310,6 +326,13 @@ def train_county_rpp(config: TrainConfig) -> dict[str, object]:
     features = features_payload["records"]
     rpp = rpp_payload["records"]
     matrix, targets, label_regions = training_matrix(regions, features, rpp)
+    input_hashes = {
+        "regions_sha256": hashlib.sha256(config.regions_json.read_bytes()).hexdigest(),
+        "official_rpp_sha256": hashlib.sha256(config.rpp_json.read_bytes()).hexdigest(),
+        "county_features_sha256": hashlib.sha256(
+            config.features_json.read_bytes()
+        ).hexdigest(),
+    }
     folds = KFold(n_splits=CV_FOLDS, shuffle=True, random_state=RANDOM_STATE)
     models: dict[str, TransformedTargetRegressor] = {}
     radii: dict[str, float] = {}
@@ -335,6 +358,7 @@ def train_county_rpp(config: TrainConfig) -> dict[str, object]:
             "features": MODEL_FEATURES,
             "labels": label_regions,
             "validation": validation,
+            "inputs": input_hashes,
         },
         sort_keys=True,
         separators=(",", ":"),
@@ -364,6 +388,7 @@ def train_county_rpp(config: TrainConfig) -> dict[str, object]:
             "geographies": "state_and_metro",
             "count": len(label_regions),
         },
+        "training_inputs": input_hashes,
         "cross_validation": {
             "method": "KFold",
             "folds": CV_FOLDS,

@@ -43,6 +43,7 @@ python3 -m venv .venv
 npm run build:regions
 npm run build:rpp
 npm run build:wages
+npm run build:taxes
 npm run build:county-features
 npm run train:county-rpp -- --commerce-csv data/reference/commerce_experimental_county_rpp.csv
 npm test
@@ -65,13 +66,19 @@ preceding year's official state and metro archive URLs during the annual
 late-May refresh. The workbook vintage is validated before output. It requires
 no API key; `-- --year YYYY` can select a different published vintage.
 
+`npm run build:taxes` generates county-expanded 2026 Tax Foundation income and
+sales-tax features using the uniform state-level convention documented in
+[`data/manual/README.md`](data/manual/README.md).
+
 `npm run build:county-features` uses the December 2024 Zillow county ZHVI/ZORI
 observations, FY 2024 HUD FMRs, and Census 2024 population and land area. HUD's
 free dataset API token must be set as `HUD_API_TOKEN` in `.env` and as the same
-repository secret for scheduled GitHub Actions. The build also requires the
-approved official-source tax input described in
-[`data/manual/README.md`](data/manual/README.md). It rejects missing tax rows
-and conflicting town-level HUD values rather than selecting or averaging them.
+repository secret for scheduled GitHub Actions. Run `npm run build:taxes` first
+to generate the approved tax input. The feature build rejects missing tax rows
+and population-weights HUD's conflicting New England town values with official
+2020 Census PL county-subdivision populations. The 2024 Census subdivision
+Gazetteer maps Connecticut's legacy HUD town codes to its current planning
+regions.
 
 `npm run train:county-rpp` aggregates county inputs to official BEA state and
 metro labels, logs cross-validation metrics, trains the ElasticNet baseline,

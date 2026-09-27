@@ -1,2 +1,2 @@
-county_fips,year,state_income_tax_rate,local_sales_tax_rate,source_url
-06001,2024,,,
+county_fips,tax_year,state_income_tax_rate,local_sales_tax_rate,state_income_tax_source_url,local_sales_tax_source_url
+06001,2026,,,https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/,https://taxfoundation.org/data/all/state/sales-tax-rates/
