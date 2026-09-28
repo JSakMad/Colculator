@@ -9,14 +9,24 @@ import {
   INITIAL_CAMERA,
   returnToNationalView,
 } from "@/lib/globe-controller.mjs";
-import { loadCountiesForState, loadStateData } from "@/lib/data";
-import type { Focus, GlobeSelectionState, Metric, RegionFeature } from "@/lib/types";
+import { loadCountiesForState, loadRegionCatalog, loadStateData } from "@/lib/data";
+import type {
+  Focus,
+  GlobeSelectionState,
+  Metric,
+  RegionCatalogEntry,
+  RegionFeature,
+  SearchCandidate,
+} from "@/lib/types";
+import { AccessibleCalculator } from "./accessible-calculator";
 import { DataPanel } from "./data-panel";
 import { GlobeStage } from "./globe-stage";
+import { LocationSearch } from "./location-search";
 
 export function ColculatorExperience() {
   const [states, setStates] = useState<RegionFeature[]>([]);
   const [counties, setCounties] = useState<RegionFeature[]>([]);
+  const [catalog, setCatalog] = useState<RegionCatalogEntry[]>([]);
   const [rpp, setRpp] = useState<Awaited<ReturnType<typeof loadStateData>>["rpp"]>();
   const [wages, setWages] = useState<Awaited<ReturnType<typeof loadStateData>>["wages"]>();
   const [rppYear, setRppYear] = useState<number | null>(null);
@@ -34,10 +44,11 @@ export function ColculatorExperience() {
 
   useEffect(() => {
     let active = true;
-    loadStateData()
-      .then((data) => {
+    Promise.all([loadStateData(), loadRegionCatalog()])
+      .then(([data, nextCatalog]) => {
         if (!active) return;
         setStates(data.states);
+        setCatalog(nextCatalog);
         setRpp(data.rpp);
         setWages(data.wages);
         setRppYear(data.rppYear);
@@ -91,6 +102,96 @@ export function ColculatorExperience() {
     }
   }
 
+  async function focusSearchCandidate(candidate: SearchCandidate) {
+    const catalogRegion = catalog.find((region) => region.id === candidate.regionId);
+    if (!catalogRegion) {
+      setError(`No Colculator region is available for ${candidate.label}.`);
+      return;
+    }
+
+    if (catalogRegion.type === "state") {
+      const stateFeature = states.find((state) => state.properties.id === catalogRegion.id);
+      if (!stateFeature) return;
+      const result = activateGlobeRegion(selection, {
+        id: stateFeature.properties.id,
+        name: stateFeature.properties.name,
+        type: "state",
+        interactive: true,
+        focus: stateFeature.properties.focus,
+      });
+      setSelection({
+        ...(result.state as GlobeSelectionState),
+        destinationRegionId: catalogRegion.id,
+      });
+      if (result.camera) {
+        setCamera(result.camera);
+        setCameraRevision((revision) => revision + 1);
+      }
+      if (rpp && wages) {
+        const request = ++countyRequest.current;
+        setLoadingCounties(true);
+        try {
+          const nextCounties = await loadCountiesForState(catalogRegion.id, rpp, wages);
+          if (request === countyRequest.current) setCounties(nextCounties);
+        } catch (caught) {
+          setError(caught instanceof Error ? caught.message : "That location could not be focused.");
+        } finally {
+          if (request === countyRequest.current) setLoadingCounties(false);
+        }
+      }
+      return;
+    }
+
+    if (catalogRegion.type === "county" && catalogRegion.parent_region_id && rpp && wages) {
+      const request = ++countyRequest.current;
+      setLoadingCounties(true);
+      try {
+        const nextCounties = await loadCountiesForState(
+          catalogRegion.parent_region_id,
+          rpp,
+          wages,
+        );
+        if (request !== countyRequest.current) return;
+        setCounties(nextCounties);
+        const county = nextCounties.find((item) => item.properties.id === catalogRegion.id);
+        if (!county) throw new Error("County geometry is unavailable.");
+        const result = activateGlobeRegion(selection, {
+          id: county.properties.id,
+          name: county.properties.name,
+          type: "county",
+          parentRegionId: county.properties.parentRegionId,
+          interactive: true,
+          focus:
+            candidate.lat !== undefined && candidate.lng !== undefined
+              ? { lat: candidate.lat, lng: candidate.lng, altitude: 0.13 }
+              : county.properties.focus,
+        });
+        setSelection(result.state as GlobeSelectionState);
+        if (result.camera) {
+          setCamera(result.camera);
+          setCameraRevision((revision) => revision + 1);
+        }
+      } catch (caught) {
+        setError(caught instanceof Error ? caught.message : "That location could not be focused.");
+      } finally {
+        if (request === countyRequest.current) setLoadingCounties(false);
+      }
+    }
+  }
+
+  function focusAccessibleDestination(regionId: string) {
+    const region = catalog.find((item) => item.id === regionId);
+    if (!region) return;
+    void focusSearchCandidate({
+      id: region.id,
+      label: region.name,
+      kind: region.type === "county" ? "county" : "state",
+      regionId: region.id,
+      stateRegionId: region.type === "county" ? region.parent_region_id ?? "" : region.id,
+      source: "census_catalog",
+    });
+  }
+
   function resetView() {
     countyRequest.current += 1;
     const result = returnToNationalView(selection);
@@ -109,7 +210,7 @@ export function ColculatorExperience() {
           Colculator
         </a>
         <div className="edition">U.S. terrain / 2026 edition</div>
-        <a className="method-link" href="#method">Methodology <span>↗</span></a>
+        <a className="method-link" href="#calculator">Calculator <span>↓</span></a>
       </header>
 
       <section id="top" className="instrument-grid" aria-labelledby="page-title">
@@ -168,6 +269,7 @@ export function ColculatorExperience() {
               <span>Drag anywhere to rotate</span>
             )}
           </div>
+          <LocationSearch onSelect={focusSearchCandidate} />
           <GlobeStage
             regions={visibleRegions}
             metric={metric}
@@ -197,6 +299,12 @@ export function ColculatorExperience() {
       </section>
 
       {error ? <div className="error-banner" role="alert">{error}</div> : null}
+
+      <AccessibleCalculator
+        regions={catalog}
+        destinationRegionId={selection.destinationRegionId}
+        onDestinationChange={focusAccessibleDestination}
+      />
 
       <footer id="method" className="site-footer">
         <p>
