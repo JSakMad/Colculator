@@ -29,6 +29,9 @@ A US cost-of-living-adjusted salary calculator for software engineering roles, c
 - Build region data: `npm run build:regions`
 - Build wage data: `npm run build:wages`
 - Build official RPP data: `npm run build:rpp` (requires `BEA_API_KEY` in the environment or root `.env`)
+- Build tax data: `npm run build:taxes`
+- Build county features: `npm run build:county-features` (requires `HUD_API_TOKEN` plus `data/manual/county_tax_rates.csv`)
+- Train county RPP model: `npm run train:county-rpp -- --commerce-csv data/reference/commerce_experimental_county_rpp.csv`
 - Run backend API: `npm run start:backend`
 - Test (frontend): `npm run test:frontend`
 - Test (backend): `npm run test:backend`
