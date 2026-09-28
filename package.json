@@ -4,6 +4,10 @@
   "private": true,
   "description": "Cost-of-living-adjusted salary calculator",
   "scripts": {
+    "build": "npm run build:frontend",
+    "dev": "next dev frontend --webpack",
+    "build:frontend": "next build frontend --webpack",
+    "start:frontend": "next start frontend",
     "build:regions": "PYTHONPATH=backend/src python3 scripts/build_regions.py",
     "build:rpp": "PYTHONPATH=backend/src python3 scripts/build_rpp.py",
     "build:wages": "PYTHONPATH=backend/src python3 scripts/build_wages.py",
@@ -14,16 +18,38 @@
     "test": "npm run test:frontend && npm run test:backend",
     "test:frontend": "node --test frontend/tests/*.test.mjs",
     "test:backend": "PYTHONPATH=backend/src .venv/bin/python -m unittest discover -s backend/tests -v",
-    "lint": "PYTHONPATH=backend/src .venv/bin/python -m compileall -q backend/src backend/tests scripts && node --check frontend/tests/*.test.mjs"
+    "lint": "PYTHONPATH=backend/src .venv/bin/python -m compileall -q backend/src backend/tests scripts && node --check frontend/tests/*.test.mjs && tsc --project frontend/tsconfig.json --noEmit"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/d3-geo": "^3.1.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@types/three": "^0.180.0",
+    "@types/topojson-client": "^3.1.5",
+    "@types/topojson-specification": "^1.0.5",
     "shapefile": "0.6.6",
     "supabase": "2.117.0",
-    "topojson-client": "3.1.0",
+    "tailwindcss": "^4.3.3",
+    "topojson-client": "^3.1.0",
     "topojson-server": "3.0.1",
-    "topojson-simplify": "3.0.3"
+    "topojson-simplify": "3.0.3",
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=22"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource/ibm-plex-mono": "^5.2.7",
+    "d3-geo": "^3.1.1",
+    "motion": "^12.23.24",
+    "next": "^16.3.6",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-globe.gl": "^2.38.0",
+    "three": "^0.180.0",
+    "world-atlas": "^2.0.2"
   }
 }
