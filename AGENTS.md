@@ -26,6 +26,8 @@ A US cost-of-living-adjusted salary calculator for software engineering roles, c
 
 ## Commands
 - Install: `npm ci && python3 -m venv .venv && .venv/bin/python -m pip install -e 'backend[test]'`
+- Run frontend: `npm run dev`
+- Build frontend: `npm run build:frontend`
 - Build region data: `npm run build:regions`
 - Build wage data: `npm run build:wages`
 - Build official RPP data: `npm run build:rpp` (requires `BEA_API_KEY` in the environment or root `.env`)
