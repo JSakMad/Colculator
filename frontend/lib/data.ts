@@ -7,6 +7,7 @@ import type {
   CountyEstimate,
   RegionFeature,
   RegionProperties,
+  RegionCatalogEntry,
   RppRecord,
   WageRecord,
 } from "./types";
@@ -24,6 +25,7 @@ type SourceProperties = {
 };
 
 type DataEnvelope<T> = { year: number; records: T[] };
+type RegionEnvelope = { regions: RegionCatalogEntry[] };
 
 const fetchJson = async <T,>(path: string): Promise<T> => {
   const response = await fetch(path);
@@ -159,4 +161,17 @@ export async function loadCountiesForState(
 
 export function metricValue(feature: RegionFeature, metric: "cost" | "wage") {
   return metric === "cost" ? feature.properties.rpp : feature.properties.medianWage;
+}
+
+let regionCatalogPromise: Promise<RegionCatalogEntry[]> | null = null;
+
+export function loadRegionCatalog() {
+  if (!regionCatalogPromise) {
+    regionCatalogPromise = fetchJson<RegionEnvelope>("/data/regions.json").then(
+      (payload) => payload.regions.filter(
+        (region) => region.type === "state" || region.type === "county",
+      ),
+    );
+  }
+  return regionCatalogPromise;
 }
