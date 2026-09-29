@@ -34,6 +34,9 @@ const categoryLabels: Record<string, string> = {
 const sourceLabel = (source: "official_bea" | "modeled") =>
   source === "official_bea" ? "Official BEA" : "Modeled";
 
+const formatSignedCurrency = (value: number) =>
+  `${value >= 0 ? "+" : "−"}${currency.format(Math.abs(value))}`;
+
 export function AccessibleCalculator({
   regions,
   destinationRegionId,
@@ -89,6 +92,10 @@ export function AccessibleCalculator({
 
   const destinationId = destinationCounty || destinationState;
   const originId = originCounty || originState;
+  const nominalValue = result ? Number(result.nominal_salary) : 0;
+  const adjustedValue = result ? Number(result.adjusted_salary) : 0;
+  const difference = adjustedValue - nominalValue;
+  const differencePercent = nominalValue ? (difference / nominalValue) * 100 : 0;
 
   function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -253,6 +260,11 @@ export function AccessibleCalculator({
             <p className="result-provenance">
               Origin: {sourceLabel(result.origin.rpp_source)} · Destination: {sourceLabel(result.destination.rpp_source)}
             </p>
+            <div className="result-difference" aria-label="Difference from current salary">
+              <span>Difference from nominal</span>
+              <strong>{formatSignedCurrency(difference)}</strong>
+              <small>{differencePercent >= 0 ? "+" : ""}{differencePercent.toFixed(1)}%</small>
+            </div>
             {result.destination.confidence_interval ? (
               <p className="result-confidence">
                 95% confidence interval: {Number(result.destination.confidence_interval[0]).toFixed(1)}–
@@ -296,7 +308,37 @@ export function AccessibleCalculator({
               </p>
             ) : null}
           </motion.div>
-        ) : null}
+        ) : (
+          <motion.div
+            key="awaiting-input"
+            className="result-placeholder"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            aria-hidden="true"
+          >
+            <div className="placeholder-heading">
+              <span>Output field</span>
+              <i />
+            </div>
+            <div className="placeholder-orbit">
+              <span />
+              <span />
+              <strong>?</strong>
+            </div>
+            <div className="placeholder-copy">
+              <p>Awaiting coordinates</p>
+              <h3>Your equivalent salary resolves here.</h3>
+            </div>
+            <div className="formula-strip">
+              <span>Nominal salary</span>
+              <b>×</b>
+              <span>Destination RPP</span>
+              <b>÷</b>
+              <span>Origin RPP</span>
+            </div>
+          </motion.div>
+        )}
       </AnimatePresence>
     </section>
   );

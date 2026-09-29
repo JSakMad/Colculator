@@ -22,6 +22,7 @@ import { AccessibleCalculator } from "./accessible-calculator";
 import { DataPanel } from "./data-panel";
 import { GlobeStage } from "./globe-stage";
 import { LocationSearch } from "./location-search";
+import { SourceLedger } from "./source-ledger";
 
 export function ColculatorExperience() {
   const [states, setStates] = useState<RegionFeature[]>([]);
@@ -204,13 +205,18 @@ export function ColculatorExperience() {
 
   return (
     <main className="experience-shell">
+      <a className="skip-link" href="#calculator">Skip the globe and use the calculator</a>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Colculator home">
           <span className="wordmark-orbit" aria-hidden="true" />
           Colculator
         </a>
-        <div className="edition">U.S. terrain / 2026 edition</div>
-        <a className="method-link" href="#calculator">Calculator <span>↓</span></a>
+        <div className="edition"><span aria-hidden="true" /> U.S. terrain / 2026 edition</div>
+        <nav className="site-nav" aria-label="Primary navigation">
+          <a href="#top">Field</a>
+          <a href="#calculator">Compare</a>
+          <a href="#sources">Sources</a>
+        </nav>
       </header>
 
       <section id="top" className="instrument-grid" aria-labelledby="page-title">
@@ -225,6 +231,11 @@ export function ColculatorExperience() {
             A geographic instrument for software salaries. Rotate the world, then
             enter the United States to compare official and modeled local costs.
           </p>
+          <div className="field-note" aria-label="Coverage summary">
+            <span>Coverage</span>
+            <strong>50 states + D.C.</strong>
+            <small>3,144 county geometries</small>
+          </div>
           <div className="metric-control" role="group" aria-label="Map metric">
             <span>Surface encodes</span>
             <div>
@@ -251,6 +262,13 @@ export function ColculatorExperience() {
         </div>
 
         <div className="globe-column">
+          <div className="globe-reticle" aria-hidden="true">
+            <span className="reticle-horizontal" />
+            <span className="reticle-vertical" />
+            <span className="reticle-scan" />
+            <i className="reticle-north">N</i>
+            <i className="reticle-east">E</i>
+          </div>
           <div className="globe-toolbar">
             <AnimatePresence mode="wait">
               <motion.div
@@ -293,6 +311,10 @@ export function ColculatorExperience() {
               </motion.button>
             ) : null}
           </AnimatePresence>
+          <div className="globe-footnote" aria-hidden="true">
+            <span>RPP datum / U.S. = 100</span>
+            <span>Drag · scroll · select</span>
+          </div>
         </div>
 
         <DataPanel selection={selectedFeature} rppYear={rppYear} wageYear={wageYear} />
@@ -306,13 +328,15 @@ export function ColculatorExperience() {
         onDestinationChange={focusAccessibleDestination}
       />
 
+      <SourceLedger />
+
       <footer id="method" className="site-footer">
-        <p>
-          Price parity: U.S. Bureau of Economic Analysis · Wages: U.S. Bureau of Labor Statistics · World boundaries: Natural Earth
-        </p>
-        <p>
-          County model inputs include Zillow Research data. <a href="https://www.zillow.com/research/data/" target="_blank" rel="noreferrer">Zillow attribution</a>
-        </p>
+        <a className="wordmark footer-wordmark" href="#top" aria-label="Back to top">
+          <span className="wordmark-orbit" aria-hidden="true" />
+          Colculator
+        </a>
+        <p>A personal geographic instrument for software salary decisions.</p>
+        <p>World boundaries: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noreferrer">Natural Earth</a></p>
       </footer>
     </main>
   );
