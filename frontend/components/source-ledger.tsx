@@ -28,7 +28,7 @@ const sources: SourceEntry[] = [
   {
     code: "04",
     name: "Zillow Research",
-    detail: "County housing model inputs",
+    detail: "County market-rent estimates and model inputs",
     href: "https://www.zillow.com/research/data/",
     attribution: true,
   },
@@ -37,6 +37,24 @@ const sources: SourceEntry[] = [
     name: "HUD",
     detail: "Fair market rents",
     href: "https://www.huduser.gov/portal/datasets/fmr.html",
+  },
+  {
+    code: "06",
+    name: "IRS",
+    detail: "2026 federal brackets, Social Security, and Medicare",
+    href: "https://www.irs.gov/publications/p15",
+  },
+  {
+    code: "07",
+    name: "Tax Foundation",
+    detail: "2026 state single-filer brackets and deductions",
+    href: "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/",
+  },
+  {
+    code: "08",
+    name: "New York Tax",
+    detail: "2026 New York City resident withholding schedule",
+    href: "https://www.tax.ny.gov/pdf/publications/withholding/nys50_t_nyc.pdf",
   },
 ];
 

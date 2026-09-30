@@ -41,10 +41,14 @@ test("complete calculator flow runs independently of the globe component", async
   const response = await submitAccessibleCalculation(
     {
       nominalSalary: "100000",
+      destinationSalary: "150000",
       originRegionId: "US-STATE-06",
       destinationRegionId: "US-COUNTY-53033",
       socCode: "15-1252",
       includeStateIncomeTax: false,
+      housingProfile: "hud_1br",
+      originMonthlyHousing: "1800",
+      destinationMonthlyHousing: "2200",
     },
     async (url, init) => {
       capturedRequest = { url, body: JSON.parse(init.body) };
@@ -59,5 +63,10 @@ test("complete calculator flow runs independently of the globe component", async
   assert.equal(capturedRequest.body.origin_region_id, "US-STATE-06");
   assert.equal(capturedRequest.body.destination_region_id, "US-COUNTY-53033");
   assert.equal(capturedRequest.body.nominal_salary, 100000);
+  assert.equal(capturedRequest.body.destination_salary, 150000);
+  assert.equal(capturedRequest.body.include_state_income_tax, true);
+  assert.equal(capturedRequest.body.housing_profile, "hud_1br");
+  assert.equal(capturedRequest.body.origin_monthly_housing, 1800);
+  assert.equal(capturedRequest.body.destination_monthly_housing, 2200);
   assert.equal(response.adjusted_salary, 97321.45);
 });

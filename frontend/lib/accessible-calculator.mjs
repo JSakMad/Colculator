@@ -8,10 +8,20 @@ export function buildCalculationPayload(input) {
   }
   return {
     nominal_salary: salary,
+    destination_salary: input.destinationSalary
+      ? Number(input.destinationSalary)
+      : null,
     origin_region_id: input.originRegionId || null,
     destination_region_id: input.destinationRegionId,
     soc_code: input.socCode || "15-1252",
-    include_state_income_tax: Boolean(input.includeStateIncomeTax),
+    include_state_income_tax: true,
+    housing_profile: input.housingProfile || "zillow_typical",
+    origin_monthly_housing: input.originMonthlyHousing
+      ? Number(input.originMonthlyHousing)
+      : null,
+    destination_monthly_housing: input.destinationMonthlyHousing
+      ? Number(input.destinationMonthlyHousing)
+      : null,
   };
 }
 
