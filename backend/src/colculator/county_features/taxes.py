@@ -137,7 +137,7 @@ def _progressive_tax(
     return tax
 
 
-def parse_income_rates(path: Path) -> dict[str, Decimal]:
+def parse_income_tax_rules(path: Path) -> dict[str, dict[str, object]]:
     rows = _xlsx_rows(path, "xl/worksheets/sheet1.xml")
     states: dict[str, dict[str, object]] = {}
     current: str | None = None
@@ -161,20 +161,105 @@ def parse_income_rates(path: Path) -> dict[str, Decimal]:
         assert isinstance(brackets, list)
         brackets.append((threshold, rate))
 
-    rates: dict[str, Decimal] = {}
+    rules: dict[str, dict[str, object]] = {}
     for state, data in states.items():
         if state in NO_WAGE_INCOME_TAX:
-            rates[state] = Decimal(0)
+            rules[state] = {
+                "brackets": [],
+                "standard_deduction": Decimal(0),
+                "personal_exemption": Decimal(0),
+                "standard_credit": Decimal(0),
+                "exemption_credit": Decimal(0),
+                "no_wage_income_tax": True,
+            }
             continue
         deduction, standard_credit = _amount_or_credit(str(data["standard"]))
         exemption, exemption_credit = _amount_or_credit(str(data["exemption"]))
-        taxable = max(Decimal(0), GROSS_INCOME - deduction - exemption)
         brackets = data["brackets"]
+        assert isinstance(brackets, list)
+        rules[state] = {
+            "brackets": sorted(brackets),
+            "standard_deduction": deduction,
+            "personal_exemption": exemption,
+            "standard_credit": standard_credit,
+            "exemption_credit": exemption_credit,
+            "no_wage_income_tax": False,
+        }
+    return rules
+
+
+def parse_income_rates(path: Path) -> dict[str, Decimal]:
+    rates: dict[str, Decimal] = {}
+    for state, rule in parse_income_tax_rules(path).items():
+        if bool(rule["no_wage_income_tax"]):
+            rates[state] = Decimal(0)
+            continue
+        deduction = Decimal(rule["standard_deduction"])
+        exemption = Decimal(rule["personal_exemption"])
+        standard_credit = Decimal(rule["standard_credit"])
+        exemption_credit = Decimal(rule["exemption_credit"])
+        taxable = max(Decimal(0), GROSS_INCOME - deduction - exemption)
+        brackets = rule["brackets"]
         assert isinstance(brackets, list)
         tax = _progressive_tax(taxable, brackets)
         tax = max(Decimal(0), tax - standard_credit - exemption_credit)
         rates[state] = tax / GROSS_INCOME
     return rates
+
+
+def build_state_income_tax_rules(
+    *, regions_json: Path, income_workbook: Path, output_json: Path,
+    tax_year: int = 2026,
+) -> dict[str, int]:
+    """Write the source-tagged single-filer rules used for salary-level estimates."""
+
+    catalog = json.loads(regions_json.read_text(encoding="utf-8"))
+    state_ids = {
+        str(region["name"]): str(region["id"])
+        for region in catalog["regions"] if region.get("type") == "state"
+    }
+    rules = parse_income_tax_rules(income_workbook)
+    if set(rules) != set(state_ids):
+        raise ValueError(
+            "Tax Foundation state rule coverage does not match FR1 catalog: "
+            f"missing={sorted(set(state_ids) - set(rules))}, "
+            f"extra={sorted(set(rules) - set(state_ids))}"
+        )
+    records: list[dict[str, object]] = []
+    for state_name in sorted(rules):
+        rule = rules[state_name]
+        brackets = rule["brackets"]
+        assert isinstance(brackets, list)
+        records.append({
+            "state_region_id": state_ids[state_name],
+            "state_name": state_name,
+            "no_wage_income_tax": bool(rule["no_wage_income_tax"]),
+            "standard_deduction": format(Decimal(rule["standard_deduction"]), "f"),
+            "personal_exemption": format(Decimal(rule["personal_exemption"]), "f"),
+            "standard_credit": format(Decimal(rule["standard_credit"]), "f"),
+            "exemption_credit": format(Decimal(rule["exemption_credit"]), "f"),
+            "brackets": [
+                {
+                    "threshold": format(threshold.quantize(Decimal("0.01")), "f"),
+                    "rate": format(rate.quantize(Decimal("0.000001")), "f"),
+                }
+                for threshold, rate in brackets
+            ],
+            "source": "tax_foundation_2026",
+            "source_url": INCOME_PAGE_URL,
+        })
+    payload = {
+        "schema_version": 1,
+        "tax_year": tax_year,
+        "filing_status": "single",
+        "records": records,
+    }
+    output_json.parent.mkdir(parents=True, exist_ok=True)
+    output_json.write_text(
+        json.dumps(payload, separators=(",", ":"), sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return {"tax_year": tax_year, "states": len(records)}
 
 
 def parse_sales_rates(path: Path) -> dict[str, Decimal]:

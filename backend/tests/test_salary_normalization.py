@@ -8,7 +8,9 @@ from pydantic import ValidationError
 from colculator.api import app, get_calculator
 from colculator.calculator.models import (
     CalculationRequest,
+    CountyCostProfile,
     RPPResolution,
+    StateIncomeTaxRule,
     WageRecord,
 )
 from colculator.calculator.repository import CatalogRepository
@@ -96,6 +98,68 @@ class SalaryNormalizationAcceptanceTest(unittest.TestCase):
         self.assertEqual("unavailable", requested.state_income_tax_adjustment.status)
         self.assertIsNone(requested.state_income_tax_adjustment.adjusted_salary)
 
+    def test_offer_comparison_uses_take_home_housing_and_nonhousing_prices(self) -> None:
+        result = self.calculator.calculate(
+            CalculationRequest(
+                nominal_salary=Decimal("100000.00"),
+                destination_salary=Decimal("150000.00"),
+                origin_region_id="US-COUNTY-48113",
+                destination_region_id="US-COUNTY-36061",
+            )
+        )
+        comparison = result.offer_comparison
+        self.assertEqual("available", comparison.status)
+        self.assertEqual("origin", comparison.better_offer)
+        self.assertEqual(Decimal("170766.26"), comparison.destination_break_even_salary)
+        self.assertEqual(Decimal("-11617.81"), comparison.annual_advantage)
+        self.assertEqual(Decimal("1.0470"), comparison.nonhousing_cost_ratio)
+        assert comparison.origin_offer is not None
+        assert comparison.destination_offer is not None
+        assert comparison.destination_break_even_offer is not None
+        self.assertEqual(Decimal("79180.00"), comparison.origin_offer.taxes.take_home_pay)
+        self.assertEqual(Decimal("100602.16"), comparison.destination_offer.taxes.take_home_pay)
+        self.assertEqual("zillow_research", comparison.origin_offer.housing.source)
+        self.assertEqual("included_nyc", comparison.destination_offer.taxes.local_income_tax_status)
+        self.assertEqual(Decimal("5379.09"), comparison.destination_offer.taxes.local_income_tax)
+        self.assertLessEqual(
+            abs(
+                comparison.destination_break_even_offer.comparable_disposable_income
+                - comparison.origin_offer.comparable_disposable_income
+            ),
+            Decimal("0.01"),
+        )
+
+    def test_offer_comparison_requires_counties_instead_of_inventing_state_rent(self) -> None:
+        result = self.calculator.calculate(
+            CalculationRequest(
+                nominal_salary=Decimal("100000.00"),
+                origin_region_id="US-STATE-48",
+                destination_region_id="US-STATE-36",
+            )
+        )
+        self.assertEqual("unavailable", result.offer_comparison.status)
+        self.assertIn("origin county", result.offer_comparison.unavailable_reason or "")
+
+    def test_user_housing_costs_override_zillow_without_losing_provenance(self) -> None:
+        result = self.calculator.calculate(
+            CalculationRequest(
+                nominal_salary=Decimal("100000.00"),
+                destination_salary=Decimal("150000.00"),
+                origin_region_id="US-COUNTY-48113",
+                destination_region_id="US-COUNTY-36061",
+                origin_monthly_housing=Decimal("1200.00"),
+                destination_monthly_housing=Decimal("3000.00"),
+            )
+        )
+        comparison = result.offer_comparison
+        assert comparison.origin_offer is not None
+        assert comparison.destination_offer is not None
+        self.assertEqual("user_provided", comparison.origin_offer.housing.source)
+        self.assertEqual(Decimal("14400.00"), comparison.origin_offer.housing.annual_cost)
+        self.assertEqual(
+            Decimal("36000.00"), comparison.destination_offer.housing.annual_cost
+        )
+
     def test_modeled_rpp_cannot_omit_confidence_metadata(self) -> None:
         with self.assertRaises(ValidationError):
             RPPResolution(
@@ -139,6 +203,16 @@ class ModeledRepository:
         )
 
     def find_wage(self, region_id: str, soc_code: str) -> WageRecord | None:
+        return None
+
+    def resolve_county_cost_profile(
+        self, region_id: str | None
+    ) -> CountyCostProfile | None:
+        return None
+
+    def resolve_state_tax_rule(
+        self, region_id: str | None
+    ) -> StateIncomeTaxRule | None:
         return None
 
 

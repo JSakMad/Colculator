@@ -6,7 +6,7 @@ import json
 from decimal import Decimal
 from pathlib import Path
 
-from .models import RPPResolution, WageRecord
+from .models import CountyCostProfile, RPPResolution, StateIncomeTaxRule, WageRecord
 
 
 NATIONAL_REGION_ID = "US-NATIONAL"
@@ -56,6 +56,37 @@ class CatalogRepository:
         self._wages = {
             (str(record["region_id"]), str(record["soc_code"])): record
             for record in wages_payload["records"]
+            if isinstance(record, dict)
+        }
+        county_features_payload = json.loads(
+            (data_dir / "county_features.json").read_text(encoding="utf-8")
+        )
+        self._county_features = {
+            str(record["county_fips"]): record
+            for record in county_features_payload["records"]
+            if isinstance(record, dict)
+        }
+        tax_rules_payload = json.loads(
+            (data_dir / "state_income_tax_rules.json").read_text(encoding="utf-8")
+        )
+        tax_year = int(tax_rules_payload["tax_year"])
+        self._state_tax_rules = {
+            str(record["state_region_id"]): StateIncomeTaxRule(
+                state_region_id=str(record["state_region_id"]),
+                state_name=str(record["state_name"]),
+                tax_year=tax_year,
+                brackets=[
+                    (Decimal(str(item["threshold"])), Decimal(str(item["rate"])))
+                    for item in record["brackets"]
+                ],
+                standard_deduction=Decimal(str(record["standard_deduction"])),
+                personal_exemption=Decimal(str(record["personal_exemption"])),
+                standard_credit=Decimal(str(record["standard_credit"])),
+                exemption_credit=Decimal(str(record["exemption_credit"])),
+                no_wage_income_tax=bool(record["no_wage_income_tax"]),
+                source_url=str(record["source_url"]),
+            )
+            for record in tax_rules_payload["records"]
             if isinstance(record, dict)
         }
 
@@ -126,6 +157,43 @@ class CatalogRepository:
         if record is None:
             return None
         return WageRecord.model_validate(record)
+
+    def resolve_county_cost_profile(
+        self, region_id: str | None
+    ) -> CountyCostProfile | None:
+        if region_id is None:
+            return None
+        region = self._regions.get(region_id)
+        if region is None:
+            raise UnknownRegionError(region_id)
+        if region.get("type") != "county":
+            return None
+        record = self._county_features.get(str(region["fips"]))
+        if record is None:
+            return None
+        metadata = record.get("source_metadata") or {}
+        return CountyCostProfile(
+            county_fips=str(record["county_fips"]),
+            year=int(record["year"]),
+            zori=self._decimal(record.get("zori")),
+            hud_fmr_studio=Decimal(str(record["hud_fmr_studio"])),
+            hud_fmr_1br=Decimal(str(record["hud_fmr_1br"])),
+            hud_fmr_2br=Decimal(str(record["hud_fmr_2br"])),
+            hud_fmr_3br=Decimal(str(record["hud_fmr_3br"])),
+            zillow_observation=metadata.get("zillow_observation"),
+            hud_fiscal_year=int(metadata["hud_fiscal_year"]),
+        )
+
+    def resolve_state_tax_rule(self, region_id: str | None) -> StateIncomeTaxRule | None:
+        if region_id is None:
+            return None
+        region = self._regions.get(region_id)
+        if region is None:
+            raise UnknownRegionError(region_id)
+        state_region_id = (
+            region_id if region.get("type") == "state" else region.get("parent_region_id")
+        )
+        return self._state_tax_rules.get(str(state_region_id))
 
     @staticmethod
     def _decimal(value: object) -> Decimal | None:

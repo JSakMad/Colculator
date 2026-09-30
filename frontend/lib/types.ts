@@ -100,12 +100,47 @@ export type CategoryResult = {
   unavailable_reason?: string | null;
 };
 
+export type OfferValueResult = {
+  region_id: string;
+  region_name: string;
+  gross_salary: number | string;
+  taxes: {
+    tax_year: number;
+    filing_status: "single";
+    federal_income_tax: number | string;
+    payroll_tax: number | string;
+    state_income_tax: number | string;
+    local_income_tax: number | string;
+    local_income_tax_status: "included_nyc" | "not_modeled";
+    total_estimated_tax: number | string;
+    take_home_pay: number | string;
+    federal_source: "irs_2026";
+    federal_source_url: string;
+    payroll_source_url: string;
+    state_source: "tax_foundation_2026";
+    state_source_url: string;
+    local_source: "nyc_tax_2026" | null;
+    local_source_url: string | null;
+  };
+  housing: {
+    monthly_cost: number | string;
+    annual_cost: number | string;
+    profile: "zillow_typical" | "hud_studio" | "hud_1br" | "hud_2br" | "hud_3br" | "user_provided";
+    source: "zillow_research" | "hud_fmr" | "user_provided";
+    source_year: number | null;
+    source_url: string | null;
+  };
+  spendable_after_housing: number | string;
+  comparable_disposable_income: number | string;
+};
+
 export type CalculationResponse = {
   nominal_salary: number | string;
   adjusted_salary: number | string;
   origin: {
     requested_region_id: string;
     requested_region_name: string;
+    rpp_year: number;
     rpp_all_items: number | string;
     rpp_source: "official_bea" | "modeled";
     confidence_interval: [number | string, number | string] | null;
@@ -131,7 +166,21 @@ export type CalculationResponse = {
   };
   state_income_tax_adjustment: {
     requested: boolean;
-    status: "not_requested" | "unavailable";
+    status: "not_requested" | "available" | "unavailable";
     unavailable_reason: string | null;
+  };
+  offer_comparison: {
+    status: "available" | "unavailable";
+    origin_offer: OfferValueResult | null;
+    destination_offer: OfferValueResult | null;
+    destination_break_even_offer: OfferValueResult | null;
+    destination_break_even_salary: number | string | null;
+    better_offer: "origin" | "destination" | "equivalent" | "not_compared" | null;
+    annual_advantage: number | string | null;
+    nonhousing_cost_ratio: number | string | null;
+    housing_expenditure_weight: number | string;
+    methodology: string;
+    unavailable_reason: string | null;
+    limitations: string[];
   };
 };

@@ -21,10 +21,10 @@ DEFAULT_DATA_DIR = Path(__file__).resolve().parents[3] / "frontend" / "public" /
 
 app = FastAPI(
     title="Colculator API",
-    version="0.1.0",
+    version="0.2.0",
     description=(
-        "Source-transparent cost-of-living salary normalization using official "
-        "BEA RPP and BLS OEWS data."
+        "Source-transparent offer comparison using 2026 tax rules, county housing, "
+        "BEA regional prices, and BLS OEWS wage benchmarks."
     ),
 )
 

@@ -5,7 +5,7 @@
 
 ## 1. Vision
 
-A US cost-of-living-adjusted salary calculator for software engineering roles, built around an interactive 3D map: click into a state, then a county, enter a salary, and get back a normalized figure — backed by official government price data where it exists, and a validated machine-learning estimate where it doesn't (most nonmetro/rural counties).
+A US offer-value calculator for software engineering roles, built around an interactive 3D map: click into a state, then a county, compare two salaries, and see which leaves more after estimated taxes, housing, and nonhousing regional prices. The original BEA-normalized salary remains visible as an official purchasing-power baseline; the primary relocation estimate is explicitly labeled as derived rather than official.
 
 ---
 
@@ -41,6 +41,8 @@ A US cost-of-living-adjusted salary calculator for software engineering roles, b
 
 **WageBenchmark** — region_id, soc_code, median_wage, mean_wage, year, source (`bls_oews`).
 
+**StateIncomeTaxRule** — state_region_id, tax_year, filing_status (`single` in v1), brackets, standard_deduction, personal_exemption, standard_credit, exemption_credit, source (`tax_foundation_2026`). This preserves the source workbook's actual progressive schedule so entered salaries are not all taxed at a fixed $100,000 effective rate.
+
 ---
 
 ## 5. Legal & Data-Compliance Notes
@@ -48,6 +50,7 @@ A US cost-of-living-adjusted salary calculator for software engineering roles, b
 - All core data sources here (BEA, BLS, Census, HUD) are official U.S. government data — public domain, no licensing restriction.
 - **Zillow Research data is free for public use but requires visible attribution to Zillow** — this is a real term of their published data, not optional. Build a persistent, visible credit line into the footer/data-sources page (Section 8).
 - No scraping is required anywhere in this pipeline — every source here is a direct free download or a free (if registration-gated) public API. BEA's API requires a free account signup for an API key; it is not literally keyless, but it costs nothing.
+- Offer-value tax estimates use the IRS's published 2026 federal/FICA rules, Tax Foundation's free 2026 state workbook, and the New York State Department of Taxation and Finance's 2026 NYC resident schedule. Every result links to its source. Local income tax coverage is deliberately marked incomplete outside NYC rather than silently treating missing municipal tax as zero.
 
 ---
 
@@ -86,12 +89,16 @@ This needs a precise spec, since "add ML" is meaningless without one.
 - **Test:** ingested median wage matches BLS's published table for a spot-checked state.
 
 ### FR5 — Salary Normalization Calculation
-- Input: nominal salary, origin region (defaults to US national average if unspecified), destination region.
-- Core calculation: `adjusted_salary = nominal_salary × (RPP_destination / RPP_origin)`.
-- **Show the category breakdown** (housing vs. goods vs. services contribution to the adjustment), not just the final number — this is the PlainCost-style transparency principle from Section 2.
-- **Optional toggle: include state income tax difference** — this is a materially different adjustment from cost-of-goods (RPP) and must be shown as a clearly separate line item, never blended into the RPP-based figure, so a user can tell which part of the change is "things cost more here" versus "the state taxes more."
+- Inputs: Offer A salary and county, Offer B county, optional Offer B salary, housing benchmark, and optional user-provided monthly housing costs. The offer-value result requires counties because a state or national selection has no single defensible housing cost.
+- **Primary offer-value calculation:** estimate each offer's 2026 single-filer take-home pay using federal income tax, employee Social Security/Medicare, progressive state income tax, and supported local income tax. Subtract annual county housing cost using Zillow ZORI by default, a selected HUD FMR bedroom profile, or the user's explicit housing amounts.
+- Adjust the remaining destination dollars into origin-location purchasing power with an approximate nonhousing price ratio. The geometric approximation uses BEA's historical **2017** 22.6% rents weight ([source](https://apps.bea.gov/scb/issues/2019/06-june/0619-regional-price-parities.htm)); it is neither a current expenditure weight nor an exact decomposition of BEA's multilateral index. Label this as an approximation, never as an official BEA statistic. Comparable income is money after taxes and housing, not savings after all household bills; an overall offer-comparison confidence interval is unavailable. Retain visible modeled-input RPP confidence intervals.
+- If Offer B salary is supplied, show which offer produces more comparable disposable income and the annual advantage. Always solve and show the destination gross break-even salary needed to match Offer A.
+- **Official baseline retained:** continue calculating `adjusted_salary = nominal_salary × (RPP_destination / RPP_origin)`, but label it "Official BEA purchasing-power baseline" rather than the primary relocation answer.
+- Show the category RPPs as independent category equivalents, not falsely as additive contribution weights.
+- Tax, housing, and price components must remain separate and source-tagged in the response and UI. Zillow attribution must appear with any result that uses ZORI.
 - **Also show the real BLS median SWE wage for the destination** alongside the calculated figure — this is the genuinely differentiated insight: a user sees not just "your salary adjusts to $X" but "and by the way, the actual median software developer salary there is $Y," letting them judge whether an offer is actually competitive for that market, not just cost-adjusted.
-- **Test:** known-value check — feed in a same-region query (origin = destination) and confirm the adjusted salary equals the input exactly. Feed in a query where destination RPP is a `modeled` county value and confirm the UI-facing response carries the `modeled` flag through to display, not just the backend.
+- **Known simplifications:** v1 assumes a single filer taking standard deductions, with no dependents, retirement contributions, bonuses, or benefits. Only basic state credits in the source schedule are applied; income-dependent deduction phaseouts and recapture provisions are not modeled. NYC resident income tax is included; other municipal income taxes are explicitly `not_modeled`. Zillow typical rent is not bedroom-specific; users can select HUD bedroom profiles or override housing costs.
+- **Test:** retain the same-region BEA identity check and modeled-source propagation check. For a Dallas County $100,000 offer versus a New York County $150,000 offer using committed 2024 Zillow data and 2026 tax rules, assert the origin offer wins, the destination break-even salary is `$170,766.26`, NYC local tax is included and source-tagged, and Zillow attribution is visible. Assert state-only inputs return offer-value `unavailable` instead of inventing a rent. Assert user housing overrides replace source data and are tagged `user_provided`.
 
 ### FR6 — Interactive 3D Globe
 - `react-globe.gl`, full free-rotating world globe (not camera-locked) — this is the library's native mode, so no fighting the tool to constrain it.

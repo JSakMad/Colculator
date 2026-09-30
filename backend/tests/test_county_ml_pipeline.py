@@ -105,6 +105,20 @@ class CountyFeatureIngestionTest(unittest.TestCase):
         for state_fips in ("02", "12", "32", "33", "46", "47", "48", "53", "56"):
             self.assertEqual("0", next(iter(state_values[state_fips]))[0])
 
+    def test_state_tax_rules_preserve_progressive_source_data(self) -> None:
+        payload = json.loads(
+            (ROOT / "frontend" / "public" / "data" / "state_income_tax_rules.json")
+            .read_text(encoding="utf-8")
+        )
+        self.assertEqual(2026, payload["tax_year"])
+        self.assertEqual("single", payload["filing_status"])
+        self.assertEqual(51, len(payload["records"]))
+        by_id = {record["state_region_id"]: record for record in payload["records"]}
+        self.assertTrue(by_id["US-STATE-48"]["no_wage_income_tax"])
+        self.assertEqual("8000", by_id["US-STATE-36"]["standard_deduction"])
+        self.assertGreater(len(by_id["US-STATE-36"]["brackets"]), 1)
+        self.assertTrue(by_id["US-STATE-36"]["source_url"].startswith("https://"))
+
     def test_hud_town_level_conflicts_are_never_silently_aggregated(self) -> None:
         payloads = {
             "listStates": {
